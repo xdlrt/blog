@@ -1,4 +1,100 @@
+# https://theme-next.js.org/docs/theme-settings/
+
 # scheme: Muse
 # scheme: Mist
 scheme: Pisces
 # scheme: Gemini
+
+cache:
+  enable: true
+
+minify: true
+
+darkmode: true
+
+favicon:
+  small: /images/favicon-16x16.png
+  medium: /images/favicon-32x32.png
+  apple_touch_icon: /images/apple-touch-icon.png
+
+creative_commons:
+  # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero
+  license: by-nc-sa
+  # Available values: big | small
+  size: small
+  sidebar: false
+  post: true
+  language: deed.zh
+
+menu:
+  home: /
+  tags: /tags/
+  categories: /categories/
+  archives: /archives/
+  # commonweal: /404/
+  about: /about/
+
+menu_settings:
+  icons: true
+  badges: true
+
+site_state: false
+
+avatar:
+  url: /images/android-chrome-192x192.png
+  rounded: true
+
+social:
+  GitHub: https://github.com/xdlrt || fab fa-github
+  Twitter: https://twitter.com/yeshu_in_future || fab fa-twitter
+  E-Mail: mailto:xdlrt0111@163.com || fa fa-envelope
+  RSS: /atom.xml || fa fa-rss
+
+social_icons:
+  icons_only: true
+
+footer:
+  since: 2019
+  copyright: 也树
+
+# Subscribe through Telegram Channel, Twitter, etc.
+# Usage: `Key: permalink || icon` (Font Awesome)
+follow_me:
+  Twitter: https://twitter.com/yeshu_in_future || fab fa-twitter
+  RSS: /atom.xml || fa fa-rss
+
+back2top:
+  enable: true
+
+reading_progress:
+  enable: true
+  # Available values: left | right
+  start_at: left
+  # Available values: top | bottom
+  position: top
+  reversed: false
+  color: "var(--theme-color)"
+  height: 2px
+
+github_banner:
+  enable: true
+  permalink: https://github.com/xdlrt
+  title: Follow me on GitHub
+
+lazyload: true
+
+mediumzoom: true
+
+quicklink:
+  enable: true
+  home: true
+  archive: true
+  about: true
+  tags: true
+  categories: true
+  delay: true
+  timeout: 3000
+  priority: true
+
+motion:
+  enable: false
