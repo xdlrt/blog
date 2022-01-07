@@ -98,3 +98,9 @@ quicklink:
 
 motion:
   enable: false
+
+baidu_analytics: 33fa00efe9f4f2a652c14b5521ab4215
+
+google_analytics:
+  tracking_id: G-DW6LQKGEJ1
+  only_pageview: false
