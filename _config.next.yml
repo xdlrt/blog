@@ -104,3 +104,13 @@ baidu_analytics: 33fa00efe9f4f2a652c14b5521ab4215
 google_analytics:
   tracking_id: G-DW6LQKGEJ1
   only_pageview: false
+
+reward_settings:
+  # If true, a donate button will be displayed in every article by default.
+  enable: true
+  animation: false
+
+reward:
+  wechatpay: /images/wechatpay.png
+  bitcoin: /images/metamask.jpg
+  
