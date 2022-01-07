@@ -6,6 +6,10 @@ date: 2018-10-22 01:02:22
 tags:
 ---
 
+React 作为一个库，不会决定你如何组织项目的结构。这是件好事，因为这样我们有了充分的自由去尝试不同的组织方式并且选取最适合我们的方式。但是从另一个角度讲，这可能会让刚刚上手 React 的开发者产生些许困惑。
+
+<!-- more -->
+
 > 原文地址：[structuring projects and naming components in react](https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76)
 > 原文作者：[Vinicius Dacal](https://hackernoon.com/@viniciusdacal)
 > 译文出自：[阿里云翻译小组](https://github.com/dawn-teams/translate)
