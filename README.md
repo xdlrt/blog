@@ -1,3 +1,3 @@
 # blog
 
-my blog using Hexo 6.x.
+In progress to be a product maker.
