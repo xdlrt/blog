@@ -114,3 +114,5 @@ reward:
   wechatpay: /images/wechatpay.png
   bitcoin: /images/metamask.jpg
   
+custom_file_path:
+  sidebar: source/_data/sidebar.njk
