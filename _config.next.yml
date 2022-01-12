@@ -116,3 +116,6 @@ reward:
   
 custom_file_path:
   sidebar: source/_data/sidebar.njk
+  footer: source/_data/footer.njk
+
+cnzz: true
