@@ -25,7 +25,12 @@ hexo.extend.filter.register('after_generate', function () {
     window.__CONTRIBUTION_CALENDAR__ = {
       target: document.querySelector("#contribution"),
       props: {
-        data: ${JSON.stringify(posts)}
+        data: ${JSON.stringify(posts)},
+        getDesc: function(params) {
+          const heat = params.heat;
+          const date = params.date;
+          return heat + ' posts on ' + date.replace(/-/g, '/');
+        }
       }
     };
   </script>`, 'default');
