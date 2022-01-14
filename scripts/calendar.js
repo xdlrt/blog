@@ -1,9 +1,7 @@
-hexo.config.calendar = Object.assign({}, hexo.config.calendar);
-
 hexo.extend.filter.register('after_generate', function () {
-  if (!hexo.config.calendar.enable) return;
+  if (!hexo.theme.config.contribution || !hexo.theme.config.contribution.enable) return;
 
-  hexo.extend.injector.register('head_end', `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/contribution-calendar@latest/dist/embed.css"></link>`, 'default');
+  hexo.extend.injector.register('head_end', `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/contribution-calendar@0.0.6/dist/embed.css"></link>`, 'default');
 
   var posts = this.locals.get('posts').sort('date')
     .filter(function (post) {
@@ -35,5 +33,5 @@ hexo.extend.filter.register('after_generate', function () {
     };
   </script>`, 'default');
 
-  hexo.extend.injector.register('body_end', `<script src="https://cdn.jsdelivr.net/npm/contribution-calendar@latest/dist/embed.js"></script>`, 'default');
+  hexo.extend.injector.register('body_end', `<script src="https://cdn.jsdelivr.net/npm/contribution-calendar@0.0.6/dist/embed.js"></script>`, 'default');
 });
