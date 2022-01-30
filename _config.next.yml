@@ -41,7 +41,7 @@ menu_settings:
 site_state: false
 
 avatar:
-  url: /images/android-chrome-192x192.png
+  url: https://img.alicdn.com/imgextra/i3/O1CN01G2hVxU1bdYDAN8Yiq_!!6000000003488-2-tps-192-192.png
   rounded: true
 
 social:
@@ -60,6 +60,7 @@ footer:
 # Subscribe through Telegram Channel, Twitter, etc.
 # Usage: `Key: permalink || icon` (Font Awesome)
 follow_me:
+  WeChat: /images/wechat.jpg || fab fa-weixin
   Twitter: https://twitter.com/yeshu_in_future || fab fa-twitter
   RSS: /atom.xml || fa fa-rss
 
