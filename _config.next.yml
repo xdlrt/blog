@@ -54,7 +54,7 @@ social_icons:
   icons_only: true
 
 footer:
-  since: 2019
+  since: 2016
   copyright: 也树
 
 # Subscribe through Telegram Channel, Twitter, etc.
@@ -102,9 +102,9 @@ motion:
 
 baidu_analytics: 33fa00efe9f4f2a652c14b5521ab4215
 
-google_analytics:
-  tracking_id: G-DW6LQKGEJ1
-  only_pageview: false
+# google_analytics:
+#   tracking_id: G-DW6LQKGEJ1
+#   only_pageview: false
 
 reward_settings:
   # If true, a donate button will be displayed in every article by default.
