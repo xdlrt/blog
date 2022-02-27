@@ -23,7 +23,7 @@ categories: newsletter
 - [#1 任天堂和上岭村](https://xiaoshu.zhubai.love/posts/2107172142524608512)
 - [#0 这是我为你写的第零封信](https://xiaoshu.zhubai.love/posts/2107165648034942976)
 
-你也可以在这里找到我：[微博](https://weibo.com/u/5361470927)、[Twitter](https://twitter.com/yeshu_in_future)。
+你也可以在这里找到我：[微博](https://weibo.com/u/5361470927)、[Twitter](https://twitter.com/yeshu_in_future)、[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)。
 
 > 这里是小树的 [newsletter](https://xiaoshu.zhubai.love)。 每周一发布，欢迎[订阅](https://xiaoshu.zhubai.love)。
 > 如果你觉得这篇文章对你有用，欢迎分享给更多好友。
