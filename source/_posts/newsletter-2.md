@@ -10,7 +10,6 @@ tags:
 
 <!-- more -->
 
----
 ### 本期导读
 - [产品] 把限制作为一种设计哲学
 - [开源] 如何做好一个开源项目
@@ -61,7 +60,7 @@ tags:
 - [精译全文 | 巴菲特2022年股东信](https://mp.weixin.qq.com/s/_F6V4FATjs9JTLE_ORRJ9A) 北京时间2月26日晚间，伯克希尔哈撒韦公司官网公布了2021年年度报告，以及一份巴菲特每年亲自撰写的致股东信。
 - [为什么不建议择时](https://mp.weixin.qq.com/s?__biz=MzI0NzQ1MDM5Mw==&mid=2247485062&idx=1&sn=24a51c18fa4170f7dc504245ba754934&chksm=e9ae98f0ded911e641716db6051d82058e44d7ea951072e19483526410825bc7aaa930bf2c20) 我不建议做择时交易，哪怕它“看上去”很容易赚钱。
 - [与信息舒适共处：我的信息极简管理实践](https://sspai.com/post/69749) cubox 团队成员对信息管理的剖析和实践
-- [A product manager’s guide to web3](https://www.lennysnewsletter.com/p/a-product-managers-guide-to-web3)
+- [A product manager’s guide to web3](https://www.lennysnewsletter.com/p/a-product-managers-guide-to-web3) 如何在 Web3 世界里做产品经理
 - [The Complete Guide to Full Stack Web3 Development](https://dev.to/dabit3/the-complete-guide-to-full-stack-web3-development-4g74) 使用 Next.js、Polygon、Solidity、The Graph、IPFS 和 Hardhat 构建全栈 Web3 应用。
 
 ### 我的观点
@@ -85,10 +84,10 @@ tags:
 
 ---
 ### 往期推荐
-- [#1 任天堂和上岭村](https://xiaoshu.zhubai.love/posts/2107172142524608512)
-- [#0 这是我为你写的第零封信](https://xiaoshu.zhubai.love/posts/2107165648034942976)
+- [一颗小树 #1 任天堂和上岭村](https://xiaoshu.zhubai.love/posts/2107172142524608512)
+- [一颗小树 #0 这是我为你写的第零封信](https://xiaoshu.zhubai.love/posts/2107165648034942976)
 
-你也可以在这里找到我：[微博](https://weibo.com/u/5361470927)、[Twitter](https://twitter.com/yeshu_in_future)。
+你也可以在这里找到我：[微博](https://weibo.com/u/5361470927)、[Twitter](https://twitter.com/yeshu_in_future)、[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)。
 
 > 这里是小树的 [newsletter](https://xiaoshu.zhubai.love)。 每周一发布，欢迎[订阅](https://xiaoshu.zhubai.love)。
 > 如果你觉得这篇文章对你有用，欢迎分享给更多好友。
