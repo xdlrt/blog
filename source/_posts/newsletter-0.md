@@ -39,9 +39,15 @@ newsletter 相比社交媒体的缺失的主要是互动性，但也许不是坏
 
 每一期都是写给你们的一封信，让我们一起回到从前车马很慢的年代。
 
+谢谢你的关注，我们下期再见。👋🏻
+
 ---
 
-### 如何订阅
-newsletter 每周一发布，同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love/)。
-可以自由选择微信或邮件方式订阅。
-更好的阅读体验，推荐订阅[竹白专栏](https://xiaoshu.zhubai.love/)。
+### 往期推荐
+- [#1 任天堂和上岭村](https://xiaoshu.zhubai.love/posts/2107172142524608512)
+- [#0 这是我为你写的第零封信](https://xiaoshu.zhubai.love/posts/2107165648034942976)
+
+你也可以在这里找到我：[微博](https://weibo.com/u/5361470927)、[Twitter](https://twitter.com/yeshu_in_future)。
+
+> 这里是小树的 [newsletter](https://xiaoshu.zhubai.love)。 每周一发布，欢迎[订阅](https://xiaoshu.zhubai.love)。
+> 如果你觉得这篇文章对你有用，欢迎分享给更多好友。
