@@ -1,5 +1,5 @@
 ---
-title: newsletter-2
+title: 一颗小树 @2 持续学习来应对这个复杂多变的世界
 categories: newsletter
 abbrlink: 37d54dfc
 date: 2022-02-27 12:34:50
