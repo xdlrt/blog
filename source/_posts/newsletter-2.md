@@ -1,15 +1,15 @@
 ---
-title: 一颗小树 @2 持续学习来应对这个复杂多变的世界
+title: '一颗小树 #2 持续学习来应对这个复杂多变的世界'
 categories: newsletter
 abbrlink: 37d54dfc
 date: 2022-02-27 12:34:50
 tags:
+description: 我在生活中会遇到非常多的问题，我喜欢通过学习相关领域的知识来解决它们。如果在这个过程中我能够用学到的东西帮助到其他人，我会收获非常多的成就感和价值感。
 ---
-
-> *你好，我是小树。这是我为你写的第 2 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 25 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。*
 
 <!-- more -->
 
+> *你好，我是小树。这是我为你写的第 2 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 25 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。*
 ### 本期导读
 - [产品] 把限制作为一种设计哲学
 - [开源] 如何做好一个开源项目

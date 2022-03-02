@@ -1,15 +1,15 @@
 ---
-title: 一颗小树 @1 任天堂和上岭村
+title: '一颗小树 #1 任天堂和上岭村'
 categories: newsletter
 abbrlink: 5e8a0c47
 date: 2022-02-21 13:01:25
 tags:
+description: 在我的心里，我是一个玩家。
 ---
-> *你好，我是小树。这是我为你写的第 1 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 13 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。*
-
 
 <!-- more -->
 
+> *你好，我是小树。这是我为你写的第 1 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 13 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。*
 ### 任天堂和岩田聪
 上周读完了《岩田先生：任天堂传奇社长如是说》，整本书像是碎片化的对谈录，细节展开的不多，记录一些印象深刻的片段。
 > On my business card, I am a corporate president.
