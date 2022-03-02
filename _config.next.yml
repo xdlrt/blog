@@ -28,11 +28,11 @@ creative_commons:
 
 menu:
   home: /
-  tags: /tags/
-  categories: /categories/
+  about: /about/
+  # tags: /tags/
+  # categories: /categories/
   archives: /archives/
   # commonweal: /404/
-  about: /about/
 
 menu_settings:
   icons: true
@@ -118,6 +118,7 @@ reward:
 custom_file_path:
   sidebar: source/_data/sidebar.njk
   footer: source/_data/footer.njk
+  style: source/_data/styles.styl
 
 cnzz: true
 
