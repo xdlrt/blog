@@ -15,7 +15,7 @@ comments: false
 ## 关于这个博客
 我从 2016 年开始写博客，中间停停写写很多次。最初写博客是为了记录自己学习的过程，现在写博客是为了分享和交流。
 博客的内容是完全免费的，你可以在[注明出处和作者并以相同方式分享](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)的前提下转载此博客的内容。如果这些内容能对你有帮助或启发，欢迎转发给你的朋友，或者私信、邮件告诉我，对我是莫大的鼓励。
-博客支持 <a href="https://geekplux.com/feed.xml" target="_blank" style="background: #fc6423; color: rgb(255, 255, 255); padding: 0px 5px 1px; border-radius: 2px; text-decoration: none; border: none; font-size: 14px; vertical-align: text-bottom;">RSS</a> 方式订阅。
+博客支持 <a href="/atom.xml" target="_blank" style="background: #fc6423; color: rgb(255, 255, 255); padding: 0px 5px 1px; border-radius: 2px; text-decoration: none; border: none; font-size: 14px; vertical-align: text-bottom;">RSS</a> 方式订阅。
 
 ## 我的兴趣爱好
 - 在不断尝试和探索，希望能拥有自己的独立产品
