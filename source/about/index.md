@@ -6,14 +6,16 @@ comments: false
 
 我是小树，一名普通的前端程序员，现在在做协同文档产品。你可以在 [Github](https://github.com/xdlrt) 上找到我的开源社区动态。日常的片段会在 [Twitter](https://twitter.com/yeshu_in_future) 和[微博](https://weibo.com/u/5361470927)中更新，不定期更新[博客](https://yeshu.cloud)和[公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)，每周会为你写[一封信](https://xiaoshu.zhubai.love)。
 
-## 每周来信
+我对现在状态的总结是：所有的努力都是为了拥有更多选择的权利，选择在哪生活，选择做什么样的事，选择和什么样的人一起工作等等。 
+
+## 关于每周来信
 
 <a href="https://geekplux.zhubai.love" target="_blank" style="background: #fc6423; color: rgb(255, 255, 255); padding: 5px 30px; border-radius: 5px; text-decoration: none; border: none; font-size: 14px;">点此订阅我的 Newsletter</a>
 
 每一期都是我为你写的一封信，让我们一起回到从前车马很慢的年代。我关注的领域包括但不限于技术、开源、投资理财、Crypto，每周更新相关内容，欢迎你来。
 
 ## 关于这个博客
-我从 2016 年开始写博客，中间停停写写很多次。最初写博客是为了记录自己学习的过程，现在写博客是为了分享和交流。
+我从 2016 年开始写博客，中间停停写写很多次。最初写博客是为了记录自己学习的过程。现在写博客是为了向外输出自己的所学所思，希望能找到更多同路人，收获更多的交流和讨论。
 博客的内容是完全免费的，你可以在[注明出处和作者并以相同方式分享](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)的前提下转载此博客的内容。如果这些内容能对你有帮助或启发，欢迎转发给你的朋友，或者私信、邮件告诉我，对我是莫大的鼓励。
 博客支持 <a href="/atom.xml" target="_blank" style="background: #fc6423; color: rgb(255, 255, 255); padding: 0px 5px 1px; border-radius: 2px; text-decoration: none; border: none; font-size: 14px; vertical-align: text-bottom;">RSS</a> 方式订阅。
 
