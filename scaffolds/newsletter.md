@@ -7,7 +7,7 @@ description:
 ---
 > *你好，我是小树。这是我为你写的第 n 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 25 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。*
 
----
+
 ### 本期导读
 
 ### 我在看什么
@@ -21,8 +21,8 @@ description:
 ---
 
 ### 往期推荐
-- [#1 任天堂和上岭村](https://xiaoshu.zhubai.love/posts/2107172142524608512)
-- [#0 这是我为你写的第零封信](https://xiaoshu.zhubai.love/posts/2107165648034942976)
+- [一颗小树 #1 任天堂和上岭村](https://xiaoshu.zhubai.love/posts/2107172142524608512)
+- [一颗小树 #0 这是我为你写的第零封信](https://xiaoshu.zhubai.love/posts/2107165648034942976)
 
 你也可以在这里找到我：[微博](https://weibo.com/u/5361470927)、[Twitter](https://twitter.com/yeshu_in_future)、[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)。
 
