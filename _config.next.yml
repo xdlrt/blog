@@ -122,5 +122,8 @@ custom_file_path:
 
 cnzz: true
 
+toc:
+  number: false
+
 contribution:
   enable: false
