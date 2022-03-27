@@ -28,6 +28,9 @@ jobs:
         with:
           node-version: "16"
           check-latest: true
+      
+      - name: Install hexo
+        run: npm i -g hexo@6
 
       - name: Install dependencies
         run: yarn
