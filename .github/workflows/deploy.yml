@@ -38,5 +38,12 @@ jobs:
       - name: Install dependencies
         run: yarn
       
+      - name: Build
+        run: hexo clean & hexo generate
+        
       - name: Deploy
-        run: hexo clean & hexo deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          repository-name: xdlrt/xdlrt.github.io
+          folder: public
