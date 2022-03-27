@@ -129,4 +129,7 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:xdlrt/xdlrt.github.io.git
+  branch: master
+  message: deploy blog by hexo
