@@ -47,4 +47,6 @@ jobs:
           token: ${{ secrets.G_T }}
           branch: master
           repository-name: xdlrt/xdlrt.github.io
+          git-config-name: xdlrt
+          git-config-email: 673643706@qq.com
           folder: public
