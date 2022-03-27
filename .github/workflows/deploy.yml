@@ -29,9 +29,6 @@ jobs:
           node-version: "16"
           check-latest: true
       
-      - name: Set up git config
-        run: git config --global user.email "673643706@qq.com" & git config --global user.name "xdlrt"
-      
       - name: Install hexo
         run: npm i -g hexo@6
 
