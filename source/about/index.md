@@ -37,6 +37,9 @@ comments: false
 博客的内容是完全免费的，你可以在[注明出处和作者并以相同方式分享](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)的前提下转载此博客的内容。如果这些内容能对你有帮助或启发，欢迎转发给你的朋友，或者私信、邮件告诉我，对我是莫大的鼓励。
 博客支持 <a href="/atom.xml" target="_blank" style="background: #fc6423; color: rgb(255, 255, 255); padding: 0px 5px 1px; border-radius: 2px; text-decoration: none; border: none; font-size: 14px; vertical-align: text-bottom;">RSS</a> 方式订阅。
 
+## 我的作品
+- [Website Card](https://website-card.vercel.app/)，一个获取页面信息并以卡片方式展示的小工具
+
 ## 我的日常工作流
 - 使用「Cubox」 作为 Inbox，收集需要稍后读的各类内容，在其中完成有价值内容的筛选和批注
 - 使用「[flomo](https://flomoapp.com/register2/?MjUxMzc) 」来记录临时笔记，并定期转换为永久笔记
