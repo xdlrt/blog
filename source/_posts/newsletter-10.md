@@ -3,7 +3,7 @@ title: '一颗小树 #10 疫情囤货指南'
 categories: newsletter
 date: 2022-04-24 21:52:22
 tags:
-description:
+description: 准备好之后，就踏踏实实等待每一个阶段的来临，正常应对。
 ---
 > *你好，我是小树。这是我为你写的第 10 封信。每期都会同步更新在微信公众号「一颗小树」和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 50 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。*
 
