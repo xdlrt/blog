@@ -116,7 +116,7 @@ Incremental Static Regeneration (ISR) 是 Nextjs 为了解决静态站点膨胀�
 ---
 
 ### 往期推荐
-- [一颗小树 #9 不要倒在黎明前](https://xiaoshu.zhubai.love/posts/2127657453835132928)
+- [一颗小树 #9 疫情之下 重建内心的秩序](https://xiaoshu.zhubai.love/posts/2127657453835132928)
 - [一颗小树 #8 不要倒在黎明前](https://xiaoshu.zhubai.love/posts/2125116827176398848)
 - [一颗小树 #6 和自己的产品一起成长](https://xiaoshu.zhubai.love/posts/2120043452577370112)
 
