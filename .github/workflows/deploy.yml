@@ -43,7 +43,7 @@ jobs:
         run: hexo clean & hexo generate
         
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@4.2.0
         with:
           token: ${{ secrets.G_T }}
           branch: master
