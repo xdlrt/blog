@@ -1,9 +1,10 @@
 ---
 title: '一颗小树 #14 让自己成为问题的终结者'
 categories: newsletter
+description: 成为别人解决方案的一部分，而不是问题。
+abbrlink: 3e44b454
 date: 2022-05-22 22:29:28
 tags:
-description: 成为别人解决方案的一部分，而不是问题。
 ---
 > *你好，我是小树。这是我为你写的第 14 封信。每期都会同步更新在微信公众号「一颗小树」和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 54 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。*
 
