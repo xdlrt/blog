@@ -4,7 +4,7 @@ date: 2022-01-06 23:19:28
 comments: false
 ---
 
-我是小树，一名普通的前端程序员，现在在做协同文档产品。你可以在 [Github](https://github.com/xdlrt) 上找到我的开源社区动态。日常的片段会在 [Twitter](https://twitter.com/yeshu_in_future) 和[微博](https://weibo.com/u/5361470927)中更新，不定期更新[博客](https://yeshu.cloud)和[公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)，每周会为你写[一封信](https://xiaoshu.zhubai.love)。
+我是小树，一名普通的前端程序员，现在在做协同文档产品。你可以在 [Github](https://github.com/xdlrt) 上找到我的开源社区动态。日常的片段会在 [Twitter](https://twitter.com/yeshu_in_future) 和[即刻](https://m.okjike.com/users/8617a08c-ba6b-4df3-8fec-9a6682c54677)中更新，不定期更新[博客](https://yeshu.cloud)和[公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)，每周会为你写[一封信](https://xiaoshu.zhubai.love)。
 
 ## 我的人生信念
 1. 守时
@@ -29,9 +29,9 @@ comments: false
 - 使用「Cubox」 作为 Inbox，收集需要稍后读的各类内容，在其中完成有价值内容的筛选和批注
 - 使用「[flomo](https://flomoapp.com/register2/?MjUxMzc) 」来记录临时笔记，并定期转换为永久笔记
 - 使用「语雀」作为个人知识库，沉淀成体系的内容
-- 注重信源的准确性，不喜欢一切用算法推荐的平台，主要通过关注我认为值得关注的人和媒体来获取信息
 - 使用「滴答清单」作为主力的 GTD 工具
 - 使用「MoneyWiz」作为主力的家庭财务管理工具
+- 注重信源的准确性，不喜欢一切用算法推荐的平台，主要通过关注我认为值得关注的人和媒体来获取信息
 
 ## 我的兴趣爱好
 - 在不断尝试和探索，希望能拥有自己的独立产品
