@@ -7,11 +7,11 @@ description:
 ---
 > *你好，我是小树。这是我为你写的第 n 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 25 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。*
 
-### 我在看什么
+### xxx
 
-### 我的观点
+### 内容推荐
 
-### 和你们聊聊
+### 碎碎念
 
 谢谢你的关注，我们下期再见。👋🏻
 
