@@ -1,5 +1,5 @@
 ---
-title: '一颗小树 #33 故乡的记忆'
+title: '一颗小树 #33 回不去的名字叫家乡'
 categories: newsletter
 abbrlink: 22e785b1
 date: 2022-10-08 21:05:43
