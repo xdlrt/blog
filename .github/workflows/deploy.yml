@@ -6,7 +6,7 @@ name: deploy-to-github-pages
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,16 +32,16 @@ jobs:
         with:
           node-version: "16"
           check-latest: true
-      
+
       - name: Install hexo
         run: npm i -g hexo@6
 
       - name: Install dependencies
         run: yarn
-      
+
       - name: Build
         run: hexo clean & hexo generate
-        
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.2.0
         with:
