@@ -20,20 +20,26 @@ export const LOGO_IMAGE = {
 export const SOCIALS: SocialObjects = [
   {
     name: "Github",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: ` ${SITE.title} on Github`,
+    href: "https://github.com/xdlrt",
+    linkTitle: ` ${SITE.title} 的 Github 主页`,
     active: true,
   },
   {
     name: "Twitter",
-    href: "https://github.com/satnaing/astro-paper",
-    linkTitle: `${SITE.title} on Twitter`,
-    active: false,
+    href: "https://twitter.com/yeshu_in_future",
+    linkTitle: `${SITE.title} 的 Twitter 主页`,
+    active: true,
   },
   {
     name: "Mail",
     href: "mailto:xdlrt0111@163.com",
-    linkTitle: `Send an email to ${SITE.title}`,
-    active: false,
+    linkTitle: `发送邮件到 ${SITE.title}`,
+    active: true,
+  },
+  {
+    name: "RSS",
+    href: "/rss.xml",
+    linkTitle: `${SITE.title} 的 RSS 订阅源`,
+    active: true,
   },
 ];

@@ -47,17 +47,17 @@ const { activeNav } = Astro.props;
         <ul id="menu-items" class="display-none sm:flex">
           <li>
             <a href="/posts" class={activeNav === "posts" ? "active" : ""}>
-              Posts
+              文章
             </a>
           </li>
           <li>
             <a href="/tags" class={activeNav === "tags" ? "active" : ""}>
-              Tags
+              标签
             </a>
           </li>
           <li>
             <a href="/about" class={activeNav === "about" ? "active" : ""}>
-              About
+              关于我
             </a>
           </li>
           <li>
@@ -116,7 +116,7 @@ const { activeNav } = Astro.props;
     @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
   }
   .logo {
-    @apply absolute py-1 text-xl font-semibold sm:static sm:text-2xl;
+    @apply absolute py-1 text-xl font-semibold sm:text-2xl;
   }
   .hamburger-menu {
     @apply self-end p-2 sm:hidden;

@@ -2,20 +2,29 @@
 // Remove current url path and remove trailing slash if exists
 const currentUrlPath = Astro.url.pathname.replace(/\/+$/, "");
 
+const pathMap: Record<string, string> = {
+  posts: "文章",
+  tags: "标签",
+  about: "关于我",
+  search: "搜索",
+};
+
 // Get url array from path
 // eg: /tags/tailwindcss => ['tags', 'tailwindcss']
-const breadcrumbList = currentUrlPath.split("/").slice(1);
+const breadcrumbList = currentUrlPath
+  .split("/")
+  .slice(1)
+  .map(path => {
+    return decodeURIComponent(pathMap[path] || path);
+  });
 
-// if breadcrumb is Home > Posts > 1 <etc>
-// replace Posts with Posts (page number)
-breadcrumbList[0] === "posts" &&
-  breadcrumbList.splice(0, 2, `Posts (page ${breadcrumbList[1] || 1})`);
+breadcrumbList[0] === "文章" && breadcrumbList.splice(0, 2, `文章`);
 ---
 
 <nav class="breadcrumb" aria-label="breadcrumb">
   <ul>
     <li>
-      <a href="/">Home</a>
+      <a href="/">首页</a>
       <span aria-hidden="true">&#62;</span>
     </li>
     {

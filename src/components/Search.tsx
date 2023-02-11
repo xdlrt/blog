@@ -82,7 +82,7 @@ export default function SearchBar({ searchList }: Props) {
         border-opacity-40 bg-skin-fill py-3 pl-10
         pr-3 placeholder:italic placeholder:text-opacity-75 
         focus:border-skin-accent focus:outline-none"
-          placeholder="Search for anything..."
+          placeholder="搜索任意文章..."
           type="text"
           name="search"
           value={inputVal}
@@ -95,11 +95,9 @@ export default function SearchBar({ searchList }: Props) {
 
       {inputVal.length > 1 && (
         <div className="mt-8">
-          Found {searchResults?.length}
-          {searchResults?.length && searchResults?.length === 1
-            ? " result"
-            : " results"}{" "}
-          for '{inputVal}'
+          找到 {searchResults?.length}
+          {searchResults?.length && searchResults?.length === 1 ? " 篇" : " 篇"}
+          有关 '{inputVal}' 的文章
         </div>
       )}
 

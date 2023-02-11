@@ -10,6 +10,7 @@ import slugify from "@utils/slugify";
 import { SITE } from "@config";
 import { getPublishPosts } from "@utils/getPosts";
 import type { PostCollectionEntry } from "@types";
+import getSortedPosts from "@utils/getSortedPosts";
 
 export interface Props {
   post: PostCollectionEntry;
@@ -33,15 +34,12 @@ const { tag } = Astro.props;
 
 const posts = await getPublishPosts();
 
-const tagPosts = getPostsByTag(posts, tag);
+const tagPosts = getSortedPosts(getPostsByTag(posts, tag));
 ---
 
-<Layout title={`Tag:${tag} | ${SITE.title}`}>
+<Layout title={`标签:${tag} | ${SITE.title}`}>
   <Header activeNav="tags" />
-  <Main
-    pageTitle={`Tag:${tag}`}
-    pageDesc={`All the articles with the tag "${tag}".`}
-  >
+  <Main>
     <ul>
       {
         tagPosts.map(({ data }) => (

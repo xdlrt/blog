@@ -31,7 +31,8 @@ export type SocialMedia =
   | "Skype"
   | "Steam"
   | "Telegram"
-  | "Mastodon";
+  | "Mastodon"
+  | "RSS";
 
 export type PostCollectionEntry =
   | CollectionEntry<"blog">
