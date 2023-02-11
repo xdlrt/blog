@@ -1,0 +1,27 @@
+---
+import { SITE } from "@config";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Search from "@components/Search";
+import { getPublishPosts } from "@utils/getPosts";
+
+// Retrieve all articles
+const posts = await getPublishPosts();
+
+// List of items to search in
+const searchList = posts.map(({ data }) => ({
+  title: data.title,
+  description: data.description,
+  data,
+}));
+---
+
+<Layout title={`搜索 | ${SITE.title}`}>
+  <Header activeNav="search" />
+  <Main>
+    <Search client:load searchList={searchList} />
+  </Main>
+  <Footer />
+</Layout>

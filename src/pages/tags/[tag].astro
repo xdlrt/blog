@@ -1,0 +1,52 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Card from "@components/Card";
+import getUniqueTags from "@utils/getUniqueTags";
+import getPostsByTag from "@utils/getPostsByTag";
+import slugify from "@utils/slugify";
+import { SITE } from "@config";
+import { getPublishPosts } from "@utils/getPosts";
+import type { PostCollectionEntry } from "@types";
+import getSortedPosts from "@utils/getSortedPosts";
+
+export interface Props {
+  post: PostCollectionEntry;
+  tag: string;
+}
+
+export async function getStaticPaths() {
+  const posts = await getPublishPosts();
+
+  const tags = getUniqueTags(posts);
+
+  return tags.map(tag => {
+    return {
+      params: { tag },
+      props: { tag },
+    };
+  });
+}
+
+const { tag } = Astro.props;
+
+const posts = await getPublishPosts();
+
+const tagPosts = getSortedPosts(getPostsByTag(posts, tag));
+---
+
+<Layout title={`标签:${tag} | ${SITE.title}`}>
+  <Header activeNav="tags" />
+  <Main>
+    <ul>
+      {
+        tagPosts.map(({ data }) => (
+          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+        ))
+      }
+    </ul>
+  </Main>
+  <Footer />
+</Layout>

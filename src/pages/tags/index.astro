@@ -1,0 +1,24 @@
+---
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Layout from "@layouts/Layout.astro";
+import Main from "@layouts/Main.astro";
+import Tag from "@components/Tag.astro";
+import getUniqueTags from "@utils/getUniqueTags";
+import { SITE } from "@config";
+import { getPublishPosts } from "@utils/getPosts";
+
+const posts = await getPublishPosts();
+
+let tags = getUniqueTags(posts);
+---
+
+<Layout title={`标签 | ${SITE.title}`}>
+  <Header activeNav="tags" />
+  <Main>
+    <ul>
+      {tags.map(tag => <Tag name={tag} size="lg" />)}
+    </ul>
+  </Main>
+  <Footer />
+</Layout>
