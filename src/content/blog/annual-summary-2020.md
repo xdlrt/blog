@@ -4,7 +4,6 @@ postSlug: 347f40bb
 pubDatetime: 2021-01-04T10:01:57.000Z
 tags:
   - 年终总结
-  - 年终总结
 description: 一些关于 2020 的记忆。
 ---
 

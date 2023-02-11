@@ -1,8 +1,6 @@
 ---
 title: how-to-use-clipboard-in-browser
 pubDatetime: 2022-01-11 13:05:12
-tags:
-  - 技术
 description: 如何优雅的在 Web 应用中实现剪贴板？
 ---
 

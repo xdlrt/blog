@@ -3,8 +3,7 @@ title: 如何写好简历，拿到大厂 offer 的敲门砖
 postSlug: 2b0ba94e
 pubDatetime: 2020-02-06T14:42:34.000Z
 tags:
-  - 思考
-  - 招聘
+  - 面试
 description: 随着各大互联网公司的实习生招聘纷纷火热开展，如何拿到心仪的 offer 就成了摆在大家面前的一个现实问题。
 ---
 

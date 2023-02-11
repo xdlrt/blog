@@ -3,7 +3,7 @@ title: 阿里前端也切图？不，人工智能帮你做
 postSlug: fd9d5608
 pubDatetime: 2020-03-24T00:05:40.000Z
 tags:
-  - 技术
+  - D2C
 description: 前端智能化有哪些作用？
 ---
 

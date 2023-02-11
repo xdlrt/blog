@@ -2,6 +2,8 @@
 title: 与其感慨路难行，不如马上出发
 postSlug: ad1d0424
 pubDatetime: 2020-07-05T23:34:35.000Z
+tags:
+  - 随笔
 description: 失踪人口回归，分享一些现状和思考，还有一些下阶段的规划。
 ---
 
