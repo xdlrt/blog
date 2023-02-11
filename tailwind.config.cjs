@@ -58,10 +58,8 @@ module.exports = {
       transparent: "transparent",
     },
     fontFamily: {
-      mono: ["IBM Plex Mono", "monospace"],
-      // mono: ["LXGW WenKai Lite", "sans-serif"],
+      mono: ["LXGW WenKai Lite", "sans-serif"],
     },
-    // },
   },
   plugins: [require("@tailwindcss/typography")],
 };
