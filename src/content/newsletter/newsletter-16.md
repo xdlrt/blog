@@ -7,7 +7,7 @@ tags:
 description: 纪录片吸引人的地方，可能并不在于它有多么跌宕起伏的剧情，或者口号式的豪言壮语，而是在观看人物真实的经历时，看到自己的影子，从而得到某种借鉴和激励。
 ---
 
-> _你好，我是小树。这是我为你写的第 16 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 58 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 16 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 58 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 ### 一场有关素质教育和真实生长的试验
 

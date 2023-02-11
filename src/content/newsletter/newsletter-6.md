@@ -8,7 +8,7 @@ description: >-
   人生曲线上，中短期由于各种随机性和运气事件，可能会有超出实际价值的波峰，也可能会有漫漫低估的长谷。但最终，这条曲线会收敛回归到的均值，是我们的对待生活的态度，是我们长期把时间和精力都花在哪些事情上，播下了哪些未来可能开花结果的种子。
 ---
 
-> _你好，我是小树。这是我为你写的第 6 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 46 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 6 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 46 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 ## 本期导读
 

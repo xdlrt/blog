@@ -7,7 +7,7 @@ tags:
 description: 在投资里对自己诚实很重要，因为你的对手只有你自己，在学习和实践投资的过程中，你会不断地发现自己的弱点，正视并战胜或接纳它们，在其它方面也会一样受益。
 ---
 
-> _你好，我是小树。这是我为你写的第 3 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 35 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 3 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 35 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 ### 本期导读
 

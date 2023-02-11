@@ -7,7 +7,7 @@ tags:
 description: 所有的努力都是为了拥有更多选择的权利，选择在哪生活，选择做什么样的事，选择和什么样的人一起工作。
 ---
 
-> _你好，我是小树。这是我为你写的第 47 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 189 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 47 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 189 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 我在 2022 年初的时候为自己梳理了几条人生信念，也可以称之为我自己的原则。
 

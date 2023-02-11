@@ -50,7 +50,7 @@
   }
   .prose {
     @apply prose-headings:!mb-3 prose-headings:!text-skin-base 
-    prose-h3:italic prose-p:!text-skin-base 
+    prose-h3:prose-p:!text-skin-base 
     prose-a:!text-skin-base prose-a:!decoration-dashed prose-a:underline-offset-8
     hover:prose-a:text-skin-accent prose-blockquote:!border-l-skin-accent
     prose-blockquote:border-opacity-50 prose-blockquote:opacity-80
@@ -88,6 +88,17 @@
   }
   .prose h2#table-of-contents + p {
     @apply hidden;
+  }
+
+  .prose
+    :where(blockquote p:first-of-type):not(
+      :where([class~="not-prose"] *)
+    )::before {
+    content: "" !important;
+  }
+
+  .prose :where(blockquote):not(:where([class~="not-prose"] *)) {
+    font-style: normal !important;
   }
 
   /* ===== scrollbar ===== */

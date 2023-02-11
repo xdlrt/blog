@@ -7,7 +7,7 @@ tags:
 description: 多维表格的底色是 APaaS 平台，关键是解决业务数字化的问题，协作能力是锦上添花，以数据库的思维方式来思考。
 ---
 
-> _你好，我是小树。这是我为你写的第 34 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 126 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 34 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 126 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 最近调研学习了一些多维表格产品，记录一下自己收获的基础认知。
 

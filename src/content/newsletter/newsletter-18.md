@@ -8,7 +8,7 @@ description: >-
   精美的东西都是脆弱的，计划总是赶不上变化，遇到变化很容易打乱整个计划和节奏，一旦开始出现问题导致无法按照原计划进行，那种挫败感对自己做事情的信心会造成巨大的打击，整个计划难以为继。
 ---
 
-> _你好，我是小树。这是我为你写的第 18 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 58 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 18 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 58 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 ### 规划要灵活不要精密
 

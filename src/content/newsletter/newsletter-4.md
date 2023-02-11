@@ -7,7 +7,7 @@ tags:
 description: 当暴风雨过去，你不会记得自己是如何度过的，你甚至不确定暴风雨是否真正结束，但你将不再是当初走进暴风雨里的那个人。这就是暴风雨的意义。
 ---
 
-> _你好，我是小树。这是我为你写的第 4 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 40 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 4 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 40 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 ### 本期导读
 

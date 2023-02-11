@@ -9,7 +9,7 @@ description: 在我的心里，我是一个玩家。
 
 <!-- more -->
 
-> _你好，我是小树。这是我为你写的第 1 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 13 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 1 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 13 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 ### 任天堂和岩田聪
 

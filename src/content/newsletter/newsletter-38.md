@@ -7,7 +7,7 @@ tags:
 description: 难忘的一晚，感谢所有人。
 ---
 
-> _你好，我是小树。这是我为你写的第 38 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 143 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 38 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 143 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 上周四晚上 8 点，我照往常一样，整理着今天的工作。这时，群里突然有人问了一句：“一楼是不让出去了吗？”
 

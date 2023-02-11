@@ -7,7 +7,7 @@ tags:
 description: 数字化从来都不是少数人的权利，而是千行百业共同进步。每一个人、每一个组织、每一家企业都应该享受到数字化的红利。
 ---
 
-> _你好，我是小树。这是我为你写的第 37 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 129 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 37 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 129 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 书接上回[初探多维表格](https://mp.weixin.qq.com/s/M27pTinwH0jV28NjhLfaHw)，继上次基础的产品功能体验之后，打算利用多维表格解决一个实际问题，更深入的感受产品带来的便利。
 

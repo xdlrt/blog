@@ -7,7 +7,7 @@ tags:
 description: 困难的事情之所以困难，是因为我们没有把它变得具体。事情在不断拆解之后，直到踮踮脚就能够到的地方，就会发现也许没有那么困难。
 ---
 
-> _你好，我是小树。这是我为你写的第 22 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 74 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 22 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 74 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 最近收到的问题中，关于「如何构建自己的信源」有不少人提及，待我整理一下，后续会分享给大家。
 

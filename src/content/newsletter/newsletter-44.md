@@ -7,7 +7,7 @@ tags:
 description: "生活已经挺艰难了，有时候也不用太为难自己，要张弛有度，刷刷小视频也是很快乐的:)"
 ---
 
-> _你好，我是小树。这是我为你写的第 44 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 173 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 44 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 173 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 信源即信息的来源，是我们输入信息的渠道。在信息爆炸的时代，我们不缺内容，缺的是适合自己并有意义的内容。
 

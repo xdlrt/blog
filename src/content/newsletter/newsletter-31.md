@@ -7,7 +7,7 @@ tags:
 description: Figma 是为团队合作而生的设计工具，而不仅仅是设计师的设计工具。
 ---
 
-> _你好，我是小树。这是我为你写的第 31 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 107 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 31 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 107 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 最近看到 Adobe 200 亿美元收购 Figma 的新闻，在查看相关信息的时候发现了一篇 2020 年 6 月的文章 [Why Figma Wins](https://kwokchain.com/2020/06/19/why-figma-wins/)，内容很不错，这篇是学习笔记。
 

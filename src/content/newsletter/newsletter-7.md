@@ -7,7 +7,7 @@ tags:
 description: 儿时的经历塑造了现在的我，回想小时候让我热切的瞬间，也往往能让我对现在的决策做出更符合本心的选择。
 ---
 
-> _你好，我是小树。这是我为你写的第 7 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 47 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 7 封信。每期都会同步更新在[微信公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 47 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 这周休假，和大家聊点轻松的。
 

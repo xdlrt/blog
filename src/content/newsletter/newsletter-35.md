@@ -7,7 +7,7 @@ tags:
 description: 北京的秋是金黄色的叶子，是和煦的阳光，是凉凉的风，是天高云淡。
 ---
 
-> _你好，我是小树。这是我为你写的第 35 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 127 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 35 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 127 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 这周末天气很好，于是在媳妇儿的策划下，决定去雁栖湖一游。
 

@@ -7,7 +7,7 @@ tags:
 description: 借用一下看理想的标题。
 ---
 
-> _你好，我是小树。这是我为你写的第 40 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 160 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 40 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 160 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 最近一周，包括我的家乡在内都发生不少不好的事情，很多人的心情都不太好，简单聊聊这周居家的见闻和“发疯”的时刻。
 

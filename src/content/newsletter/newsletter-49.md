@@ -7,7 +7,7 @@ tags:
 description: 爱具体的人，不要爱抽象的人，要爱生活，不要爱生活的意义。
 ---
 
-> _你好，我是小树。这是我为你写的第 49 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 197 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。_
+> 你好，我是小树。这是我为你写的第 49 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 197 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
 
 最近读了一份小红书出品的《2023 小红书年度生活趋势》报告，有一些收获分享给大家。
 
