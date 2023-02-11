@@ -1,3 +1,5 @@
+import type { CollectionEntry } from "astro:content";
+
 export type SocialObjects = {
   name: SocialMedia;
   href: string;
@@ -30,3 +32,7 @@ export type SocialMedia =
   | "Steam"
   | "Telegram"
   | "Mastodon";
+
+export type PostCollectionEntry =
+  | CollectionEntry<"blog">
+  | CollectionEntry<"newsletter">;

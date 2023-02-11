@@ -7,12 +7,12 @@ import Footer from "@components/Footer.astro";
 import Card from "@components/Card";
 import LinkButton from "@components/LinkButton.astro";
 import slugify from "@utils/slugify";
-import type { CollectionEntry } from "astro:content";
+import type { PostCollectionEntry } from "@types";
 
 export interface Props {
   pageNum: number;
   totalPages: number;
-  posts: CollectionEntry<"blog">[];
+  posts: PostCollectionEntry[];
 }
 
 const { pageNum, totalPages, posts } = Astro.props;

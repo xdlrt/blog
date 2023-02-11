@@ -1,7 +1,7 @@
 import { slufigyAll } from "./slugify";
-import type { CollectionEntry } from "astro:content";
+import type { PostCollectionEntry } from "@types";
 
-const getPostsByTag = (posts: CollectionEntry<"blog">[], tag: string) =>
+const getPostsByTag = (posts: PostCollectionEntry[], tag: string) =>
   posts.filter(post => slufigyAll(post.data.tags).includes(tag));
 
 export default getPostsByTag;

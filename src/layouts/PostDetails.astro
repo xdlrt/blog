@@ -4,10 +4,10 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
-import type { CollectionEntry } from "astro:content";
+import type { PostCollectionEntry } from "@types";
 
 export interface Props {
-  post: CollectionEntry<"blog">;
+  post: PostCollectionEntry;
 }
 
 const { post } = Astro.props;

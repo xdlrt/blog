@@ -3,10 +3,9 @@ import { SITE } from "@config";
 import Posts from "@layouts/Posts.astro";
 import getSortedPosts from "@utils/getSortedPosts";
 import getPageNumbers from "@utils/getPageNumbers";
+import { getPublishPosts } from "@utils/getPosts";
 
-import { getCollection } from "astro:content";
-
-const posts = await getCollection("blog");
+const posts = await getPublishPosts();
 
 const sortedPosts = getSortedPosts(posts);
 
