@@ -65,10 +65,10 @@ layout: ../layouts/AboutLayout.astro
 - 推荐我看过的博客、电影和电视剧
 - 我在微博、Twitter 等社交媒体上有意义的输出
 
-<a href="https://xiaoshu.zhubai.love" target="_blank" style="background: #fc6423; color: rgb(255, 255, 255); padding: 5px 30px; border-radius: 5px; text-decoration: none; border: none; font-size: 14px;">点此订阅我的 Newsletter</a>
+<a href="https://xiaoshu.zhubai.love" target="_blank" style="background: rgba(var(--color-accent), var(--tw-text-opacity)); color: rgb(255, 255, 255)!important; padding: 5px 30px; border-radius: 5px; text-decoration: none; border: none; font-size: 14px;">点此订阅我的 Newsletter</a>
 
 ## 关于这个博客
 
 我从 2016 年开始写博客，中间停停写写很多次。最初写博客是为了记录自己学习的过程。现在写博客是为了向外输出自己的所学所思，希望能找到更多同路人，收获更多的交流和讨论。
 博客的内容是完全免费的，你可以在[注明出处和作者并以相同方式分享](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)的前提下转载此博客的内容。如果这些内容能对你有帮助或启发，欢迎转发给你的朋友，或者私信、邮件告诉我，对我是莫大的鼓励。
-博客支持 <a href="/atom.xml" target="_blank" style="background: #fc6423; color: rgb(255, 255, 255); padding: 0px 5px 1px; border-radius: 2px; text-decoration: none; border: none; font-size: 14px; vertical-align: text-bottom;">RSS</a> 方式订阅。
+博客支持 <a href="/rss.xml" target="_blank" style="background: rgba(var(--color-accent), var(--tw-text-opacity)); color: rgb(255, 255, 255)!important; padding: 0px 5px 1px; border-radius: 2px; text-decoration: none; border: none; font-size: 14px; vertical-align: text-bottom;">RSS</a> 方式订阅。
