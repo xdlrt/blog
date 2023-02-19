@@ -58,7 +58,7 @@ module.exports = {
       transparent: "transparent",
     },
     fontFamily: {
-      mono: ["LXGW WenKai Lite", "sans-serif"],
+      mono: ["Helvetica Neue", "-apple-system", "PingFang SC", "Microsoft YaHei", "STHeiti", "Helvetica", "Arial", "sans-serif"],
     },
   },
   plugins: [require("@tailwindcss/typography")],

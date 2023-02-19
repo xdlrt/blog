@@ -49,7 +49,6 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
       sizes="16x16"
       href="/images/favicon-16x16.png"
     />
-    <link rel="mask-icon" href="/images/logo.svg" color="#222" />
 
     <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
@@ -78,10 +77,6 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
         : socialImageURL}
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css"
-    />
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body>
