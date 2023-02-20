@@ -2,6 +2,7 @@
 title: how-to-use-clipboard-in-browser
 pubDatetime: 2022-01-11 13:05:12
 description: 如何优雅的在 Web 应用中实现剪贴板？
+draft: true
 ---
 
 如何优雅的在 Web 应用中实现剪贴板？

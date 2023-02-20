@@ -5,7 +5,7 @@ export const SITE = {
   author: "也树",
   desc: "In progress to be a product maker.",
   title: "一颗小树",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "/android-chrome-192x192.png",
   lightAndDarkMode: true,
   postPerPage: 10,
 };
