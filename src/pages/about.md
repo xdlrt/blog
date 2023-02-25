@@ -2,7 +2,9 @@
 layout: ../layouts/AboutLayout.astro
 ---
 
-我是小树，一名普通的前端程序员，现在在做协同文档产品。
+我是小树，前端工程师，在做协同表格。
+
+公众号「一颗小树」作者。
 
 你可以在 [Github](https://github.com/xdlrt) 上找到我的开源社区动态。日常的片段会在 [Twitter](https://twitter.com/yeshu_in_future) 和[即刻](https://m.okjike.com/users/8617a08c-ba6b-4df3-8fec-9a6682c54677)中更新，不定期更新[博客](https://yeshu.cloud)和[公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)，每周会为你写[一封信](https://xiaoshu.zhubai.love)。
 
