@@ -7,7 +7,7 @@ tags:
 description: ""
 ---
 
-> 你好，我是小树。这是我为你写的第 n 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 25 位朋友订阅了这封信，也欢迎你[邮件订阅](https://xiaoshu.zhubai.love)，第一时间收到更新推送。
+> 你好，我是小树。这是我为你写的第 n 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)和[竹白专栏](https://xiaoshu.zhubai.love)。现在有 25 位朋友订阅了这封信，也欢迎你。
 
 ### xxx
 
@@ -24,5 +24,4 @@ description: ""
 
 你也可以在这里找到我：[即刻](https://okjk.co/3Vsn5T)、[Twitter](https://twitter.com/yeshu_in_future)、微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)。
 
-> 这里是小树的 [newsletter](https://xiaoshu.zhubai.love)。 每周一发布，欢迎[订阅](https://xiaoshu.zhubai.love)。
 > 如果你觉得这篇文章对你有用，欢迎分享给更多好友。
