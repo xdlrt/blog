@@ -2,7 +2,7 @@
 layout: ../layouts/AboutLayout.astro
 ---
 
-我是小树，前端工程师，在做协同表格。
+我是小树，前端工程师，在做协同文档。
 
 公众号「一颗小树」作者。
 
@@ -34,43 +34,53 @@ layout: ../layouts/AboutLayout.astro
 
 ## 我的作品
 
-- [Website Card](https://website-card.vercel.app/)：一个获取页面信息并以卡片方式展示的小工具
-- [Markdowns](https://markdowns.yeshu.cloud)：一个基于 Markdown 的公众号排版工具
+- [Markdowns](https://markdowns.yeshu.cloud)：一个基于 Markdown 的公众号排版工具，用尽可能少的功能解决排版需求
 
 ## 我的日常工作流
 
-- 使用「Cubox」 作为 Inbox，收集需要稍后读的各类内容，在其中完成有价值内容的筛选和批注
-- 使用「[flomo](https://flomoapp.com/register2/?MjUxMzc) 」来记录临时笔记，并定期转换为永久笔记
-- 使用「语雀」作为个人知识库，沉淀成体系的内容
-- 使用「滴答清单」作为主力的 GTD 工具
-- 使用「MoneyWiz」作为主力的家庭财务管理工具
-- 注重信源的准确性，不喜欢一切用算法推荐的平台，主要通过关注我认为值得关注的人和媒体来获取信息
+- 使用 **Cubox** 作为 Inbox，收集需要稍后读的各类内容，在其中完成有价值内容的筛选和批注。如果你也感兴趣，可以使用我的推荐码 q8mvh3，我们可以各获得 7 天的会员奖励
+- 使用 **[flomo](https://flomoapp.com/register2/?MjUxMzc)** 来记录临时笔记，并定期转换为永久笔记
+- 使用 **Obsidian** 作为个人知识库的载体，沉淀成体系的内容
+- 使用 **滴答清单** 作为 GTD 工具
+- 使用 **MoneyWiz** 作为家庭财务管理工具
+- 不喜欢一切用算法推荐的平台，通过关注自己整理的优质信源摄入内容
 
 ## 我的兴趣爱好
 
-- 在不断尝试和探索，希望能拥有自己的独立产品
+- 在不断尝试和探索，希望能有时间和空间更自由的工作方式
 - 投资大白，目前更多专注在指数基金和可转债
 - 2300+ 小时的 Dota2 云玩家，任天堂的粉丝
 - 热爱说唱和乐队，喜欢能够真实表达自我的音乐
 
 ## 关于每周来信
 
-作者的核心诉求是表达。写一篇长文，需要考虑文章的格式、结构、内容的充实程度，还要把故事讲好，这是编辑更关注的事情。如果能尽可能地减少这个角色的频繁切换，会轻松很多。
+作者的核心诉求是表达。
+
+写一篇长文，需要考虑文章的格式、结构、内容的充实程度，还要把故事讲好，这是编辑更关注的事情。如果能尽可能地减少这个角色的频繁切换，会轻松很多。
+
 想要做好一件事，更好的不是把完成作为目标，更不用强制规定自己每天必须完成多少工作量，更重要的，是**搭建一个让自己可以持续做下去的环境**。
+
 我希望进一步降低自己写作的门槛和包袱，把我平时的看到的、听到的和想到的加以整理，定期提供给大家。这样的形式和输出的频率对我来说是可掌控的。
+
 不求干货满满，在这几分钟的阅读中能偶尔收获一星半点启发，也是很好的。
 
 ### 订阅它能收获哪些内容？
 
-- 我关注的领域相关内容的精读，包括但不限于前端技术、开源、投资理财、Web3
+- 我关注的领域相关内容的精读，包括但不限于技术、独立开发、投资理财等
 - 推荐我读过的书和文章
 - 推荐我看过的博客、电影和电视剧
-- 我在微博、Twitter 等社交媒体上有意义的输出
+- 我在即刻、Twitter 等社交媒体上有意义的输出
 
 <a href="https://xiaoshu.zhubai.love" target="_blank" style="background: rgba(var(--color-accent), var(--tw-text-opacity)); color: rgb(255, 255, 255)!important; padding: 5px 30px; border-radius: 5px; text-decoration: none; border: none; font-size: 14px;">点此订阅我的 Newsletter</a>
 
 ## 关于这个博客
 
-我从 2016 年开始写博客，中间停停写写很多次。最初写博客是为了记录自己学习的过程。现在写博客是为了向外输出自己的所学所思，希望能找到更多同路人，收获更多的交流和讨论。
-博客的内容是完全免费的，你可以在[注明出处和作者并以相同方式分享](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)的前提下转载此博客的内容。如果这些内容能对你有帮助或启发，欢迎转发给你的朋友，或者私信、邮件告诉我，对我是莫大的鼓励。
+我从 2016 年开始写博客，中间停停写写很多次。
+
+最初写博客是为了记录自己学习的过程。现在写博客是为了向外输出自己的所学所思，希望能找到更多同路人，收获更多的交流和讨论。
+
+博客的内容是完全免费的，你可以在[注明出处和作者并以相同方式分享](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)的前提下转载此博客的内容。
+
+如果这些内容能对你有帮助或启发，欢迎转发给你的朋友，或者私信、邮件告诉我，对我是莫大的鼓励。
+
 博客支持 <a href="/rss.xml" target="_blank" style="background: rgba(var(--color-accent), var(--tw-text-opacity)); color: rgb(255, 255, 255)!important; padding: 0px 5px 1px; border-radius: 2px; text-decoration: none; border: none; font-size: 14px; vertical-align: text-bottom;">RSS</a> 方式订阅。
