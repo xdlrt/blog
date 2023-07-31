@@ -1,5 +1,5 @@
 ---
-title: "关于大模型，我的实践和思考"
+title: "N 倍生产力提升：我的 AI 助理"
 pubDatetime: 2023-07-30T12:08:49.750Z
 postSlug: newsletter-74
 tags:
