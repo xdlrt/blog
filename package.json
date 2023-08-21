@@ -14,7 +14,7 @@
     "cz": "cz",
     "prepare": "husky install",
     "lint": "eslint .",
-    "new:newsletter": "node scripts/new newsletter"
+    "newsletter": "node scripts/new newsletter"
   },
   "dependencies": {
     "@astrojs/rss": "^2.4.3",
