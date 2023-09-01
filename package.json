@@ -17,7 +17,7 @@
     "newsletter": "node scripts/new newsletter"
   },
   "dependencies": {
-    "@astrojs/rss": "^2.4.3",
+    "@astrojs/rss": "^3.0.0",
     "astro": "^2.9.6",
     "fuse.js": "^6.6.2",
     "github-slugger": "^2.0.0",
