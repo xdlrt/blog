@@ -21,3 +21,6 @@ pnpm-debug.log*
 
 # ignore .astro directory
 .astro
+/test-results/
+/playwright-report/
+/playwright/.cache/
