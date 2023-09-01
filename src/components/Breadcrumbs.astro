@@ -9,6 +9,10 @@ const pathMap: Record<string, string> = {
   search: "搜索",
 };
 
+const linkMap: Record<string, string> = {
+  标签: "tags",
+};
+
 // Get url array from path
 // eg: /tags/tailwindcss => ['tags', 'tailwindcss']
 const breadcrumbList = currentUrlPath
@@ -25,7 +29,7 @@ breadcrumbList[0] === "文章" && breadcrumbList.splice(0, 2, `文章`);
   <ul>
     <li>
       <a href="/">首页</a>
-      <span aria-hidden="true">&#62;</span>
+      <span aria-hidden="true">&nbsp;&#62;&nbsp;</span>
     </li>
     {
       breadcrumbList.map((breadcrumb, index) =>
@@ -41,8 +45,8 @@ breadcrumbList[0] === "文章" && breadcrumbList.splice(0, 2, `文章`);
           </li>
         ) : (
           <li>
-            <a href={`/${breadcrumb}`}>{breadcrumb}</a>
-            <span aria-hidden="true">&#62;</span>
+            <a href={`/${linkMap[breadcrumb]}`}>{breadcrumb}</a>
+            <span aria-hidden="true">&nbsp;&#62;&nbsp;</span>
           </li>
         )
       )

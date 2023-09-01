@@ -90,6 +90,7 @@ export default function SearchBar({ searchList }: Props) {
           autoComplete="off"
           autoFocus
           ref={inputRef}
+          data-testid="search-input"
         />
       </label>
 

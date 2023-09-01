@@ -16,7 +16,7 @@ let tags = getUniqueTags(posts);
 <Layout title={`标签 | ${SITE.title}`}>
   <Header activeNav="tags" />
   <Main>
-    <ul>
+    <ul data-testid="tag-list">
       {tags.map(tag => <Tag name={tag} size="lg" />)}
     </ul>
   </Main>
