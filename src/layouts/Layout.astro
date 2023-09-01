@@ -1,5 +1,4 @@
 ---
-import { ViewTransitions } from "astro:transitions";
 import { SITE } from "@config";
 import "../styles/base.css";
 
@@ -75,7 +74,6 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
     />
 
     <script is:inline src="/toggle-theme.js"></script>
-    <ViewTransitions />
   </head>
   <body>
     <slot />
