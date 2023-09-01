@@ -1,6 +1,6 @@
 {
-  "name": "astro-paper",
-  "version": "2.1.0",
+  "name": "yeshu-blog",
+  "version": "2.0.0",
   "private": false,
   "scripts": {
     "dev": "astro dev",
@@ -14,7 +14,9 @@
     "cz": "cz",
     "prepare": "husky install",
     "lint": "eslint .",
-    "newsletter": "node scripts/new newsletter"
+    "newsletter": "node scripts/new newsletter",
+    "test:ui": "npx playwright test",
+    "test:ui:debug": "npx playwright test --ui"
   },
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
