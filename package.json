@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
-    "astro": "^2.9.6",
+    "astro": "^3.0.5",
     "fuse.js": "^6.6.2",
     "github-slugger": "^2.0.0",
     "remark-collapse": "^0.1.2",
@@ -29,7 +29,7 @@
   "devDependencies": {
     "@astrojs/react": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
-    "@astrojs/tailwind": "^4.0.0",
+    "@astrojs/tailwind": "^5.0.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/github-slugger": "^2.0.0",
     "@types/react": "^18.2.21",
@@ -43,6 +43,7 @@
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
+    "prettier-plugin-astro": "^0.12.0",
     "prettier-plugin-tailwindcss": "^0.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

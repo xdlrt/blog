@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import { SITE } from "@config";
 import "../styles/base.css";
 
@@ -13,7 +14,6 @@ const {
   title = SITE.title,
   author = SITE.author,
   description = SITE.desc,
-  ogImage = SITE.ogImage,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -23,7 +23,7 @@ const socialImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -75,15 +75,16 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
     />
 
     <script is:inline src="/toggle-theme.js"></script>
+    <ViewTransitions />
   </head>
   <body>
     <slot />
     <script>
       var _hmt = _hmt || [];
-      (function() {
+      (function () {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?33fa00efe9f4f2a652c14b5521ab4215";
-        var s = document.getElementsByTagName("script")[0]; 
+        var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
       })();
     </script>
