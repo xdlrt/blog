@@ -14,7 +14,9 @@
     "cz": "cz",
     "prepare": "husky install",
     "lint": "eslint .",
-    "newsletter": "node scripts/new newsletter"
+    "newsletter": "node scripts/new newsletter",
+    "test:ui": "npx playwright test",
+    "test:ui:debug": "npx playwright test --ui"
   },
   "dependencies": {
     "@astrojs/rss": "^3.0.0",
