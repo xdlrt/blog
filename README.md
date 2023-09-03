@@ -2,6 +2,13 @@
 
 In progress to be a product maker.
 
+## 技术栈
+
+- Astro 3.x
+- Typescript
+- TailwindCSS
+- Playwright
+
 ## 环境要求
 
 - Node.js 18.x
