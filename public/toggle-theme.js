@@ -18,6 +18,11 @@ function getPreferTheme() {
 
 let themeValue = getPreferTheme();
 
+function togglePreference() {
+  themeValue = themeValue === "light" ? "dark" : "light";
+  setPreference();
+}
+
 function setPreference() {
   localStorage.setItem("theme", themeValue);
   reflectPreference();
@@ -37,10 +42,7 @@ window.onload = () => {
   reflectPreference();
 
   // now this script can find and listen for clicks on the control
-  document.querySelector("#theme-btn")?.addEventListener("click", () => {
-    themeValue = themeValue === "light" ? "dark" : "light";
-    setPreference();
-  });
+  document.querySelector("#theme-btn")?.addEventListener("click", togglePreference);
 };
 
 // sync with system changes
