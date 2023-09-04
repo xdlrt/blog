@@ -1,5 +1,5 @@
 ---
-title: "一个月瘦 9 斤，我做对了什么"
+title: "与体重斗，其乐无穷"
 pubDatetime: 2023-09-03T11:48:58.951Z
 postSlug: newsletter-79
 tags:
