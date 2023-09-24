@@ -1,5 +1,5 @@
 ---
-title: "搬家小记"
+title: "搬家整理小记"
 pubDatetime: 2023-09-24T12:04:15.169Z
 postSlug: newsletter-82
 tags:
