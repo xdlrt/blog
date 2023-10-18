@@ -6,7 +6,7 @@ layout: ../layouts/AboutLayout.astro
 
 公众号「一颗小树」作者。
 
-你可以在 [Github](https://github.com/xdlrt) 上找到我的开源社区动态。日常的片段会在 [Twitter](https://twitter.com/yeshu_in_future) 和[即刻](https://m.okjike.com/users/8617a08c-ba6b-4df3-8fec-9a6682c54677)中更新，不定期更新[博客](https://yeshu.cloud)和[公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)，每周会为你写[一封信](https://xiaoshu.zhubai.love)。
+你可以在 [Github](https://github.com/xdlrt) 上找到我的开源社区动态。日常的片段会在 [Twitter](https://twitter.com/yeshu_in_future) 和[即刻](https://m.okjike.com/users/8617a08c-ba6b-4df3-8fec-9a6682c54677)中更新，不定期更新[博客](https://yeshu.cloud)和[公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)，每周会为你写一封信。
 
 ## 我的人生信念
 
@@ -70,8 +70,6 @@ layout: ../layouts/AboutLayout.astro
 - 推荐我读过的书和文章
 - 推荐我看过的博客、电影和电视剧
 - 我在即刻、Twitter 等社交媒体上有意义的输出
-
-<a href="https://xiaoshu.zhubai.love" target="_blank" style="background: rgba(var(--color-accent), var(--tw-text-opacity)); color: rgb(255, 255, 255)!important; padding: 5px 30px; border-radius: 5px; text-decoration: none; border: none; font-size: 14px;">点此订阅我的 Newsletter</a>
 
 ## 关于这个博客
 
