@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@astrojs/react": "^3.0.4",
-    "@astrojs/sitemap": "^3.0.0",
+    "@astrojs/sitemap": "^3.0.2",
     "@astrojs/tailwind": "^5.0.2",
     "@playwright/test": "^1.38.1",
     "@tailwindcss/typography": "^0.5.10",
