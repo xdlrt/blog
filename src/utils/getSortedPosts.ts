@@ -1,6 +1,6 @@
 import type { PostCollectionEntry } from "@types";
 
-const getSortedPosts = (posts: PostCollectionEntry[]) =>
+export const getSortedPosts = (posts: PostCollectionEntry[]) =>
   posts
     .filter(({ data }) => !data.draft)
     .sort(
@@ -8,5 +8,3 @@ const getSortedPosts = (posts: PostCollectionEntry[]) =>
         Math.floor(new Date(b.data.pubDatetime).getTime() / 1000) -
         Math.floor(new Date(a.data.pubDatetime).getTime() / 1000)
     );
-
-export default getSortedPosts;

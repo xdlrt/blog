@@ -134,7 +134,5 @@ const options: SatoriOptions = {
   ],
 };
 
-const generateOgImage = async (mytext = SITE.title) =>
-  await satori(ogImage(mytext), options);
-
-export default generateOgImage;
+export const generateOgImage = async (text = SITE.title) =>
+  await satori(ogImage(text), options);

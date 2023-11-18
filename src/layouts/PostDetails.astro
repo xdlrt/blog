@@ -24,7 +24,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
   <Header />
   <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
     <button
-      class="focus-outline mt-8 mb-2 flex hover:opacity-75"
+      class="focus-outline mt-8 mb-2 flex hover:opacity-75 transition-all"
       onclick="history.back()"
     >
       <svg xmlns="http://www.w3.org/2000/svg"

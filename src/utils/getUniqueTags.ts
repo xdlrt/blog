@@ -1,7 +1,7 @@
 import { slugifyStr } from "./slugify";
 import type { PostCollectionEntry } from "@types";
 
-const getUniqueTags = (posts: PostCollectionEntry[]) => {
+export const getUniqueTags = (posts: PostCollectionEntry[]) => {
   let tags: string[] = [];
   const filteredPosts = posts.filter(({ data }) => !data.draft);
   filteredPosts.forEach(post => {
@@ -14,5 +14,3 @@ const getUniqueTags = (posts: PostCollectionEntry[]) => {
   });
   return tags;
 };
-
-export default getUniqueTags;
