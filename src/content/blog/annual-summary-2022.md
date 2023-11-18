@@ -2,7 +2,6 @@
 title: 小树的 2022 年终总结
 postSlug: da712197
 pubDatetime: 2022-12-31T23:00:31.000Z
-featured: true
 tags:
   - 年终总结
 description: 2022 过去了，我还是很怀念它。
