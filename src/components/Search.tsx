@@ -1,7 +1,8 @@
+import React from "react";
 import Fuse from "fuse.js";
 import { useEffect, useRef, useState } from "react";
 import Card from "@components/Card";
-import slugify from "@utils/slugify";
+import { slugify } from "@utils/slugify";
 import type { BlogFrontmatter } from "@content/_schemas";
 
 export type SearchItem = {
