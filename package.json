@@ -41,7 +41,7 @@
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.56.0",
-    "eslint-plugin-astro": "^0.30.0",
+    "eslint-plugin-astro": "^0.31.0",
     "gray-matter": "^4.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
