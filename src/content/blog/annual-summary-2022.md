@@ -146,6 +146,6 @@ description: 2022 过去了，我还是很怀念它。
 
 往年总结：
 
-- [小树的 2021 年终总结](https://mp.weixin.qq.com/s?__biz=MzU1ODA2ODM3OQ==&mid=2247483793&idx=1&sn=a14fe44752e8acd37590d99552157587&chksm=fc2d6665cb5aef7371b3d9522a7819c961fbb5502960ab4a9a1c3835d7847c3477d214240fd7&token=949593255&lang=zh_CN#rd)
-- [小树的 2020 年终总结](https://mp.weixin.qq.com/s?__biz=MzU1ODA2ODM3OQ==&mid=2247483783&idx=1&sn=e995b9c7b7961abb0e7c959162f8c8ce&chksm=fc2d6673cb5aef6504241905e1ce719f0eabb326dd00948672f20e3d3fd60cdeba6bbbd408b3&token=949593255&lang=zh_CN#rd)
-- [小树的 2019 年终总结](https://mp.weixin.qq.com/s?__biz=MzU1ODA2ODM3OQ==&mid=2247483726&idx=1&sn=e95206957e1af5e5931adf835daa46d9&chksm=fc2d66bacb5aefacd629047d94f457da8d33365b211b94a569ebed1756d3d6bece0cc976a49a&token=949593255&lang=zh_CN#rd)
+- [小树的 2021 年终总结](https://mp.weixin.qq.com/s/AZVkG8SnnVOInGMzhLSHhg)
+- [小树的 2020 年终总结](https://mp.weixin.qq.com/s/lNfHa1v7J-rKdC-ZnRHFKQ)
+- [小树的 2019 年终总结](https://mp.weixin.qq.com/s/DKjlpFo9GGKumjHx0Jb7SQ)
