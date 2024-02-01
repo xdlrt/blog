@@ -43,7 +43,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-astro": "^0.31.0",
     "gray-matter": "^4.0.3",
-    "husky": "^8.0.3",
+    "husky": "^9.0.7",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "prettier-plugin-astro": "^0.12.3",
