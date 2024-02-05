@@ -43,4 +43,4 @@ frontmatter.pubDatetime = new Date();
 
 // console.log(frontmatter);
 
-fs.writeFileSync(`src/content/${templateName}/${slug}.md`, matter.stringify(content, frontmatter));
+fs.writeFileSync(`src/content/${templateName}/${slug}.md`, matter.stringify(content.replace('{{index}}', makeNewsletterIndex()), frontmatter));

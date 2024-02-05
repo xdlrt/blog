@@ -7,9 +7,7 @@ tags:
 description: ""
 ---
 
-> 你好，我是小树。这是我为你写的第 n 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)。
-
-### xxx
+> 你好，我是小树。这是我为你写的第 {{index}} 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)。
 
 ### 碎碎念
 
@@ -18,9 +16,6 @@ description: ""
 ---
 
 ### 往期推荐
-
-- [一颗小树 #1 任天堂和上岭村](https://xiaoshu.zhubai.love/posts/2107172142524608512)
-- [一颗小树 #0 这是我为你写的第零封信](https://xiaoshu.zhubai.love/posts/2107165648034942976)
 
 你也可以在这里找到我：[即刻](https://okjk.co/3Vsn5T)、[Twitter](https://twitter.com/yeshu_in_future)、微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)。
 
