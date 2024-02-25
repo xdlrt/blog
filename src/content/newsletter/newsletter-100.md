@@ -92,7 +92,7 @@ Sam Altman 是 OpenAI 的创始人。最近读到 [Sam Altman 18 年的博客](h
 
 我们的最终目的是用更少的时间，完成应做的工作，把剩下的时间留给家人和朋友。
 
-# 小结
+## 小结
 
 文章中还有一些 Sam Altman 个人生活习惯的建议，但每个人差异较大，未必值得参考，感兴趣的朋友可以去[博客原文](https://blog.samaltman.com/productivity)看看。
 
