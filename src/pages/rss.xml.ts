@@ -4,7 +4,7 @@ import { slugify } from "@utils/slugify";
 import { getPublishPosts } from "@utils/getPosts";
 import { getSortedPosts } from "@utils/getSortedPosts";
 
-export async function get() {
+export async function GET() {
   const posts = await getPublishPosts();
   return rss({
     title: SITE.title,
