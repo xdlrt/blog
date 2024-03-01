@@ -80,7 +80,7 @@ devDependencies:
     specifier: ^15.2.2
     version: 15.2.2
   prettier:
-    specifier: ^3.2.4
+    specifier: ^3.2.5
     version: 3.2.5
   prettier-plugin-astro:
     specifier: ^0.13.0
