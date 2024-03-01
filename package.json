@@ -19,7 +19,7 @@
     "test:ui:debug": "npx playwright test --ui"
   },
   "dependencies": {
-    "@astrojs/rss": "^4.0.4",
+    "@astrojs/rss": "^4.0.5",
     "astro": "^4.2.8",
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",

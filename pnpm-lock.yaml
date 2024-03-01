@@ -6,7 +6,7 @@ settings:
 
 dependencies:
   '@astrojs/rss':
-    specifier: ^4.0.4
+    specifier: ^4.0.5
     version: 4.0.5
   astro:
     specifier: ^4.2.8
