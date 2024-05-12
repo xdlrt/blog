@@ -105,6 +105,11 @@ description: "如果当下在做的事情没办法满足你心里的排序，不
 
 ### 往期推荐
 
+- [扔掉心里的锚](https://mp.weixin.qq.com/s/eVd9qL8SioCuz-mdaAsOkA)
+- [用多维表格实现高质量需求交付](https://mp.weixin.qq.com/s/_LTZOi0_Dn7mopZ4hjqQhA)
+- [黄山：穿越云雾的山水诗篇](https://mp.weixin.qq.com/s/Yaf3ZqUvbYUmFkcTRK43Hw)
+- [允许自己放空](https://mp.weixin.qq.com/s/R3RVsoQb59Ssl9dAu8RaJw)
+
 你也可以在这里找到我：[即刻](https://okjk.co/3Vsn5T)、[Twitter](https://twitter.com/yeshu_in_future)、微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)。
 
 > 如果你觉得这篇文章对你有用，欢迎分享给更多好友。
