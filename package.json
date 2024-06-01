@@ -32,7 +32,7 @@
     "@astrojs/react": "^3.3.2",
     "@astrojs/sitemap": "^3.1.4",
     "@astrojs/tailwind": "^5.1.0",
-    "@playwright/test": "^1.43.1",
+    "@playwright/test": "^1.44.1",
     "@tailwindcss/typography": "^0.5.13",
     "@types/github-slugger": "^2.0.0",
     "@types/react": "^18.3.1",
