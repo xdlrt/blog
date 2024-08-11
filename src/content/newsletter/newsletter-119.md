@@ -1,5 +1,5 @@
 ---
-title: "“我们”的共同烦恼"
+title: "“我们”共同的烦恼"
 pubDatetime: 2024-08-10T08:20:53.315Z
 postSlug: newsletter-119
 tags:
