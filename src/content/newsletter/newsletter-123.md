@@ -1,5 +1,5 @@
 ---
-title: "工具的边界"
+title: "多维表格的边界"
 pubDatetime: 2024-10-27T13:21:48.229Z
 postSlug: newsletter-123
 tags:
