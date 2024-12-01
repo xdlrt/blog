@@ -40,7 +40,7 @@
     "astro-eslint-parser": "^1.0.2",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^9.12.0",
+    "eslint": "^9.16.0",
     "eslint-plugin-astro": "^1.2.2",
     "gray-matter": "^4.0.3",
     "husky": "^9.1.4",
