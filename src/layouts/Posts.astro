@@ -47,6 +47,11 @@ const next = pageNum < totalPages ? "" : "disabled";
           </svg>
           <span class="pagination-text">上一页</span>
         </LinkButton>
+
+        <span class="page-info">
+          {pageNum} / {totalPages}
+        </span>
+
         <LinkButton
           disabled={next === "disabled"}
           href={`/posts/${pageNum + 1}`}
@@ -76,5 +81,8 @@ const next = pageNum < totalPages ? "" : "disabled";
   }
   .pagination-text {
     @apply inline-block align-middle;
+  }
+  .page-info {
+    @apply mx-4 text-skin-base align-middle;
   }
 </style>
