@@ -29,7 +29,7 @@
     "tailwindcss": "^3.4.13"
   },
   "devDependencies": {
-    "@astrojs/react": "^4.0.0",
+    "@astrojs/react": "^4.1.2",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.3",
     "@playwright/test": "^1.48.0",
