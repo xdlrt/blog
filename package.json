@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.10",
-    "astro": "^5.0.3",
+    "astro": "^5.1.1",
     "fuse.js": "^7.0.0",
     "github-slugger": "^2.0.0",
     "remark-collapse": "^0.1.2",
