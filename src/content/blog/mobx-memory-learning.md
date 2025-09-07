@@ -236,7 +236,7 @@ export default App;
 真正的重点在：
 
 - ObservableObjectAdministration：每一个 ObservableObject 都需要一个 adm 来管理，负责“结构”
-- <symbol mobx administration> ：ObservableObjectAdministration 的“钥匙”，用来快速访问到对应的 adm
+- `<symbol mobx administration>`：ObservableObjectAdministration 的“钥匙”，用来快速访问到对应的 adm
 - ObservableValue：来源于每一个属性的 deep Observable，负责“值”
 - Atom：响应式的最小单元，每一个 ObservableValue 都需要
 - Map：ObservableObject 中 \_values 的容器，内容是 ObservableValue 的引用
