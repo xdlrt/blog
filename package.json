@@ -35,7 +35,7 @@
     "@playwright/test": "^1.57.0",
     "@tailwindcss/typography": "^0.5.19",
     "@types/github-slugger": "^2.0.0",
-    "@types/react": "^19.2.7",
+    "@types/react": "^19.2.10",
     "@typescript-eslint/parser": "^8.51.0",
     "astro-eslint-parser": "^1.2.2",
     "commitizen": "^4.3.1",
@@ -48,7 +48,7 @@
     "prettier": "^3.7.4",
     "prettier-plugin-astro": "^0.14.0",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "react": "^19.0.0",
+    "react": "^19.2.4",
     "react-dom": "^19.2.3"
   },
   "config": {
