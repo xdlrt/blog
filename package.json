@@ -35,7 +35,7 @@
     "@playwright/test": "^1.58.2",
     "@tailwindcss/typography": "^0.5.19",
     "@types/github-slugger": "^2.0.0",
-    "@types/react": "^19.2.7",
+    "@types/react": "^19.2.14",
     "@typescript-eslint/parser": "^8.56.1",
     "astro-eslint-parser": "^1.2.2",
     "commitizen": "^4.3.1",
