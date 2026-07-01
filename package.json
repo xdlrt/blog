@@ -37,7 +37,7 @@
     "@types/github-slugger": "^2.0.0",
     "@types/react": "^19.2.14",
     "@typescript-eslint/parser": "^8.59.1",
-    "astro-eslint-parser": "^1.4.0",
+    "astro-eslint-parser": "^2.1.0",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^10.2.1",
