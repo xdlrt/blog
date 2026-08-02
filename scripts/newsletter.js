@@ -3,7 +3,7 @@ const path = require('path');
 const matter = require('gray-matter');
 
 function makeNewsletterIndex() {
-  const directory = path.resolve(__dirname, '../src/content/newsletter');
+  const directory = path.resolve(__dirname, '../src/data/newsletter');
   const filePrefix = 'newsletter-';
   const fileExtension = '.md';
 
@@ -43,4 +43,4 @@ frontmatter.pubDatetime = new Date();
 
 // console.log(frontmatter);
 
-fs.writeFileSync(`src/content/${templateName}/${slug}.md`, matter.stringify(content.replace('{{index}}', makeNewsletterIndex()), frontmatter));
+fs.writeFileSync(`src/data/${templateName}/${slug}.md`, matter.stringify(content.replace('{{index}}', makeNewsletterIndex()), frontmatter));

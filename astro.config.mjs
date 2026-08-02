@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
 import react from "@astrojs/react";
+import tailwindcss from "@tailwindcss/vite";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import sitemap from "@astrojs/sitemap";
@@ -8,15 +8,10 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: "https://yeshu.cloud/",
-  integrations: [
-    tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
-    react(),
-    sitemap(),
-  ],
+  integrations: [react(), sitemap()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   markdown: {
     remarkPlugins: [
       remarkToc,

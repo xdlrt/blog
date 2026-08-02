@@ -4,6 +4,7 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
+import { render } from "astro:content";
 import type { PostCollectionEntry } from "@types";
 
 export interface Props {
@@ -14,7 +15,7 @@ const { post } = Astro.props;
 
 const { title, author, description, ogImage, pubDatetime, tags } = post.data;
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
   .href;
@@ -49,6 +50,8 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
 </Layout>
 
 <style>
+  @reference "../styles/base.css";
+
   main {
     @apply mx-auto w-full max-w-3xl px-4 pb-12;
   }
