@@ -29,7 +29,7 @@ posts.forEach(({ data }) =>
     pageDesc="沿着主题重新发现这些文字。"
     pageMeta="TOPIC INDEX"
   >
-    <ul data-testid="tag-list">
+    <ul class="tag-cloud" data-testid="tag-list">
       {
         tags.map(tag => (
           <Tag name={tag} size="lg" count={tagCounts.get(tag.toLowerCase())} />
@@ -39,3 +39,11 @@ posts.forEach(({ data }) =>
   </Main>
   <Footer />
 </Layout>
+
+<style>
+  @reference "../../styles/base.css";
+
+  .tag-cloud {
+    @apply flex flex-wrap gap-x-7 gap-y-4;
+  }
+</style>

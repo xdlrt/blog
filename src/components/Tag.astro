@@ -9,12 +9,12 @@ const { name, size = "sm", count } = Astro.props;
 ---
 
 <li
-  class={`inline-block ${size === "sm" ? "my-1" : "my-3 mx-1"}`}
+  class={`inline-block ${size === "sm" ? "my-1" : ""}`}
   data-testid="tag-item"
 >
   <a
     href={`/tags/${name.toLowerCase()}`}
-    class={`${size === "sm" ? "text-sm" : "text-lg"} pr-2 group`}
+    class={`${size === "sm" ? "pr-2 text-sm" : "text-lg"} group`}
   >
     <span>{name.toLowerCase()}</span>
     {typeof count === "number" && <small>{count}</small>}

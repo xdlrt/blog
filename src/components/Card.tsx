@@ -27,6 +27,12 @@ export default function Card({
   });
   const category = tags?.[0] || "未分类";
   const isEditorial = variant === "editorial" || variant === "lead";
+  const cardSpacing =
+    variant === "lead"
+      ? "px-5 py-6 hover:bg-skin-card/55"
+      : variant === "editorial"
+        ? "-mx-2 px-2 py-6 hover:bg-skin-card/55"
+        : "-mx-2 px-2 py-5 hover:bg-skin-card/40 sm:-mx-4 sm:px-4 sm:py-5";
 
   return (
     <li
@@ -36,11 +42,7 @@ export default function Card({
     >
       <a
         href={href}
-        className={`group block rounded-[inherit] transition-colors focus-visible:no-underline ${
-          isEditorial
-            ? "px-5 py-6 hover:bg-skin-card/55"
-            : "px-2 py-5 hover:bg-skin-card/40 sm:px-4 sm:py-5"
-        }`}
+        className={`group block rounded-[inherit] transition-colors focus-visible:no-underline ${cardSpacing}`}
       >
         <div className="card-meta mb-3 flex items-center justify-between gap-4 text-xs tracking-[0.12em] text-skin-muted">
           <span>{index ? String(index).padStart(2, "0") : category}</span>
