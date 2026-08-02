@@ -1,0 +1,246 @@
+---
+export interface Props {
+  currentPage: number;
+  totalPages: number;
+  totalItems: number;
+}
+
+const { currentPage, totalPages, totalItems } = Astro.props;
+
+const pageHref = (page: number) => (page === 1 ? "/posts" : `/posts/${page}`);
+
+const visiblePages = new Set<number>([1, totalPages]);
+
+if (currentPage <= 4) {
+  for (let page = 1; page <= Math.min(5, totalPages); page += 1) {
+    visiblePages.add(page);
+  }
+} else if (currentPage >= totalPages - 3) {
+  for (let page = Math.max(1, totalPages - 4); page <= totalPages; page += 1) {
+    visiblePages.add(page);
+  }
+} else {
+  for (let page = currentPage - 1; page <= currentPage + 1; page += 1) {
+    visiblePages.add(page);
+  }
+}
+
+const sortedPages = [...visiblePages].sort((a, b) => a - b);
+const pageEntries: Array<number | "ellipsis"> = [];
+
+sortedPages.forEach((page, index) => {
+  const previousPage = sortedPages[index - 1];
+  if (previousPage && page - previousPage > 1) {
+    pageEntries.push("ellipsis");
+  }
+  pageEntries.push(page);
+});
+
+const previousPage = currentPage > 1 ? currentPage - 1 : undefined;
+const nextPage = currentPage < totalPages ? currentPage + 1 : undefined;
+---
+
+<nav class="pagination" aria-label="文章分页" data-testid="pagination">
+  <div class="desktop-pagination">
+    {
+      previousPage ? (
+        <a
+          class="direction-link previous"
+          href={pageHref(previousPage)}
+          rel="prev"
+          aria-label={`前往上一页，第 ${previousPage} 页`}
+        >
+          <span>上一页</span>
+          <small>第 {String(previousPage).padStart(2, "0")} 页</small>
+        </a>
+      ) : (
+        <span class="direction-link previous disabled" aria-disabled="true">
+          <span>上一页</span>
+          <small>已经是第一页</small>
+        </span>
+      )
+    }
+
+    <div class="page-center">
+      <ol class="page-list">
+        {
+          pageEntries.map(entry =>
+            entry === "ellipsis" ? (
+              <li class="ellipsis" aria-hidden="true">
+                …
+              </li>
+            ) : (
+              <li>
+                <a
+                  href={pageHref(entry)}
+                  aria-label={`前往第 ${entry} 页`}
+                  aria-current={entry === currentPage ? "page" : undefined}
+                >
+                  {entry}
+                </a>
+              </li>
+            )
+          )
+        }
+      </ol>
+      <p class="page-summary">
+        第 {String(currentPage).padStart(2, "0")} / {
+          String(totalPages).padStart(2, "0")
+        } 页
+        <span aria-hidden="true"> · </span>
+        共 {totalItems} 篇
+      </p>
+    </div>
+
+    {
+      nextPage ? (
+        <a
+          class="direction-link next"
+          href={pageHref(nextPage)}
+          rel="next"
+          aria-label={`前往下一页，第 ${nextPage} 页`}
+        >
+          <span>下一页</span>
+          <small>第 {String(nextPage).padStart(2, "0")} 页</small>
+        </a>
+      ) : (
+        <span class="direction-link next disabled" aria-disabled="true">
+          <span>下一页</span>
+          <small>已经是最后一页</small>
+        </span>
+      )
+    }
+  </div>
+
+  <div class="mobile-pagination">
+    {
+      previousPage ? (
+        <a
+          class="mobile-direction"
+          href={pageHref(previousPage)}
+          rel="prev"
+          aria-label={`前往上一页，第 ${previousPage} 页`}
+        >
+          上一页
+        </a>
+      ) : (
+        <span class="mobile-direction disabled" aria-disabled="true">
+          上一页
+        </span>
+      )
+    }
+
+    <label class="mobile-page-select">
+      <span class="sr-only">选择页码</span>
+      <select aria-label="选择页码" data-page-select>
+        {
+          Array.from({ length: totalPages }, (_, index) => index + 1).map(
+            page => (
+              <option value={pageHref(page)} selected={page === currentPage}>
+                {page} / {totalPages}
+              </option>
+            )
+          )
+        }
+      </select>
+    </label>
+
+    {
+      nextPage ? (
+        <a
+          class="mobile-direction next"
+          href={pageHref(nextPage)}
+          rel="next"
+          aria-label={`前往下一页，第 ${nextPage} 页`}
+        >
+          下一页
+        </a>
+      ) : (
+        <span class="mobile-direction next disabled" aria-disabled="true">
+          下一页
+        </span>
+      )
+    }
+  </div>
+</nav>
+
+<script>
+  document
+    .querySelectorAll<HTMLSelectElement>("[data-page-select]")
+    .forEach(select => {
+      select.addEventListener("change", () => {
+        window.location.assign(select.value);
+      });
+    });
+</script>
+
+<style>
+  @reference "../styles/base.css";
+
+  .pagination {
+    @apply mx-auto mt-auto mb-8 w-full max-w-5xl px-4 pt-4;
+  }
+  .desktop-pagination {
+    @apply hidden grid-cols-[minmax(8rem,1fr)_auto_minmax(8rem,1fr)] items-center gap-6 sm:grid;
+  }
+  .direction-link {
+    @apply flex min-h-20 flex-col justify-center rounded-2xl px-5 py-3 transition-colors hover:bg-skin-card/55 hover:text-skin-accent;
+  }
+  .direction-link > span {
+    font-family: "Songti SC", STSong, serif;
+    @apply text-xl font-semibold;
+  }
+  .direction-link small {
+    @apply mt-1 text-[0.65rem] tracking-[0.12em] text-skin-muted;
+  }
+  .direction-link.next {
+    @apply items-end text-right;
+  }
+  .direction-link.disabled {
+    @apply pointer-events-none opacity-40;
+  }
+  .page-center {
+    @apply flex min-w-64 flex-col items-center;
+  }
+  .page-list {
+    @apply flex items-center justify-center gap-1;
+  }
+  .page-list a,
+  .ellipsis {
+    @apply flex h-10 min-w-10 items-center justify-center rounded-full px-2 text-sm transition-colors;
+  }
+  .page-list a:hover {
+    @apply bg-skin-card/65 text-skin-accent;
+  }
+  .page-list a[aria-current="page"] {
+    @apply bg-skin-base font-semibold text-skin-fill;
+  }
+  .ellipsis {
+    @apply min-w-7 px-0 text-skin-muted;
+  }
+  .page-summary {
+    @apply mt-2 text-[0.65rem] tracking-[0.12em] text-skin-muted;
+  }
+  .mobile-pagination {
+    @apply grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:hidden;
+  }
+  .mobile-direction {
+    @apply flex min-h-12 items-center rounded-xl px-3 text-sm font-medium transition-colors hover:bg-skin-card/55 hover:text-skin-accent;
+  }
+  .mobile-direction.next {
+    @apply justify-end text-right;
+  }
+  .mobile-direction.disabled {
+    @apply pointer-events-none opacity-35;
+  }
+  .mobile-page-select {
+    @apply relative rounded-full bg-skin-base text-skin-fill;
+  }
+  .mobile-page-select select {
+    @apply h-11 cursor-pointer appearance-none rounded-full bg-transparent px-5 text-center text-sm font-semibold outline-hidden;
+  }
+  .mobile-page-select select:focus-visible {
+    outline: 2px dashed rgb(var(--color-accent));
+    outline-offset: 3px;
+  }
+</style>

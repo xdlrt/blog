@@ -30,3 +30,13 @@ test('about page', async ({ page }) => {
   await expect(page.locator('#about')).toBeVisible();
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('关于我');
 });
+
+test('mobile pagination can jump directly to a page', async ({ page }) => {
+  await page.goto('/posts/8');
+
+  const pageSelect = page.getByLabel('选择页码');
+  await expect(pageSelect).toBeVisible();
+  await expect(pageSelect).toHaveValue('/posts/8');
+  await pageSelect.selectOption('/posts/9');
+  await expect(page).toHaveURL(/\/posts\/9$/);
+});

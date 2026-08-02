@@ -33,3 +33,36 @@ test('long tag archives progressively reveal posts', async ({ page }) => {
   await page.getByRole('button', { name: '再看 24 篇' }).click();
   await expect(page.locator('.article-card:not(.hidden)')).toHaveCount(48);
 });
+
+test('desktop pagination exposes common archive navigation', async ({ page }) => {
+  await page.goto('/posts/8');
+
+  const pagination = page.getByRole('navigation', { name: '文章分页' });
+  await expect(pagination).toBeVisible();
+  await expect(
+    pagination.getByRole('link', { name: '前往第 1 页' })
+  ).toBeVisible();
+  await expect(
+    pagination.getByRole('link', { name: '前往第 20 页' })
+  ).toBeVisible();
+  await expect(
+    pagination.getByRole('link', { name: '前往第 8 页' })
+  ).toHaveAttribute('aria-current', 'page');
+  await expect(pagination.getByText(/共 \d+ 篇/)).toBeVisible();
+  await expect(
+    pagination.getByRole('link', { name: '前往上一页，第 7 页' })
+  ).toHaveAttribute('rel', 'prev');
+  await expect(
+    pagination.getByRole('link', { name: '前往下一页，第 9 页' })
+  ).toHaveAttribute('rel', 'next');
+});
+
+test('footer closes the page with text navigation', async ({ page }) => {
+  await page.goto('/about');
+
+  const footer = page.locator('footer');
+  await expect(footer.getByText('写作是持续整理自己的方式。')).toBeVisible();
+  await expect(footer.getByRole('link', { name: '回到顶部' })).toBeVisible();
+  await expect(footer.getByRole('link', { name: 'Github' })).toBeVisible();
+  await expect(footer.locator('svg')).toHaveCount(0);
+});
