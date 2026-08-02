@@ -57,7 +57,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
     </article>
 
     <ul class="tags-container">
-      {tags.map(tag => <Tag name={tag} />)}
+      {tags.map(tag => <Tag name={tag} variant="chip" />)}
     </ul>
 
     {
@@ -118,7 +118,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
     @apply mt-8 text-sm;
   }
   .tags-container {
-    @apply mx-auto my-12 pt-4;
+    @apply mx-auto my-12 flex flex-wrap gap-2 pt-4;
     max-width: var(--layout-reading-width);
   }
   .reading-nav {

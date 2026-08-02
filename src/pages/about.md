@@ -4,56 +4,48 @@ title: 关于我
 description: 我是小树，一名产品工程师和长期写作者。这里记录我正在做的事、相信的原则，以及持续整理自己的方式。
 ---
 
-你好，我是小树，目前的工作是多维表格研发。
+## 我现在在做什么
 
-公众号「一颗小树」作者。
-
-你可以在 [Github](https://github.com/xdlrt) 上找到我的开源社区动态。
-
-日常的思考会在 [Twitter](https://twitter.com/yeshu_in_future) 和[即刻](https://m.okjike.com/users/8617a08c-ba6b-4df3-8fec-9a6682c54677)中更新。
-
-长篇内容不定期更新在[博客](https://yeshu.cloud)和[公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)。
+- **写作**：公众号「一颗小树」作者，长篇内容不定期更新在[博客](https://yeshu.cloud)和[公众号](https://weixin.sogou.com/weixin?query=a_warm_tree)
+- **动态**：你可以在 [GitHub](https://github.com/xdlrt)、[Twitter](https://twitter.com/yeshu_in_future) 和[即刻](https://m.okjike.com/users/8617a08c-ba6b-4df3-8fec-9a6682c54677)找到我
 
 ## 我的人生信念
 
-### 健康优先
+1. ### 健康优先
+   - 坚持运动
+   - 定期身体检查
 
-- 坚持运动
-- 定期身体检查
+2. ### 待人处事
+   - 守时
+   - 做正确的事，正确地做事
+   - 再想多一点，再做多一点
+   - 凡事有交代，件件有着落，事事有回音
 
-### 待人处事
+3. ### 终身学习
+   - 保持阅读和写作
+   - 保持在拉伸区学习和思考
+   - 保持对新事物的好奇心
+   - 可持续发展，追求有复利更久期的增长
 
-- 守时
-- 做正确的事，正确地做事
-- 再想多一点，再做多一点
-- 凡事有交代，件件有着落，事事有回音
+4. ### 思维方式
+   - 向内求，遵照内在记分牌
+   - 人生是一场无限游戏，多做正和游戏
+   - 留有余闲，具备应对风险的能力
+   - 和问题共处，聚焦关键问题
+   - 大事充分准备，小事快速决策
 
-### 终身学习
-
-- 保持阅读和写作
-- 保持在拉伸区学习和思考
-- 保持对新事物的好奇心
-- 可持续发展，追求有复利更久期的增长
-
-### 思维方式
-
-- 向内求，遵照内在记分牌
-- 人生是一场无限游戏，多做正和游戏
-- 留有余闲，具备应对风险的能力
-- 和问题共处，聚焦关键问题
-- 大事充分准备，小事快速决策
-
-### 性格和品质
-
-- 保持善良和利他
-- 保持情绪稳定，非暴力沟通
-- 缩小 ego，关注生活，提升幸福感
+5. ### 性格和品质
+   - 保持善良和利他
+   - 保持情绪稳定，非暴力沟通
+   - 缩小 ego，关注生活，提升幸福感
 
 所有的努力都是为了拥有更多选择的权利。
 
 ## 我的作品
 
-- [Markdowns](https://markdowns.yeshu.cloud)：一个基于 Markdown 格式，生成公众号内容的排版工具。
+### [Markdowns](https://markdowns.yeshu.cloud)
+
+一个基于 Markdown 格式生成公众号内容的排版工具。
 
 ## 我的日常工作流
 
@@ -80,4 +72,4 @@ description: 我是小树，一名产品工程师和长期写作者。这里记�
 
 如果这些内容能对你有帮助或启发，欢迎转发给你的朋友，或者私信、邮件告诉我，对我是莫大的鼓励。
 
-博客支持 <a href="/rss.xml" target="_blank" style="background: rgba(var(--color-accent), var(--tw-text-opacity)); color: rgb(255, 255, 255)!important; padding: 0px 5px 1px; border-radius: 2px; text-decoration: none; border: none; font-size: 14px; vertical-align: text-bottom;">RSS</a> 方式订阅。
+你也可以[通过 RSS 订阅](/rss.xml)这个博客。

@@ -96,6 +96,27 @@ test("about copy shares the desktop reading measure", async ({ page }) => {
   });
 });
 
+test("post topics read as distinct tags", async ({ page }) => {
+  await page.setViewportSize({ width: 1024, height: 900 });
+  await page.goto("/posts/annual-summary-2025");
+
+  const tag = page.locator(".tags-container a").first();
+  await expect(tag).toBeVisible();
+
+  const appearance = await tag.evaluate(element => {
+    const style = getComputedStyle(element);
+    return {
+      backgroundColor: style.backgroundColor,
+      borderRadius: Number.parseFloat(style.borderRadius),
+      label: element.textContent?.trim(),
+    };
+  });
+
+  expect(appearance.label).toMatch(/^#/);
+  expect(appearance.backgroundColor).not.toBe("rgba(0, 0, 0, 0)");
+  expect(appearance.borderRadius).toBeGreaterThanOrEqual(16);
+});
+
 test("mobile pages do not force a permanent vertical scrollbar gutter", async ({
   page,
 }) => {

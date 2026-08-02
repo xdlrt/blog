@@ -3,19 +3,21 @@ export interface Props {
   name: string;
   size?: "sm" | "lg";
   count?: number;
+  variant?: "plain" | "chip";
 }
 
-const { name, size = "sm", count } = Astro.props;
+const { name, size = "sm", count, variant = "plain" } = Astro.props;
 ---
 
 <li
-  class={`inline-block ${size === "sm" ? "my-1" : ""}`}
+  class={`inline-block ${size === "sm" && variant === "plain" ? "my-1" : ""}`}
   data-testid="tag-item"
 >
   <a
     href={`/tags/${name.toLowerCase()}`}
-    class={`${size === "sm" ? "pr-2 text-sm" : "text-lg"} group`}
+    class={`${size === "sm" ? "text-sm" : "text-lg"} ${variant === "chip" ? "tag-chip" : "tag-plain"} group`}
   >
+    {variant === "chip" && <span class="tag-prefix">#</span>}
     <span>{name.toLowerCase()}</span>
     {typeof count === "number" && <small>{count}</small>}
   </a>
@@ -24,8 +26,17 @@ const { name, size = "sm", count } = Astro.props;
 <style>
   @reference "../styles/base.css";
 
-  a {
+  .tag-plain {
     @apply relative decoration-dashed hover:-top-0.5 hover:text-skin-accent focus-visible:p-1;
+  }
+  .tag-plain:not(.text-lg) {
+    @apply pr-2;
+  }
+  .tag-chip {
+    @apply focus-outline inline-flex items-center rounded-full bg-skin-card/75 px-3 py-1.5 font-medium no-underline transition-[color,background-color,transform] hover:-translate-y-px hover:bg-skin-card hover:text-skin-accent;
+  }
+  .tag-prefix {
+    @apply mr-1 text-skin-accent;
   }
   a span {
     @apply inline-block align-middle;
