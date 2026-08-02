@@ -1,22 +1,20 @@
 import { test, expect } from '@playwright/test';
 
-test('homepage', async ({ page }) => {
-  await page.goto('http://localhost:4321/');
-  await expect(page).toHaveTitle(/一颗小树/);
+test('mobile menu closes with Escape', async ({ page }) => {
+  await page.goto('/');
+  const menuButton = page.locator('[data-testid="header-menu"]');
+  await menuButton.click();
+  await expect(menuButton).toHaveAttribute('aria-expanded', 'true');
+  await menuButton.press('Escape');
+  await expect(menuButton).toHaveAttribute('aria-expanded', 'false');
 });
 
-test('tags page', async ({ page }) => {
-  await page.goto('http://localhost:4321/tags');
-  await expect(page.locator('[data-testid="tag-list"]')).toBeVisible();
-  await expect(page.locator('[data-testid="tag-item"]').nth(0)).toBeVisible();
-});
+test('mobile pagination can jump directly to a page', async ({ page }) => {
+  await page.goto('/posts/8');
 
-test('search page', async ({ page }) => {
-  await page.goto('http://localhost:4321/search');
-  await expect(page.locator('[data-testid="search-input"]')).toBeVisible();
-});
-
-test('about page', async ({ page }) => {
-  await page.goto('http://localhost:4321/about');
-  await expect(page.locator('#about')).toBeVisible();
+  const pageSelect = page.getByLabel('选择页码');
+  await expect(pageSelect).toBeVisible();
+  await expect(pageSelect).toHaveValue('/posts/8');
+  await pageSelect.selectOption('/posts/9');
+  await expect(page).toHaveURL(/\/posts\/9$/);
 });

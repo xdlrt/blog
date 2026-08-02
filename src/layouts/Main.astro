@@ -4,13 +4,15 @@ import Breadcrumbs from "@components/Breadcrumbs.astro";
 export interface Props {
   pageTitle?: string;
   pageDesc?: string;
+  pageMeta?: string;
 }
 
-const { pageTitle, pageDesc } = Astro.props;
+const { pageTitle, pageDesc, pageMeta } = Astro.props;
 ---
 
 <Breadcrumbs />
 <main id="main-content">
+  {pageMeta && <p class="page-meta">{pageMeta}</p>}
   {pageTitle && <h1>{pageTitle}</h1>}
   {pageDesc && <p>{pageDesc}</p>}
   <slot />
@@ -20,12 +22,21 @@ const { pageTitle, pageDesc } = Astro.props;
   @reference "../styles/base.css";
 
   #main-content {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12;
+    @apply mx-auto w-full max-w-5xl px-4 pb-12 pt-10;
   }
   #main-content h1 {
-    @apply text-2xl font-semibold sm:text-3xl;
+    @apply text-3xl font-semibold sm:text-5xl;
+  }
+  #main-content .page-meta {
+    @apply mb-2 mt-0 text-xs font-semibold tracking-[0.16em] text-skin-accent;
   }
   #main-content p {
-    @apply mt-2 mb-6 italic;
+    @apply mb-8 mt-3 text-skin-muted;
+  }
+
+  @media (min-width: 1600px) {
+    #main-content {
+      max-width: var(--layout-display-width);
+    }
   }
 </style>

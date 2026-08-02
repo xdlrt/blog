@@ -1,5 +1,4 @@
 ---
-import Hr from "./Hr.astro";
 import Socials from "./Socials.astro";
 
 const currentYear = new Date().getFullYear();
@@ -12,13 +11,20 @@ const { noMarginTop = false } = Astro.props;
 ---
 
 <footer class={`${noMarginTop ? "" : "mt-auto"}`}>
-  <Hr noPadding />
-  <div class="footer-wrapper">
-    <Socials centered />
-    <div class="copyright-wrapper">
-      <span>Copyright &#169; {currentYear}</span>
-      <span class="separator">&nbsp;|&nbsp;</span>
-      <span>也树</span>
+  <div class="footer-shell">
+    <div class="footer-intro">
+      <p class="footer-kicker">一颗小树 · NOTES SINCE 2016</p>
+      <p class="footer-statement">写作是持续整理自己的方式。</p>
+    </div>
+
+    <div class="footer-navigation">
+      <Socials variant="text" />
+      <a class="back-to-top" href="#top">回到顶部</a>
+    </div>
+
+    <div class="footer-meta">
+      <span>&#169; {currentYear} 也树</span>
+      <span>持续记录，偶尔回看。</span>
     </div>
   </div>
 </footer>
@@ -27,15 +33,34 @@ const { noMarginTop = false } = Astro.props;
   @reference "../styles/base.css";
 
   footer {
-    @apply w-full;
+    @apply w-full max-w-none bg-skin-card/35 px-0;
   }
-  .footer-wrapper {
-    @apply flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4;
+  .footer-shell {
+    @apply mx-auto grid w-full max-w-5xl gap-7 px-4 py-9 md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-10 md:py-10;
   }
-  .copyright-wrapper {
-    @apply my-2 flex flex-col items-center whitespace-nowrap sm:flex-row;
+  .footer-intro {
+    @apply self-center;
   }
-  .separator {
-    @apply hidden sm:inline;
+  .footer-kicker {
+    @apply text-[0.65rem] font-semibold tracking-[0.16em] text-skin-accent;
+  }
+  .footer-statement {
+    font-family: "Songti SC", STSong, serif;
+    @apply mt-3 text-2xl font-semibold leading-snug sm:text-3xl;
+  }
+  .footer-navigation {
+    @apply flex flex-col items-start md:items-end;
+  }
+  .back-to-top {
+    @apply inline-flex min-h-11 items-center rounded-xl px-3 text-sm text-skin-muted transition-colors hover:bg-skin-card/65 hover:text-skin-accent;
+  }
+  .footer-meta {
+    @apply flex flex-col gap-1 text-[0.65rem] tracking-[0.12em] text-skin-muted md:col-span-2 md:flex-row md:justify-between;
+  }
+
+  @media (min-width: 1600px) {
+    .footer-shell {
+      max-width: var(--layout-display-width);
+    }
   }
 </style>

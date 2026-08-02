@@ -5,16 +5,29 @@ import socialIcons from "@assets/socialIcons";
 
 export interface Props {
   centered?: boolean;
+  variant?: "icon" | "text";
 }
 
-const { centered = false } = Astro.props;
+const { centered = false, variant = "icon" } = Astro.props;
+const textLabels: Record<string, string> = {
+  Github: "Github",
+  Twitter: "X",
+  Mail: "Email",
+  RSS: "RSS",
+};
 ---
 
-<div class={`social-icons ${centered ? "flex" : ""}`}>
+<div
+  class={`social-links ${variant === "text" ? "text-links" : "icon-links"} ${centered ? "centered" : ""}`}
+>
   {
     SOCIALS.filter(social => social.active).map(social => (
       <LinkButton href={social.href} title={social.linkTitle}>
-        <Fragment set:html={socialIcons[social.name]} />
+        {variant === "text" ? (
+          textLabels[social.name] || social.name
+        ) : (
+          <Fragment set:html={socialIcons[social.name]} />
+        )}
       </LinkButton>
     ))
   }
@@ -23,7 +36,19 @@ const { centered = false } = Astro.props;
 <style>
   @reference "../styles/base.css";
 
-  .social-icons {
+  .social-links {
     @apply flex flex-wrap justify-start gap-2;
+  }
+  .social-links.centered {
+    @apply flex;
+  }
+  .icon-links :global(a) {
+    @apply inline-flex h-11 w-11 items-center justify-center rounded-full transition-colors hover:bg-skin-card;
+  }
+  .text-links {
+    @apply gap-x-1 gap-y-0;
+  }
+  .text-links :global(a) {
+    @apply inline-flex min-h-11 items-center rounded-xl px-3 text-sm text-skin-muted transition-colors hover:bg-skin-card/65 hover:text-skin-accent;
   }
 </style>

@@ -13,17 +13,18 @@ const {
   title = SITE.title,
   author = SITE.author,
   description = SITE.desc,
+  ogImage,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const socialImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
+const socialImageURL = new URL(ogImage || SITE.ogImage, Astro.url.origin).href;
 
 const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -75,7 +76,8 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
 
     <script is:inline src="/toggle-theme.js"></script>
   </head>
-  <body>
+  <body id="top">
+    <a class="skip-link" href="#main-content">跳到正文</a>
     <slot />
     <script>
       var _hmt = _hmt || [];

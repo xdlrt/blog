@@ -1,12 +1,25 @@
 ---
 export interface Props {
   noPadding?: boolean;
-  ariaHidden?: boolean;
 }
 
-const { noPadding = false, ariaHidden = true } = Astro.props;
+const { noPadding = false } = Astro.props;
 ---
 
-<div class={`max-w-3xl mx-auto ${noPadding ? "px-0" : "px-4"}`}>
-  <hr class="border-skin-line" aria-hidden={ariaHidden} />
+<div
+  class={`section-break max-w-5xl mx-auto ${noPadding ? "px-0" : "px-4"}`}
+  aria-hidden="true"
+>
 </div>
+
+<style>
+  .section-break {
+    min-height: 0.5rem;
+  }
+
+  @media (min-width: 1600px) {
+    .section-break {
+      max-width: var(--layout-display-width);
+    }
+  }
+</style>
