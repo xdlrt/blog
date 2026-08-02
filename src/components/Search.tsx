@@ -141,7 +141,7 @@ export default function SearchBar({ searchList }: Props) {
             href="/tags"
             className="mt-4 inline-block text-sm font-semibold text-skin-accent"
           >
-            浏览全部标签 ↗
+            浏览全部标签
           </a>
         </div>
       )}

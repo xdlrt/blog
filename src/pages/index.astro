@@ -35,9 +35,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
           也保存那些值得反复回看的思考。
         </p>
         <div class="hero-actions">
-          <a href="/posts" class="primary-action">
-            开始阅读 <span aria-hidden="true">↗</span>
-          </a>
+          <a href="/posts" class="primary-action"> 开始阅读 </a>
           <LinkButton className="about-link" href="/about">关于我</LinkButton>
         </div>
         {
@@ -119,11 +117,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
       <div class="all-posts-btn-wrapper">
         <LinkButton href="/posts">
           <span class="all-posts-text">查看完整写作档案</span>
-          <svg xmlns="http://www.w3.org/2000/svg"
-            ><path
-              d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"
-            ></path>
-          </svg>
         </LinkButton>
       </div>
     </section>
@@ -168,7 +161,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     @apply mt-9 flex items-center gap-7;
   }
   .primary-action {
-    @apply inline-flex items-center gap-4 rounded-full bg-skin-base px-6 py-3 text-sm font-medium text-skin-fill transition-transform duration-300;
+    @apply inline-flex items-center rounded-full bg-skin-base px-6 py-3 text-sm font-medium text-skin-fill transition-transform duration-300;
   }
   .primary-action:hover {
     transform: translateY(-2px);
@@ -229,19 +222,11 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   .article-grid :global(.article-card-lead > a),
   #featured :global(.article-card-lead > a) {
-    @apply grid grid-cols-[1fr_auto] gap-x-10 px-7 py-9;
-  }
-  .article-grid :global(.article-card-lead .card-meta),
-  #featured :global(.article-card-lead .card-meta) {
-    @apply col-span-2;
+    @apply px-7 py-9;
   }
   .article-grid :global(.article-card-lead .card-title),
   #featured :global(.article-card-lead .card-title) {
     font-size: clamp(1.8rem, 4vw, 3rem);
-  }
-  .article-grid :global(.article-card-lead .card-arrow),
-  #featured :global(.article-card-lead .card-arrow) {
-    @apply self-end;
   }
   .all-posts-btn-wrapper {
     @apply my-12 text-center;
@@ -271,14 +256,6 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     }
     .article-grid :global(.article-card-lead),
     #featured :global(.article-card-lead) {
-      grid-column: span 1;
-    }
-    .article-grid :global(.article-card-lead > a),
-    #featured :global(.article-card-lead > a) {
-      grid-template-columns: 1fr;
-    }
-    .article-grid :global(.article-card-lead .card-meta),
-    #featured :global(.article-card-lead .card-meta) {
       grid-column: span 1;
     }
   }

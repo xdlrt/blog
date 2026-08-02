@@ -58,14 +58,6 @@ export default function Card({
           )}
           <p className="mt-2 leading-relaxed text-skin-muted">{description}</p>
         </div>
-        <span
-          className={`card-arrow mt-4 inline-flex h-11 w-11 items-center justify-center rounded-full bg-skin-card text-skin-base transition-transform group-hover:translate-x-1 ${
-            isEditorial ? "" : "sm:hidden"
-          }`}
-          aria-hidden="true"
-        >
-          ↗
-        </span>
       </a>
     </li>
   );
