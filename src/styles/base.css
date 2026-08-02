@@ -1,6 +1,55 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer theme, base, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source("../");
+
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+
+  --color-skin-fill: rgb(var(--color-fill));
+  --color-skin-base: rgb(var(--color-text-base));
+  --color-skin-accent: rgb(var(--color-accent));
+  --color-skin-card: rgb(var(--color-card));
+  --color-skin-card-muted: rgb(var(--color-card-muted));
+  --color-skin-line: rgb(var(--color-border));
+
+  --fill-*: initial;
+  --fill-transparent: transparent;
+
+  --font-*: initial;
+  --font-mono:
+    Helvetica Neue, -apple-system, PingFang SC, Microsoft YaHei, STHeiti,
+    Helvetica, Arial, sans-serif;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility display-none {
+  @apply hidden;
+}
+
+@utility focus-outline {
+  @apply outline-2 outline-offset-1 outline-skin-accent focus-visible:no-underline focus-visible:outline-dashed;
+}
 
 @layer base {
   :root,
@@ -30,14 +79,14 @@
   }
   body {
     @apply flex min-h-screen flex-col bg-skin-fill font-mono text-skin-base 
-    selection:bg-skin-accent selection:bg-opacity-70 selection:text-skin-inverted transition-colors;
+    selection:bg-skin-accent/70 selection:text-skin-fill transition-colors;
   }
   section,
   footer {
     @apply mx-auto max-w-3xl px-4;
   }
   a {
-    @apply outline-2 outline-offset-1 outline-skin-fill 
+    @apply outline-2 outline-offset-1 outline-skin-accent
     focus-visible:no-underline focus-visible:outline-dashed;
   }
   svg {
@@ -49,24 +98,23 @@
     sm:scale-110;
   }
   .prose {
-    @apply prose-headings:!mb-3 prose-headings:!text-skin-base 
-    prose-p:text-skin-base 
-    prose-h3:prose-p:!text-skin-base prose-a:!text-skin-base prose-a:!decoration-dashed
+    @apply prose-headings:mb-3! prose-headings:!text-skin-base
+    prose-p:text-skin-base
+    prose-h3:prose-p:!text-skin-base prose-a:!text-skin-base prose-a:decoration-dashed!
     prose-a:underline-offset-8 hover:prose-a:text-skin-accent
-    prose-blockquote:!border-l-skin-accent prose-blockquote:border-opacity-50
+    prose-blockquote:border-l-skin-accent/50!
     prose-blockquote:opacity-80 prose-figcaption:!text-skin-base
     prose-figcaption:opacity-70
     prose-strong:!text-skin-base
     
-    prose-code:rounded prose-code:bg-skin-card 
-    prose-code:bg-opacity-75 prose-code:p-1 
-    prose-code:before:!content-[''] prose-code:after:!content-['']
-    prose-ol:!text-skin-base 
+    prose-code:rounded-sm prose-code:bg-skin-card/75 prose-code:p-1
+    prose-code:before:content-['']! prose-code:after:content-['']!
+    prose-ol:!text-skin-base
     prose-ul:overflow-x-clip prose-ul:!text-skin-base prose-li:marker:!text-skin-accent
     prose-table:text-skin-base prose-th:border
-    prose-th:border-skin-line prose-td:border 
-    prose-td:border-skin-line prose-img:mx-auto 
-    prose-img:!mt-2 prose-img:border-2 
+    prose-th:border-skin-line prose-td:border
+    prose-td:border-skin-line prose-img:mx-auto
+    prose-img:mt-2! prose-img:border-2
     prose-img:border-skin-line prose-hr:!border-skin-line;
   }
   .prose a {
@@ -124,14 +172,5 @@
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-skin-card-muted;
-  }
-}
-
-@layer components {
-  .display-none {
-    @apply hidden;
-  }
-  .focus-outline {
-    @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
 }

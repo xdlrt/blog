@@ -96,6 +96,8 @@ const { activeNav } = Astro.props;
 </header>
 
 <style>
+  @reference "../styles/base.css";
+
   .nav-container {
     @apply mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row;
   }
@@ -155,7 +157,7 @@ const { activeNav } = Astro.props;
     @apply h-5 w-6 flex-col items-end justify-between;
   }
   .icon-container div {
-    @apply h-0.5 bg-skin-inverted transition-all;
+    @apply h-0.5 bg-skin-base transition-all;
   }
   #first-line {
     @apply w-full;
