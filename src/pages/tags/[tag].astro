@@ -39,14 +39,56 @@ const tagPosts = getSortedPosts(getPostsByTag(posts, tag));
 
 <Layout title={`标签:${tag} | ${SITE.title}`}>
   <Header activeNav="tags" />
-  <Main>
-    <ul>
+  <Main
+    pageTitle={`标签：${tag}`}
+    pageDesc={`共 ${tagPosts.length} 篇相关记录。`}
+    pageMeta="TOPIC ARCHIVE"
+  >
+    <ul class="progressive-list">
       {
-        tagPosts.map(({ data }) => (
-          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+        tagPosts.map(({ data }, index) => (
+          <Card
+            href={`/posts/${slugify(data)}`}
+            frontmatter={data}
+            initiallyHidden={index >= 24}
+          />
         ))
       }
     </ul>
+    {
+      tagPosts.length > 24 && (
+        <button class="load-more" type="button" data-load-more>
+          再看 24 篇
+        </button>
+      )
+    }
   </Main>
   <Footer />
 </Layout>
+
+<style>
+  @reference "../../styles/base.css";
+
+  .load-more {
+    @apply mx-auto mt-8 flex min-h-11 items-center rounded-full bg-skin-card px-6 py-3 text-sm font-semibold transition-colors hover:bg-skin-card-muted;
+  }
+</style>
+
+<script>
+  const loadMoreButton =
+    document.querySelector<HTMLButtonElement>("[data-load-more]");
+
+  loadMoreButton?.addEventListener("click", () => {
+    const hiddenCards = Array.from(
+      document.querySelectorAll<HTMLElement>(".progressive-list > .hidden")
+    );
+    hiddenCards.slice(0, 24).forEach(card => card.classList.remove("hidden"));
+    const remaining = hiddenCards.length - 24;
+
+    if (remaining <= 0) {
+      loadMoreButton.remove();
+    } else {
+      loadMoreButton.textContent = `再看 ${Math.min(24, remaining)} 篇`;
+    }
+  });
+</script>

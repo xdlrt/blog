@@ -31,24 +31,27 @@ function setPreference() {
 function reflectPreference() {
   document.firstElementChild.setAttribute("data-theme", themeValue);
 
-  document.querySelector("#theme-btn")?.setAttribute("aria-label", themeValue);
+  const nextThemeLabel =
+    themeValue === "light" ? "切换到深色模式" : "切换到浅色模式";
+  document.querySelector("#theme-btn")?.setAttribute("aria-label", nextThemeLabel);
 }
 
 // set early so no page flashes / CSS is made aware
 reflectPreference();
 
-window.onload = () => {
+window.addEventListener("load", () => {
   // set on load so screen readers can get the latest value on the button
   reflectPreference();
 
   // now this script can find and listen for clicks on the control
   document.querySelector("#theme-btn")?.addEventListener("click", togglePreference);
-};
+});
 
 // sync with system changes
 window
   .matchMedia("(prefers-color-scheme: dark)")
   .addEventListener("change", ({ matches: isDark }) => {
+    if (localStorage.getItem("theme")) return;
     themeValue = isDark ? "dark" : "light";
-    setPreference();
+    reflectPreference();
   });

@@ -11,13 +11,30 @@ import { getPublishPosts } from "@utils/getPosts";
 const posts = await getPublishPosts();
 
 let tags = getUniqueTags(posts);
+const tagCounts = new Map<string, number>();
+posts.forEach(({ data }) =>
+  data.tags?.forEach(tag =>
+    tagCounts.set(
+      tag.toLowerCase(),
+      (tagCounts.get(tag.toLowerCase()) || 0) + 1
+    )
+  )
+);
 ---
 
 <Layout title={`标签 | ${SITE.title}`}>
   <Header activeNav="tags" />
-  <Main>
+  <Main
+    pageTitle="标签"
+    pageDesc="沿着主题重新发现这些文字。"
+    pageMeta="TOPIC INDEX"
+  >
     <ul data-testid="tag-list">
-      {tags.map(tag => <Tag name={tag} size="lg" />)}
+      {
+        tags.map(tag => (
+          <Tag name={tag} size="lg" count={tagCounts.get(tag.toLowerCase())} />
+        ))
+      }
     </ul>
   </Main>
   <Footer />

@@ -16,9 +16,9 @@ const { noMarginTop = false } = Astro.props;
   <div class="footer-wrapper">
     <Socials centered />
     <div class="copyright-wrapper">
-      <span>Copyright &#169; {currentYear}</span>
-      <span class="separator">&nbsp;|&nbsp;</span>
-      <span>也树</span>
+      <span class="footer-mark">一颗小树</span>
+      <span>写作是持续整理自己的方式。</span>
+      <span class="meta">&#169; {currentYear} 也树</span>
     </div>
   </div>
 </footer>
@@ -27,15 +27,19 @@ const { noMarginTop = false } = Astro.props;
   @reference "../styles/base.css";
 
   footer {
-    @apply w-full;
+    @apply w-full max-w-5xl;
   }
   .footer-wrapper {
-    @apply flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4;
+    @apply flex flex-col items-center justify-between gap-5 py-8 sm:flex-row-reverse sm:py-7;
   }
   .copyright-wrapper {
-    @apply my-2 flex flex-col items-center whitespace-nowrap sm:flex-row;
+    @apply my-2 flex flex-col items-center gap-1 text-sm sm:items-start;
   }
-  .separator {
-    @apply hidden sm:inline;
+  .footer-mark {
+    font-family: "Songti SC", STSong, serif;
+    @apply text-lg font-semibold;
+  }
+  .meta {
+    @apply text-xs tracking-wider text-skin-muted;
   }
 </style>

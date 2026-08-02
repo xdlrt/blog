@@ -7,7 +7,7 @@ tags:
 description: "大模型最大的幻觉，可能是让人类以为自己可以直接略过过程、直达结果。"
 ---
 
-![1](https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/1.webp)
+<img src="https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/1.webp" alt="小树的 2025 年终总结封面" width="5504" height="3072" decoding="async" />
 
 2025 年初我给自己的关键词是“稳”，可惜事与愿违，今年反而是变化最多的一年。
 
@@ -19,7 +19,7 @@ description: "大模型最大的幻觉，可能是让人类以为自己可以直
 
 AI 时代，个人的品味越发重要，逐渐成为大家的共识。
 
-![2](https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/2.webp)
+<img src="https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/2.webp" alt="品味是 AI 时代的护城河" width="5504" height="3072" loading="lazy" decoding="async" />
 
 我对品味的理解是：**见过足够多的好东西后，主动选择留下来的欢喜之物**。
 
@@ -27,7 +27,7 @@ AI 时代，个人的品味越发重要，逐渐成为大家的共识。
 
 如果无法判断 AI 交付结果的好坏，那么有可能真的会被 AI 逐渐吞噬。
 
-![3](https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/3.webp)
+<img src="https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/3.webp" alt="AI 作为能力增幅器的示意图" width="5504" height="3072" loading="lazy" decoding="async" />
 
 我现在有种强烈的预感：**AI 会成为个人能力的增幅器，加剧能力分化**。 它拓宽了优秀工程师的边界，让岗位分工重新变得模糊。
 
@@ -41,7 +41,7 @@ AI 时代，个人的品味越发重要，逐渐成为大家的共识。
 
 AI 总能够根据你的输入提供一个在当前场景能够解决问题的选择，但是如何结合具体的业务场景和团队阶段，提供相对更优的方案，依然依赖人本身的决策。
 
-![4](https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/4.webp)
+<img src="https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/4.webp" alt="人与 AI 的三明治工作法" width="5504" height="3072" loading="lazy" decoding="async" />
 
 我现在的工作模式已经在发生变化：更多时间花在深入一线的调研、技术方案推敲、以及对 AI 交付成果的审阅。业务需求 Coding 的过程，我会有意识地让 AI 承担更多。
 
@@ -63,7 +63,7 @@ AI 总能够根据你的输入提供一个在当前场景能够解决问题的�
 
 想要换个环境是个纠结了很久的过程，心路历程[《阿里七年，小树毕业了》](https://mp.weixin.qq.com/s/gRQ1lLzxptUX9zJp-iGsVQ)里交代过。
 
-![5](https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/5.webp)
+<img src="https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/5.webp" alt="阿里七年职业生涯回望" width="5504" height="3072" loading="lazy" decoding="async" />
 
 站在当下回头望，我在阿里的七年可以切分为两段：
 
@@ -74,7 +74,7 @@ AI 总能够根据你的输入提供一个在当前场景能够解决问题的�
 
 值得庆幸的是，AI 给互联网续上一条命，行业内还是能有一些不错的机会。入职也有几个月了，目前来看，一切都还不错。
 
-![6](https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/6.webp)
+<img src="https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/6.webp" alt="成就感来源、自我能力画像与不足" width="5504" height="3072" loading="lazy" decoding="async" />
 
 **每一次重大选择，都是一次深入认识自己的机会。**
 
@@ -92,7 +92,7 @@ AI 总能够根据你的输入提供一个在当前场景能够解决问题的�
 
 只有始终对自己诚实，我才能更加坚定地朝着自己希冀的方向前行。
 
-![7](https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/7.webp)
+<img src="https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/7.webp" alt="每天一小时深度学习 AI 论文的方法" width="5504" height="3072" loading="lazy" decoding="async" />
 
 换工作之后，上班时间会晚一些，但我已经习惯了以前的生活节奏，正好匀出一个小时重拾深度的学习。
 
@@ -144,7 +144,7 @@ AI 总能够根据你的输入提供一个在当前场景能够解决问题的�
 
 比较遗憾的是，去年想尝试的出海产品没太大起色。但人的精力总归有限，今年已经很好啦。
 
-![8](https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/8.webp)
+<img src="https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/8.webp" alt="大模型让人误以为可以略过过程直达结果" width="5504" height="3072" loading="lazy" decoding="async" />
 
 今年和朋友们的交流比较少。AI 再强大，也代替不了人与人之间的碰撞。人是有情绪，有温度的。
 
@@ -152,7 +152,7 @@ AI 总能够根据你的输入提供一个在当前场景能够解决问题的�
 
 ## 尾声
 
-![9](https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/9.webp)
+<img src="https://blog-1253298428.cos.ap-shanghai.myqcloud.com/uPic/9.webp" alt="从公开输出转向向内思考的年度总结" width="5504" height="3072" loading="lazy" decoding="async" />
 
 要给一直关注我的小伙伴道个歉，今年满打满算输出了 12 篇内容，远低于前几年的输出频率。
 

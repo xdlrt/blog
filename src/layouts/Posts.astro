@@ -23,7 +23,11 @@ const next = pageNum < totalPages ? "" : "disabled";
 
 <Layout title={`文章 | ${SITE.title}`}>
   <Header activeNav="posts" />
-  <Main>
+  <Main
+    pageTitle="文章"
+    pageDesc="关于产品、技术与生活选择的长期记录。"
+    pageMeta={`ARCHIVE ${String(pageNum).padStart(2, "0")} / ${String(totalPages).padStart(2, "0")}`}
+  >
     <ul>
       {
         posts.map(({ data }) => (
@@ -40,7 +44,7 @@ const next = pageNum < totalPages ? "" : "disabled";
           disabled={prev === "disabled"}
           href={`/posts${pageNum - 1 !== 1 ? "/" + (pageNum - 1) : ""}`}
           className={`mr-4 select-none ${prev}`}
-          ariaLabel="Previous"
+          ariaLabel="上一页"
         >
           <svg xmlns="http://www.w3.org/2000/svg" class={`${prev}-svg`}>
             <path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z" />
@@ -56,7 +60,7 @@ const next = pageNum < totalPages ? "" : "disabled";
           disabled={next === "disabled"}
           href={`/posts/${pageNum + 1}`}
           className={`ml-4 select-none ${next}`}
-          ariaLabel="Next"
+          ariaLabel="下一页"
         >
           <span class="pagination-text">下一页</span>
           <svg xmlns="http://www.w3.org/2000/svg" class={`${next}-svg`}>

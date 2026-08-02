@@ -16,14 +16,14 @@
   --color-skin-card: rgb(var(--color-card));
   --color-skin-card-muted: rgb(var(--color-card-muted));
   --color-skin-line: rgb(var(--color-border));
+  --color-skin-muted: rgb(var(--color-text-muted));
 
   --fill-*: initial;
   --fill-transparent: transparent;
 
   --font-*: initial;
   --font-mono:
-    Helvetica Neue, -apple-system, PingFang SC, Microsoft YaHei, STHeiti,
-    Helvetica, Arial, sans-serif;
+    "Avenir Next", Avenir, "PingFang SC", "Hiragino Sans GB", sans-serif;
 }
 
 /*
@@ -62,20 +62,24 @@
 @layer base {
   :root,
   html[data-theme="light"] {
-    --color-fill: 251, 254, 251;
-    --color-text-base: 40, 39, 40;
-    --color-accent: 0, 108, 172;
-    --color-card: 230, 230, 230;
-    --color-card-muted: 205, 205, 205;
-    --color-border: 236, 233, 233;
+    color-scheme: light;
+    --color-fill: 244, 241, 232;
+    --color-text-base: 28, 46, 37;
+    --color-accent: 28, 91, 65;
+    --color-card: 232, 226, 211;
+    --color-card-muted: 211, 201, 180;
+    --color-border: 202, 194, 175;
+    --color-text-muted: 82, 96, 86;
   }
   html[data-theme="dark"] {
-    --color-fill: 33, 39, 55;
-    --color-text-base: 234, 237, 243;
-    --color-accent: 255, 107, 1;
-    --color-card: 52, 63, 96;
-    --color-card-muted: 138, 51, 2;
-    --color-border: 171, 75, 8;
+    color-scheme: dark;
+    --color-fill: 20, 29, 25;
+    --color-text-base: 222, 218, 202;
+    --color-accent: 137, 181, 145;
+    --color-card: 35, 48, 40;
+    --color-card-muted: 58, 73, 62;
+    --color-border: 76, 88, 78;
+    --color-text-muted: 169, 174, 163;
   }
   #sun-svg,
   html[data-theme="dark"] #moon-svg {
@@ -86,8 +90,27 @@
     display: block;
   }
   body {
-    @apply flex min-h-screen flex-col bg-skin-fill font-mono text-skin-base 
+    @apply flex min-h-screen flex-col bg-skin-fill font-mono text-skin-base
     selection:bg-skin-accent/70 selection:text-skin-fill transition-colors;
+    background-image:
+      radial-gradient(
+        circle at 12% 8%,
+        rgba(var(--color-accent), 0.06),
+        transparent 28rem
+      ),
+      radial-gradient(
+        circle at 88% 34%,
+        rgba(var(--color-accent), 0.025),
+        transparent 24rem
+      );
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+  }
+  .skip-link {
+    @apply fixed top-3 left-3 z-50 -translate-y-20 rounded-full bg-skin-base px-4 py-2 text-sm font-semibold text-skin-fill transition-transform;
+  }
+  .skip-link:focus {
+    @apply translate-y-0;
   }
   section,
   footer {
@@ -95,6 +118,15 @@
   }
   a {
     @apply focus-outline;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Songti SC", STSong, "Noto Serif CJK SC", serif;
+    letter-spacing: -0.025em;
   }
   svg {
     @apply inline-block h-6 w-6 fill-skin-base group-hover:fill-skin-accent;
@@ -121,8 +153,16 @@
     prose-table:text-skin-base prose-th:border
     prose-th:border-skin-line prose-td:border
     prose-td:border-skin-line prose-img:mx-auto
-    prose-img:mt-2! prose-img:border-2
-    prose-img:border-skin-line prose-hr:!border-skin-line;
+    prose-img:mt-2! prose-hr:!border-skin-line;
+    font-size: 1.0625rem;
+    line-height: 1.95;
+  }
+  .prose h2 {
+    margin-top: 2.8em !important;
+  }
+  .prose p {
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
   }
   .prose a {
     @apply hover:!text-skin-accent;
@@ -143,6 +183,18 @@
   }
   .prose h2#table-of-contents + p {
     @apply hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      transition-delay: 0ms !important;
+    }
   }
 
   .prose

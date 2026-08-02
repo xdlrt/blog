@@ -14,16 +14,16 @@ const { activeNav } = Astro.props;
   <div class="nav-container">
     <div class="top-nav-wrap">
       <a href="/" class="logo">
-        <img
-          src="/images/apple-touch-icon.png"
-          class="w-6 h-6 sm:w-8 sm:h-8 rounded-full mr-2"
-        />
-        {SITE.title}
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="wordmark">
+          <strong>{SITE.title}</strong>
+          <small>YESHU'S NOTES</small>
+        </span>
       </a>
       <nav id="nav-menu">
         <button
           class="hamburger-menu focus-outline"
-          aria-label="Open Menu"
+          aria-label="打开菜单"
           aria-expanded="false"
           aria-controls="menu-items"
           data-testid="header-menu"
@@ -40,11 +40,11 @@ const { activeNav } = Astro.props;
               文章
             </a>
           </li>
-          <!-- <li>
+          <li>
             <a href="/tags" class={activeNav === "tags" ? "active" : ""}>
               标签
             </a>
-          </li> -->
+          </li>
           <li>
             <a href="/about" class={activeNav === "about" ? "active" : ""}>
               关于我
@@ -56,8 +56,8 @@ const { activeNav } = Astro.props;
               className={`focus-outline p-3 sm:p-1 ${
                 activeNav === "search" ? "active" : ""
               }`}
-              ariaLabel="search"
-              title="Search"
+              ariaLabel="搜索"
+              title="搜索"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ const { activeNav } = Astro.props;
                 <button
                   id="theme-btn"
                   class="focus-outline"
-                  title="Toggles light & dark"
+                  title="切换明暗主题"
                   aria-label="auto"
                   aria-live="polite"
                 >
@@ -99,16 +99,34 @@ const { activeNav } = Astro.props;
   @reference "../styles/base.css";
 
   .nav-container {
-    @apply mx-auto flex max-w-3xl flex-col items-center justify-between sm:flex-row;
+    @apply mx-auto flex max-w-5xl flex-col items-center justify-between sm:flex-row;
   }
   .top-nav-wrap {
-    @apply relative flex w-full items-start justify-between p-4 sm:items-center sm:py-8;
+    @apply relative flex w-full items-start justify-between px-4 py-5 sm:items-center sm:py-7;
   }
   .logo {
-    @apply absolute py-1 text-xl font-semibold sm:text-2xl flex items-center justify-center;
+    @apply absolute flex items-center gap-3 py-1 text-xl no-underline;
+  }
+  .brand-mark {
+    @apply block h-2.5 w-2.5 rounded-full transition-transform duration-300;
+    background: rgb(var(--color-accent));
+    box-shadow: 0 0 0 0.35rem rgba(var(--color-accent), 0.08);
+  }
+  .logo:hover .brand-mark {
+    transform: scale(1.2);
+  }
+  .wordmark {
+    @apply flex flex-col leading-none;
+  }
+  .wordmark strong {
+    font-family: "Songti SC", STSong, serif;
+    @apply text-xl font-semibold tracking-wide;
+  }
+  .wordmark small {
+    @apply mt-1 text-[0.65rem] font-medium tracking-[0.16em] text-skin-muted;
   }
   .hamburger-menu {
-    @apply self-end p-2 sm:hidden;
+    @apply flex h-11 w-11 items-center justify-center self-end rounded-full p-2 sm:hidden;
   }
   .hamburger-menu svg {
     @apply h-6 w-6 scale-125 fill-skin-base;
@@ -118,23 +136,16 @@ const { activeNav } = Astro.props;
     @apply flex w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
   }
   nav ul {
-    @apply mt-4 w-44 grid-cols-2 grid-rows-4 gap-y-2 gap-x-2 sm:mt-0 sm:ml-0 sm:w-auto sm:gap-y-0 sm:gap-x-5;
+    @apply absolute top-full right-4 z-20 mt-1 w-48 rounded-2xl bg-skin-card p-3 shadow-lg sm:static sm:mt-0 sm:ml-0 sm:w-auto sm:gap-x-5 sm:bg-transparent sm:p-0 sm:shadow-none;
   }
   nav ul li {
-    @apply col-span-2 flex items-center justify-center;
+    @apply flex items-center justify-center;
   }
   nav ul li a {
-    @apply w-full px-4 py-3 text-center font-medium hover:text-skin-accent sm:my-0 sm:px-2 sm:py-1 transition-all;
-  }
-  nav ul li:nth-child(4) a {
-    @apply w-auto;
-  }
-  nav ul li:nth-child(4),
-  nav ul li:nth-child(5) {
-    @apply col-span-1;
+    @apply flex min-h-11 w-full items-center justify-center rounded-xl px-4 py-2 text-center text-sm font-medium tracking-wide hover:bg-skin-fill/50 hover:text-skin-accent sm:my-0 sm:min-h-0 sm:w-auto sm:px-2 sm:py-1 sm:hover:bg-transparent transition-all;
   }
   nav a.active {
-    @apply underline decoration-wavy decoration-2 underline-offset-4;
+    @apply font-semibold text-skin-accent;
   }
   nav a.active svg {
     @apply fill-skin-accent;
@@ -147,7 +158,7 @@ const { activeNav } = Astro.props;
     @apply h-6 w-6 fill-skin-base hover:fill-skin-accent transition-all;
   }
   #theme-btn {
-    @apply p-3 sm:p-1;
+    @apply flex h-11 w-11 items-center justify-center rounded-xl p-2 sm:h-auto sm:w-auto sm:p-1;
   }
   #theme-btn svg {
     @apply scale-125 hover:rotate-12 sm:scale-100 transition-all;
@@ -177,14 +188,13 @@ const { activeNav } = Astro.props;
 
   const iconContainer = document.querySelector(".icon-container")?.classList;
   const firstLine = document.querySelector("#first-line")?.classList;
-  const secondLine = document.querySelector("#second-line ")?.classList;
+  const secondLine = document.querySelector("#second-line")?.classList;
   const thirdLine = document.querySelector("#third-line")?.classList;
 
-  menuBtn?.addEventListener("click", function () {
-    const menuExpanded = menuBtn?.getAttribute("aria-expanded");
-    if (menuExpanded === "false") {
+  const setMenuExpanded = (expanded: boolean) => {
+    if (expanded) {
       menuBtn?.setAttribute("aria-expanded", "true");
-      menuBtn?.setAttribute("aria-label", "Close Menu");
+      menuBtn?.setAttribute("aria-label", "关闭菜单");
       menuItems?.remove("display-none");
 
       // icon animation
@@ -195,7 +205,7 @@ const { activeNav } = Astro.props;
       secondLine?.add("!w-full", "-rotate-45", "absolute", "bottom-1/2");
     } else {
       menuBtn?.setAttribute("aria-expanded", "false");
-      menuBtn?.setAttribute("aria-label", "Open Menu");
+      menuBtn?.setAttribute("aria-label", "打开菜单");
       menuItems?.add("display-none");
 
       // icon animation
@@ -204,6 +214,20 @@ const { activeNav } = Astro.props;
       firstLine?.remove("rotate-45", "absolute", "bottom-1/2");
       thirdLine?.remove("display-none");
       secondLine?.remove("!w-full", "-rotate-45", "absolute", "bottom-1/2");
+    }
+  };
+
+  menuBtn?.addEventListener("click", function () {
+    setMenuExpanded(menuBtn?.getAttribute("aria-expanded") === "false");
+  });
+
+  document.addEventListener("keydown", event => {
+    if (
+      event.key === "Escape" &&
+      menuBtn?.getAttribute("aria-expanded") === "true"
+    ) {
+      setMenuExpanded(false);
+      menuBtn?.focus();
     }
   });
 </script>

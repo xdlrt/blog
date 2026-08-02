@@ -2,9 +2,10 @@
 export interface Props {
   name: string;
   size?: "sm" | "lg";
+  count?: number;
 }
 
-const { name, size = "sm" } = Astro.props;
+const { name, size = "sm", count } = Astro.props;
 ---
 
 <li
@@ -23,6 +24,7 @@ const { name, size = "sm" } = Astro.props;
       ></path>
     </svg>
     &nbsp;<span>{name.toLowerCase()}</span>
+    {typeof count === "number" && <small>{count}</small>}
   </a>
 </li>
 
@@ -37,5 +39,8 @@ const { name, size = "sm" } = Astro.props;
   }
   a span {
     @apply inline-block align-middle;
+  }
+  a small {
+    @apply ml-2 text-xs text-skin-muted;
   }
 </style>

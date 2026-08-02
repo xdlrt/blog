@@ -7,24 +7,54 @@ import Layout from "./Layout.astro";
 
 export interface Props {
   frontmatter: {
-    title: string;
+    title?: string;
     description?: string;
   };
 }
 
 const { frontmatter } = Astro.props;
+const title = frontmatter.title || "关于我";
 ---
 
 <Layout title={`关于我 | ${SITE.title}`}>
   <Header activeNav="about" />
-  <Breadcrumbs />
+  <Breadcrumbs width="reading" />
   <main id="main-content">
+    <header class="about-header">
+      <p>ABOUT / YESHU</p>
+      <h1>{title}</h1>
+      {
+        frontmatter.description && (
+          <div class="about-deck">{frontmatter.description}</div>
+        )
+      }
+    </header>
     <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">
-      <h1 class="mt-2 text-2xl tracking-wider sm:text-3xl">
-        {frontmatter.title}
-      </h1>
       <slot />
     </section>
   </main>
   <Footer />
 </Layout>
+
+<style>
+  @reference "../styles/base.css";
+
+  #main-content {
+    @apply mx-auto w-full max-w-3xl px-4;
+  }
+  .about-header {
+    @apply pb-8 pt-10;
+  }
+  .about-header p {
+    @apply text-xs font-semibold tracking-[0.16em] text-skin-accent;
+  }
+  .about-header h1 {
+    @apply mt-3 text-4xl font-semibold sm:text-6xl;
+  }
+  .about-deck {
+    @apply mt-5 max-w-2xl text-lg leading-8 text-skin-muted;
+  }
+  #about {
+    @apply mx-auto;
+  }
+</style>

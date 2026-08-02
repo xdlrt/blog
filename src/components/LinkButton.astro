@@ -10,22 +10,36 @@ export interface Props {
 const { href, className, ariaLabel, title, disabled = false } = Astro.props;
 ---
 
-<a
-  type="button"
-  href={disabled ? "#" : href}
-  tabindex={disabled ? "-1" : "0"}
-  class={`group ${className}`}
-  aria-label={ariaLabel}
-  title={title}
-  aria-disabled={disabled}
->
-  <slot />
-</a>
+{
+  disabled ? (
+    <span
+      class={`group ${className}`}
+      aria-label={ariaLabel}
+      title={title}
+      aria-disabled="true"
+    >
+      <slot />
+    </span>
+  ) : (
+    <a
+      href={href}
+      class={`group ${className}`}
+      aria-label={ariaLabel}
+      title={title}
+    >
+      <slot />
+    </a>
+  )
+}
 
 <style>
   @reference "../styles/base.css";
 
-  a {
+  a,
+  span {
     @apply hover:text-skin-accent transition-all;
+  }
+  span[aria-disabled="true"] {
+    @apply pointer-events-none select-none text-skin-muted;
   }
 </style>

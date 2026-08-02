@@ -6,6 +6,9 @@ import Tag from "@components/Tag.astro";
 import Datetime from "@components/Datetime";
 import { render } from "astro:content";
 import type { PostCollectionEntry } from "@types";
+import { getPublishPosts } from "@utils/getPosts";
+import { getSortedPosts } from "@utils/getSortedPosts";
+import { slugify } from "@utils/slugify";
 
 export interface Props {
   post: PostCollectionEntry;
@@ -16,6 +19,13 @@ const { post } = Astro.props;
 const { title, author, description, ogImage, pubDatetime, tags } = post.data;
 
 const { Content } = await render(post);
+const allPosts = getSortedPosts(await getPublishPosts());
+const currentIndex = allPosts.findIndex(entry => entry.id === post.id);
+const newerPost = currentIndex > 0 ? allPosts[currentIndex - 1] : undefined;
+const olderPost =
+  currentIndex >= 0 && currentIndex < allPosts.length - 1
+    ? allPosts[currentIndex + 1]
+    : undefined;
 
 const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
   .href;
@@ -23,21 +33,25 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
 
 <Layout title={title} author={author} description={description} ogImage={ogUrl}>
   <Header />
-  <div class="mx-auto flex w-full max-w-3xl justify-start px-2">
-    <button
-      class="focus-outline mt-8 mb-2 flex hover:opacity-75 transition-all"
-      onclick="history.back()"
-    >
+  <div class="back-wrapper">
+    <a class="focus-outline back-button" href="/posts">
       <svg xmlns="http://www.w3.org/2000/svg"
         ><path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
-      </svg><span>返回</span>
-    </button>
+      </svg><span>返回文章列表</span>
+    </a>
   </div>
   <main id="main-content">
-    <h1 class="post-title">{title}</h1>
-    <Datetime datetime={pubDatetime} size="lg" className="my-2" />
+    <header class="post-header">
+      <div class="post-kicker">
+        <span>FIELD NOTE</span>
+        <span>{tags[0] || "未分类"}</span>
+      </div>
+      <h1 class="post-title">{title}</h1>
+      <p class="post-deck">{description}</p>
+      <Datetime datetime={pubDatetime} size="lg" className="post-date" />
+    </header>
     <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
       <Content />
     </article>
@@ -45,6 +59,27 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
     <ul class="tags-container">
       {tags.map(tag => <Tag name={tag} />)}
     </ul>
+
+    {
+      (newerPost || olderPost) && (
+        <nav class="reading-nav" aria-label="继续阅读">
+          {newerPost ? (
+            <a href={`/posts/${slugify(newerPost.data)}`}>
+              <span>上一篇</span>
+              <strong>{newerPost.data.title}</strong>
+            </a>
+          ) : (
+            <span />
+          )}
+          {olderPost && (
+            <a class="next" href={`/posts/${slugify(olderPost.data)}`}>
+              <span>下一篇</span>
+              <strong>{olderPost.data.title}</strong>
+            </a>
+          )}
+        </nav>
+      )
+    }
   </main>
   <Footer />
 </Layout>
@@ -53,12 +88,50 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
   @reference "../styles/base.css";
 
   main {
-    @apply mx-auto w-full max-w-3xl px-4 pb-12;
+    @apply mx-auto w-full max-w-5xl px-4 pb-12;
+  }
+  .back-wrapper {
+    @apply mx-auto flex w-full max-w-5xl justify-start px-4;
+  }
+  .back-button {
+    @apply mb-2 mt-8 flex items-center text-sm text-skin-muted transition-colors hover:text-skin-base;
+  }
+  .post-header {
+    @apply mx-auto max-w-3xl pb-10 pt-8;
+  }
+  .post-kicker {
+    color: rgb(var(--color-accent));
+    @apply mb-5 flex justify-between text-[0.65rem] font-semibold tracking-[0.18em];
   }
   .post-title {
-    @apply text-2xl font-semibold text-skin-accent;
+    font-size: clamp(2.25rem, 6vw, 4.35rem);
+    text-wrap: balance;
+    word-break: normal;
+    @apply font-semibold leading-[1.12];
+  }
+  .post-deck {
+    @apply mt-6 max-w-2xl text-lg leading-8 text-skin-muted;
+  }
+  .post-header :global(.post-date) {
+    @apply mt-8 text-sm;
   }
   .tags-container {
-    @apply my-8;
+    @apply mx-auto my-12 max-w-3xl pt-4;
+  }
+  .reading-nav {
+    @apply mx-auto grid max-w-3xl gap-4 sm:grid-cols-2;
+  }
+  .reading-nav > a {
+    @apply rounded-2xl bg-skin-card/55 p-5 transition-colors hover:bg-skin-card;
+  }
+  .reading-nav > a.next {
+    @apply text-right;
+  }
+  .reading-nav span {
+    @apply block text-xs tracking-[0.14em] text-skin-muted;
+  }
+  .reading-nav strong {
+    @apply mt-2 block leading-relaxed;
+    font-family: "Songti SC", STSong, serif;
   }
 </style>
