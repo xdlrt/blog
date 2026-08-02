@@ -29,7 +29,7 @@ const title = frontmatter.title || "关于我";
         )
       }
     </header>
-    <section id="about" class="prose mb-28 max-w-3xl prose-img:border-0">
+    <section id="about" class="prose mb-28 prose-img:border-0">
       <slot />
     </section>
   </main>
@@ -40,7 +40,8 @@ const title = frontmatter.title || "关于我";
   @reference "../styles/base.css";
 
   #main-content {
-    @apply mx-auto w-full max-w-3xl px-4;
+    @apply mx-auto w-full px-4;
+    max-width: calc(var(--layout-reading-width) + 2rem);
   }
   .about-header {
     @apply pb-8 pt-10;
@@ -56,5 +57,12 @@ const title = frontmatter.title || "关于我";
   }
   #about {
     @apply mx-auto;
+    max-width: var(--layout-reading-width);
+  }
+  @media (min-width: 48rem) {
+    #about {
+      font-size: 1.0625rem;
+      line-height: 2rem;
+    }
   }
 </style>

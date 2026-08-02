@@ -52,7 +52,7 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
       <p class="post-deck">{description}</p>
       <Datetime datetime={pubDatetime} size="lg" className="post-date" />
     </header>
-    <article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+    <article id="article" role="article" class="prose mx-auto mt-8">
       <Content />
     </article>
 
@@ -91,13 +91,15 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
     @apply mx-auto w-full max-w-5xl px-4 pb-12;
   }
   .back-wrapper {
-    @apply mx-auto flex w-full max-w-3xl justify-start px-4 sm:px-0;
+    @apply mx-auto flex w-full justify-start px-4;
+    max-width: calc(var(--layout-reading-width) + 2rem);
   }
   .back-button {
     @apply mb-2 mt-8 flex items-center text-sm text-skin-muted transition-colors hover:text-skin-base;
   }
   .post-header {
-    @apply mx-auto max-w-3xl pb-10 pt-8;
+    @apply mx-auto pb-10 pt-8;
+    max-width: var(--layout-reading-width);
   }
   .post-kicker {
     color: rgb(var(--color-accent));
@@ -116,10 +118,12 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
     @apply mt-8 text-sm;
   }
   .tags-container {
-    @apply mx-auto my-12 max-w-3xl pt-4;
+    @apply mx-auto my-12 pt-4;
+    max-width: var(--layout-reading-width);
   }
   .reading-nav {
-    @apply mx-auto grid max-w-3xl gap-4 sm:grid-cols-2;
+    @apply mx-auto grid gap-4 sm:grid-cols-2;
+    max-width: var(--layout-reading-width);
   }
   .reading-nav > a {
     @apply rounded-2xl bg-skin-card/55 p-5 transition-colors hover:bg-skin-card;
@@ -133,5 +137,15 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
   .reading-nav strong {
     @apply mt-2 block leading-relaxed;
     font-family: "Songti SC", STSong, serif;
+  }
+  @media (min-width: 48rem) {
+    #article {
+      font-size: 1.0625rem;
+      line-height: 2rem;
+    }
+  }
+  #article {
+    width: 100%;
+    max-width: var(--layout-reading-width);
   }
 </style>

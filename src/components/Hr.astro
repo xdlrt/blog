@@ -16,4 +16,10 @@ const { noPadding = false } = Astro.props;
   .section-break {
     min-height: 0.5rem;
   }
+
+  @media (min-width: 1600px) {
+    .section-break {
+      max-width: var(--layout-display-width);
+    }
+  }
 </style>

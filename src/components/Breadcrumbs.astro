@@ -73,7 +73,7 @@ breadcrumbList[0] === "文章" && breadcrumbList.splice(0, 2, `文章`);
     @apply max-w-5xl;
   }
   .breadcrumb.reading {
-    @apply max-w-3xl;
+    max-width: calc(var(--layout-reading-width) + 2rem);
   }
   .breadcrumb ul li {
     @apply inline;
@@ -86,5 +86,11 @@ breadcrumbList[0] === "文章" && breadcrumbList.splice(0, 2, `文章`);
   }
   .breadcrumb ul li:not(:last-child) a {
     @apply hover:opacity-100;
+  }
+
+  @media (min-width: 1600px) {
+    .breadcrumb.wide {
+      max-width: var(--layout-display-width);
+    }
   }
 </style>

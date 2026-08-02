@@ -29,7 +29,7 @@ export default function Card({
   const isEditorial = variant === "editorial" || variant === "lead";
   const cardSpacing =
     variant === "lead"
-      ? "-mx-2 px-2 py-7 hover:bg-skin-card/55 sm:-mx-4 sm:px-4 sm:py-8"
+      ? "-mx-2 px-2 py-7 hover:bg-skin-card/55 focus-visible:[outline-offset:-3px] sm:-mx-4 sm:px-4 sm:py-8"
       : variant === "editorial"
         ? "-mx-2 px-2 py-6 hover:bg-skin-card/55 sm:-mx-4 sm:px-4"
         : "-mx-2 px-2 py-5 hover:bg-skin-card/40 sm:-mx-4 sm:px-4 sm:py-5";

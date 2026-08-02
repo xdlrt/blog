@@ -214,7 +214,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   }
   .article-grid,
   #featured ul {
-    @apply grid grid-cols-2 gap-x-5 gap-y-3;
+    @apply grid grid-cols-2 gap-x-10 gap-y-3;
   }
   .article-grid :global(.article-card-lead),
   #featured :global(.article-card-lead) {
@@ -223,6 +223,10 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   .article-grid :global(.article-card-lead > a),
   #featured :global(.article-card-lead > a) {
     @apply bg-skin-card/45;
+  }
+  .article-grid :global(.article-card-lead > a:hover),
+  #featured :global(.article-card-lead > a:hover) {
+    @apply bg-skin-card/55;
   }
   .article-grid :global(.article-card-lead .card-title),
   #featured :global(.article-card-lead .card-title) {
@@ -234,7 +238,7 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   .all-posts-text {
     @apply inline-block align-middle;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 767px) {
     #hero {
       min-height: auto;
       grid-template-columns: 1fr;
@@ -257,6 +261,13 @@ const socialCount = SOCIALS.filter(social => social.active).length;
     .article-grid :global(.article-card-lead),
     #featured :global(.article-card-lead) {
       grid-column: span 1;
+    }
+  }
+  @media (min-width: 1600px) {
+    #hero,
+    #featured,
+    #recent-posts {
+      max-width: var(--layout-display-width, 64rem);
     }
   }
 </style>

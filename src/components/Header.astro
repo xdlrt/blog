@@ -34,7 +34,7 @@ const { activeNav } = Astro.props;
             <div id="third-line"></div>
           </div>
         </button>
-        <ul id="menu-items" class="display-none sm:flex">
+        <ul id="menu-items" class="display-none md:flex">
           <li>
             <a href="/posts" class={activeNav === "posts" ? "active" : ""}>
               文章
@@ -53,7 +53,7 @@ const { activeNav } = Astro.props;
           <li>
             <LinkButton
               href="/search"
-              className={`focus-outline p-3 sm:p-1 ${
+              className={`header-search focus-outline p-3 md:p-1 ${
                 activeNav === "search" ? "active" : ""
               }`}
               ariaLabel="搜索"
@@ -61,7 +61,7 @@ const { activeNav } = Astro.props;
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="scale-125 sm:scale-100"
+                class="scale-125 md:scale-100"
                 ><path
                   d="M19.023 16.977a35.13 35.13 0 0 1-1.367-1.384c-.372-.378-.596-.653-.596-.653l-2.8-1.337A6.962 6.962 0 0 0 16 9c0-3.859-3.14-7-7-7S2 5.141 2 9s3.14 7 7 7c1.763 0 3.37-.66 4.603-1.739l1.337 2.8s.275.224.653.596c.387.363.896.854 1.384 1.367l1.358 1.392.604.646 2.121-2.121-.646-.604c-.379-.372-.885-.866-1.391-1.36zM9 14c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"
                 ></path>
@@ -99,10 +99,10 @@ const { activeNav } = Astro.props;
   @reference "../styles/base.css";
 
   .nav-container {
-    @apply mx-auto flex max-w-5xl flex-col items-center justify-between sm:flex-row;
+    @apply mx-auto flex max-w-5xl flex-col items-center justify-between md:flex-row;
   }
   .top-nav-wrap {
-    @apply relative flex w-full items-start justify-between px-4 py-5 sm:items-center sm:py-7;
+    @apply relative flex w-full items-start justify-between px-4 py-5 md:items-center md:py-7;
   }
   .logo {
     @apply absolute flex items-center gap-3 py-1 text-xl no-underline;
@@ -126,23 +126,23 @@ const { activeNav } = Astro.props;
     @apply mt-1 text-[0.65rem] font-medium tracking-[0.16em] text-skin-muted;
   }
   .hamburger-menu {
-    @apply flex h-11 w-11 items-center justify-center self-end rounded-full p-2 sm:hidden;
+    @apply flex h-11 w-11 items-center justify-center self-end rounded-full p-2 md:hidden;
   }
   .hamburger-menu svg {
     @apply h-6 w-6 scale-125 fill-skin-base;
   }
 
   nav {
-    @apply flex w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
+    @apply flex w-full flex-col items-center md:ml-2 md:flex-row md:justify-end md:space-x-4 md:py-0;
   }
   nav ul {
-    @apply absolute top-full right-4 z-20 mt-1 w-48 rounded-2xl bg-skin-card p-3 shadow-lg sm:static sm:mt-0 sm:ml-0 sm:w-auto sm:gap-x-5 sm:bg-transparent sm:p-0 sm:shadow-none;
+    @apply absolute top-full right-4 z-20 mt-1 w-48 rounded-2xl bg-skin-card p-3 shadow-lg md:static md:mt-0 md:ml-0 md:w-auto md:gap-x-5 md:bg-transparent md:p-0 md:shadow-none;
   }
   nav ul li {
     @apply flex items-center justify-center;
   }
   nav ul li a {
-    @apply flex min-h-11 w-full items-center justify-center rounded-xl px-4 py-2 text-center text-sm font-medium tracking-wide hover:bg-skin-fill/50 hover:text-skin-accent sm:my-0 sm:min-h-0 sm:w-auto sm:px-2 sm:py-1 sm:hover:bg-transparent transition-all;
+    @apply flex min-h-11 w-full items-center justify-center rounded-xl px-4 py-2 text-center text-sm font-medium tracking-wide hover:bg-skin-fill/50 hover:text-skin-accent md:my-0 md:w-auto md:px-2 md:py-1 md:hover:bg-transparent transition-all;
   }
   nav a.active {
     @apply font-semibold text-skin-accent;
@@ -158,10 +158,10 @@ const { activeNav } = Astro.props;
     @apply h-6 w-6 fill-skin-base hover:fill-skin-accent transition-all;
   }
   #theme-btn {
-    @apply flex h-11 w-11 items-center justify-center rounded-xl p-2 sm:h-auto sm:w-auto sm:p-1;
+    @apply flex h-11 w-11 items-center justify-center rounded-xl p-2 md:p-1;
   }
   #theme-btn svg {
-    @apply scale-125 hover:rotate-12 sm:scale-100 transition-all;
+    @apply scale-125 hover:rotate-12 md:scale-100 transition-all;
   }
 
   .icon-container {
@@ -178,6 +178,27 @@ const { activeNav } = Astro.props;
   }
   #third-line {
     @apply w-1/2;
+  }
+
+  @media (min-width: 768px) {
+    nav ul li a,
+    nav :global(.header-search),
+    #theme-btn {
+      min-width: 2.75rem;
+      min-height: 2.75rem;
+    }
+
+    nav :global(.header-search) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .nav-container {
+      max-width: var(--layout-display-width);
+    }
   }
 </style>
 

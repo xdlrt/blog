@@ -33,4 +33,10 @@ const { pageTitle, pageDesc, pageMeta } = Astro.props;
   #main-content p {
     @apply mb-8 mt-3 text-skin-muted;
   }
+
+  @media (min-width: 1600px) {
+    #main-content {
+      max-width: var(--layout-display-width);
+    }
+  }
 </style>

@@ -143,6 +143,11 @@ const nextPage = currentPage < totalPages ? currentPage + 1 : undefined;
           )
         }
       </select>
+      <span
+        class="select-indicator"
+        data-testid="page-select-indicator"
+        aria-hidden="true">▾</span
+      >
     </label>
 
     {
@@ -181,7 +186,7 @@ const nextPage = currentPage < totalPages ? currentPage + 1 : undefined;
     @apply mx-auto mt-auto mb-8 w-full max-w-5xl px-4 pt-4;
   }
   .desktop-pagination {
-    @apply hidden grid-cols-[minmax(8rem,1fr)_auto_minmax(8rem,1fr)] items-center gap-6 sm:grid;
+    @apply hidden grid-cols-[minmax(8rem,1fr)_auto_minmax(8rem,1fr)] items-center gap-6 md:grid;
   }
   .direction-link {
     @apply flex min-h-20 flex-col justify-center rounded-2xl px-5 py-3 transition-colors hover:bg-skin-card/55 hover:text-skin-accent;
@@ -222,7 +227,7 @@ const nextPage = currentPage < totalPages ? currentPage + 1 : undefined;
     @apply mt-2 text-[0.65rem] tracking-[0.12em] text-skin-muted;
   }
   .mobile-pagination {
-    @apply grid grid-cols-[1fr_auto_1fr] items-center gap-2 sm:hidden;
+    @apply grid grid-cols-[1fr_auto_1fr] items-center gap-2 md:hidden;
   }
   .mobile-direction {
     @apply flex min-h-12 items-center rounded-xl px-3 text-sm font-medium transition-colors hover:bg-skin-card/55 hover:text-skin-accent;
@@ -237,10 +242,19 @@ const nextPage = currentPage < totalPages ? currentPage + 1 : undefined;
     @apply relative rounded-full bg-skin-base text-skin-fill;
   }
   .mobile-page-select select {
-    @apply h-11 cursor-pointer appearance-none rounded-full bg-transparent px-5 text-center text-sm font-semibold outline-hidden;
+    @apply h-11 cursor-pointer appearance-none rounded-full bg-transparent py-0 pr-8 pl-4 text-center text-sm font-semibold outline-hidden;
+  }
+  .select-indicator {
+    @apply pointer-events-none absolute top-1/2 right-2.5 -translate-y-1/2 text-xs;
   }
   .mobile-page-select select:focus-visible {
     outline: 2px dashed rgb(var(--color-accent));
     outline-offset: 3px;
+  }
+
+  @media (min-width: 1600px) {
+    .pagination {
+      max-width: var(--layout-display-width);
+    }
   }
 </style>

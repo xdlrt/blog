@@ -36,7 +36,7 @@ const { noMarginTop = false } = Astro.props;
     @apply w-full max-w-none bg-skin-card/35 px-0;
   }
   .footer-shell {
-    @apply mx-auto grid w-full max-w-5xl gap-7 px-4 py-9 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-x-10 sm:py-10;
+    @apply mx-auto grid w-full max-w-5xl gap-7 px-4 py-9 md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-10 md:py-10;
   }
   .footer-intro {
     @apply self-center;
@@ -49,12 +49,18 @@ const { noMarginTop = false } = Astro.props;
     @apply mt-3 text-2xl font-semibold leading-snug sm:text-3xl;
   }
   .footer-navigation {
-    @apply flex flex-col items-start sm:items-end;
+    @apply flex flex-col items-start md:items-end;
   }
   .back-to-top {
     @apply inline-flex min-h-11 items-center rounded-xl px-3 text-sm text-skin-muted transition-colors hover:bg-skin-card/65 hover:text-skin-accent;
   }
   .footer-meta {
-    @apply flex flex-col gap-1 text-[0.65rem] tracking-[0.12em] text-skin-muted sm:col-span-2 sm:flex-row sm:justify-between;
+    @apply flex flex-col gap-1 text-[0.65rem] tracking-[0.12em] text-skin-muted md:col-span-2 md:flex-row md:justify-between;
+  }
+
+  @media (min-width: 1600px) {
+    .footer-shell {
+      max-width: var(--layout-display-width);
+    }
   }
 </style>
