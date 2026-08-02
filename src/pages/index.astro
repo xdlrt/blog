@@ -24,40 +24,30 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   <Header />
   <main id="main-content">
     <section id="hero">
-      <div class="hero-copy">
-        <div class="eyebrow">
-          <span>IN PROGRESS TO BE A PRODUCT MAKER</span>
-          <span>EST. 2016</span>
-        </div>
+      <div class="hero-heading">
+        <p class="eyebrow">IN PROGRESS TO BE A PRODUCT MAKER</p>
         <h1><span>技术向前，</span><span>生活向内。</span></h1>
-        <p class="hero-intro">
-          你好，我是小树。这里记录产品、技术与生活选择，
-          也保存那些值得反复回看的思考。
-        </p>
-        <div class="hero-actions">
-          <a href="/posts" class="primary-action"> 开始阅读 </a>
-          <LinkButton className="about-link" href="/about">关于我</LinkButton>
-        </div>
-        {
-          socialCount > 0 && (
-            <div class="social-wrapper">
-              <div class="social-links">FIND ME ELSEWHERE</div>
-              <Socials />
-            </div>
-          )
-        }
       </div>
       <aside class="archive-note" aria-label="博客写作档案概览">
-        <p class="note-label">WRITING ARCHIVE</p>
-        <p class="note-count">{sortedPosts.length}<span>篇</span></p>
-        <p class="note-copy">
-          从技术学习到产品思考，也记录工作与生活中那些具体的选择。
+        <p class="note-count">
+          <strong>{sortedPosts.length}</strong><span>篇文章</span>
         </p>
         <div class="note-meta">
           <span>始于 2016</span>
           <span>持续更新</span>
         </div>
       </aside>
+      <div class="hero-actions">
+        <a href="/posts" class="primary-action">开始阅读</a>
+        <LinkButton className="about-link" href="/about">关于我</LinkButton>
+      </div>
+      {
+        socialCount > 0 && (
+          <div class="social-wrapper" aria-label="外部链接">
+            <Socials variant="text" />
+          </div>
+        )
+      }
     </section>
 
     <Hr />
@@ -108,14 +98,14 @@ const socialCount = SOCIALS.filter(social => social.active).length;
                   frontmatter={data}
                   secHeading={false}
                   index={index + 1}
-                  variant={index === 0 ? "lead" : "editorial"}
+                  variant="editorial"
                 />
               )
           )
         }
       </ul>
       <div class="all-posts-btn-wrapper">
-        <LinkButton href="/posts">
+        <LinkButton className="archive-action" href="/posts">
           <span class="all-posts-text">查看完整写作档案</span>
         </LinkButton>
       </div>
@@ -129,22 +119,26 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   @reference "../styles/base.css";
 
   #hero {
-    @apply grid px-4 py-14;
+    @apply grid px-4;
     max-width: 64rem;
-    min-height: min(610px, calc(100vh - 110px));
-    grid-template-columns: minmax(0, 1.45fr) minmax(14rem, 0.55fr);
-    align-items: center;
-    gap: clamp(3rem, 8vw, 7rem);
+    grid-template-columns: minmax(0, 1fr) minmax(12rem, 0.34fr);
+    grid-template-areas:
+      "heading archive"
+      "actions social";
+    column-gap: clamp(3.5rem, 9vw, 8rem);
+    row-gap: clamp(1.5rem, 3vw, 2.25rem);
+    padding-top: clamp(4.75rem, 10vh, 7rem);
+    padding-bottom: clamp(5.5rem, 12vh, 8rem);
   }
-  .hero-copy {
-    max-width: 46rem;
+  .hero-heading {
+    grid-area: heading;
   }
   .eyebrow {
-    @apply mb-8 flex items-center justify-between gap-4 text-[0.68rem] font-semibold tracking-[0.16em] text-skin-muted;
+    @apply mb-8 text-[0.68rem] font-semibold tracking-[0.16em] text-skin-muted;
   }
   #hero h1 {
-    font-size: clamp(3rem, 7.8vw, 6rem);
-    line-height: 1.02;
+    font-size: clamp(3.5rem, 7.2vw, 5.75rem);
+    line-height: 0.98;
     @apply my-0 font-semibold;
   }
   #hero h1 span {
@@ -153,46 +147,49 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   #hero h1 span:last-child {
     color: rgb(var(--color-accent));
   }
-  .hero-intro {
-    max-width: 35rem;
-    @apply mt-8 text-base leading-8 text-skin-muted sm:text-lg;
-  }
   .hero-actions {
-    @apply mt-9 flex items-center gap-7;
+    grid-area: actions;
+    @apply flex items-center gap-7;
   }
   .primary-action {
-    @apply inline-flex items-center rounded-full bg-skin-base px-6 py-3 text-sm font-medium text-skin-fill transition-transform duration-300;
+    @apply inline-flex min-h-11 items-center rounded bg-skin-base px-6 text-sm font-medium text-skin-fill transition-colors duration-300;
   }
   .primary-action:hover {
-    transform: translateY(-2px);
+    background-color: rgb(var(--color-accent));
   }
   .hero-actions :global(.about-link) {
-    @apply text-sm underline underline-offset-8;
+    @apply inline-flex min-h-11 items-center text-sm underline underline-offset-8;
   }
   .social-wrapper {
-    @apply mt-14 flex items-center gap-3;
-  }
-  .social-links {
-    @apply whitespace-nowrap text-[0.68rem] tracking-[0.16em] text-skin-muted;
+    grid-area: social;
+    @apply flex items-center;
   }
   .archive-note {
-    @apply relative rounded-[2rem] bg-skin-card/85 p-8;
-  }
-  .note-label {
-    @apply text-[0.68rem] font-semibold tracking-[0.18em] text-skin-muted;
+    grid-area: archive;
+    align-self: end;
   }
   .note-count {
     font-family: "Songti SC", STSong, serif;
-    @apply mt-7 text-6xl font-semibold leading-none text-skin-accent;
+    @apply flex items-end gap-3 leading-none text-skin-accent;
+  }
+  .note-count strong {
+    @apply text-6xl font-semibold;
   }
   .note-count span {
-    @apply ml-2 text-base font-normal text-skin-muted;
-  }
-  .note-copy {
-    @apply mt-6 text-sm leading-7 text-skin-muted;
+    font-family: inherit;
+    @apply pb-1 text-sm font-normal tracking-[0.08em] text-skin-muted;
   }
   .note-meta {
-    @apply mt-8 flex justify-between text-[0.68rem] tracking-wider text-skin-muted;
+    @apply mt-5 flex gap-7 text-[0.68rem] tracking-wider text-skin-muted;
+  }
+  .social-wrapper :global(.text-links) {
+    @apply flex-nowrap gap-3;
+  }
+  .social-wrapper :global(.text-links a) {
+    @apply rounded px-1 text-[0.68rem] font-medium uppercase tracking-[0.1em];
+  }
+  .social-wrapper :global(.text-links a:first-child) {
+    @apply pl-0;
   }
   #featured,
   #recent-posts {
@@ -216,49 +213,65 @@ const socialCount = SOCIALS.filter(social => social.active).length;
   #featured ul {
     @apply grid grid-cols-2 gap-x-10 gap-y-3;
   }
-  .article-grid :global(.article-card-lead),
   #featured :global(.article-card-lead) {
     @apply col-span-2;
   }
-  .article-grid :global(.article-card-lead > a),
   #featured :global(.article-card-lead > a) {
     @apply bg-skin-card/45;
   }
-  .article-grid :global(.article-card-lead > a:hover),
   #featured :global(.article-card-lead > a:hover) {
     @apply bg-skin-card/55;
   }
-  .article-grid :global(.article-card-lead .card-title),
   #featured :global(.article-card-lead .card-title) {
     font-size: clamp(1.8rem, 4vw, 3rem);
   }
   .all-posts-btn-wrapper {
-    @apply my-12 text-center;
+    @apply my-14 flex justify-center;
+  }
+  .all-posts-btn-wrapper :global(.archive-action) {
+    @apply inline-flex min-h-12 min-w-56 items-center justify-center rounded bg-skin-base px-8 text-sm font-medium tracking-[0.04em] text-skin-fill transition-colors hover:bg-skin-accent hover:text-skin-fill;
   }
   .all-posts-text {
     @apply inline-block align-middle;
   }
   @media (max-width: 767px) {
     #hero {
-      min-height: auto;
       grid-template-columns: 1fr;
-      padding-top: 3rem;
-      padding-bottom: 3.5rem;
+      grid-template-areas:
+        "heading"
+        "archive"
+        "actions"
+        "social";
+      row-gap: 0;
+      padding-top: 3.75rem;
+      padding-bottom: 4.5rem;
     }
-    .eyebrow span:first-child {
+    .eyebrow {
       max-width: 14rem;
+      @apply mb-6 leading-5;
+    }
+    #hero h1 {
+      font-size: clamp(3rem, 14vw, 4rem);
     }
     .archive-note {
-      display: none;
+      @apply mt-9;
+    }
+    .note-count strong {
+      @apply text-4xl;
+    }
+    .note-meta {
+      @apply mt-3;
+    }
+    .hero-actions {
+      @apply mt-8;
     }
     .social-wrapper {
-      @apply mt-10 flex-col items-start;
+      @apply mt-5;
     }
     .article-grid,
     #featured ul {
       grid-template-columns: 1fr;
     }
-    .article-grid :global(.article-card-lead),
     #featured :global(.article-card-lead) {
       grid-column: span 1;
     }

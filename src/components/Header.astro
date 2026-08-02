@@ -14,11 +14,7 @@ const { activeNav } = Astro.props;
   <div class="nav-container">
     <div class="top-nav-wrap">
       <a href="/" class="logo">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="wordmark">
-          <strong>{SITE.title}</strong>
-          <small>YESHU'S NOTES</small>
-        </span>
+        <strong>{SITE.title}</strong>
       </a>
       <nav id="nav-menu">
         <button
@@ -36,17 +32,29 @@ const { activeNav } = Astro.props;
         </button>
         <ul id="menu-items" class="display-none md:flex">
           <li>
-            <a href="/posts" class={activeNav === "posts" ? "active" : ""}>
+            <a
+              href="/posts"
+              class={activeNav === "posts" ? "active" : ""}
+              aria-current={activeNav === "posts" ? "page" : undefined}
+            >
               文章
             </a>
           </li>
           <li>
-            <a href="/tags" class={activeNav === "tags" ? "active" : ""}>
+            <a
+              href="/tags"
+              class={activeNav === "tags" ? "active" : ""}
+              aria-current={activeNav === "tags" ? "page" : undefined}
+            >
               标签
             </a>
           </li>
           <li>
-            <a href="/about" class={activeNav === "about" ? "active" : ""}>
+            <a
+              href="/about"
+              class={activeNav === "about" ? "active" : ""}
+              aria-current={activeNav === "about" ? "page" : undefined}
+            >
               关于我
             </a>
           </li>
@@ -58,6 +66,7 @@ const { activeNav } = Astro.props;
               }`}
               ariaLabel="搜索"
               title="搜索"
+              ariaCurrent={activeNav === "search" ? "page" : undefined}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +84,7 @@ const { activeNav } = Astro.props;
                   id="theme-btn"
                   class="focus-outline"
                   title="切换明暗主题"
-                  aria-label="auto"
+                  aria-label="切换明暗主题"
                   aria-live="polite"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" id="moon-svg">
@@ -105,25 +114,11 @@ const { activeNav } = Astro.props;
     @apply relative flex w-full items-start justify-between px-4 py-5 md:items-center md:py-7;
   }
   .logo {
-    @apply absolute flex items-center gap-3 py-1 text-xl no-underline;
+    @apply absolute flex min-h-11 items-center text-xl no-underline;
   }
-  .brand-mark {
-    @apply block h-2.5 w-2.5 rounded-full transition-transform duration-300;
-    background: rgb(var(--color-accent));
-    box-shadow: 0 0 0 0.35rem rgba(var(--color-accent), 0.08);
-  }
-  .logo:hover .brand-mark {
-    transform: scale(1.2);
-  }
-  .wordmark {
-    @apply flex flex-col leading-none;
-  }
-  .wordmark strong {
+  .logo strong {
     font-family: "Songti SC", STSong, serif;
     @apply text-xl font-semibold tracking-wide;
-  }
-  .wordmark small {
-    @apply mt-1 text-[0.65rem] font-medium tracking-[0.16em] text-skin-muted;
   }
   .hamburger-menu {
     @apply flex h-11 w-11 items-center justify-center self-end rounded-full p-2 md:hidden;

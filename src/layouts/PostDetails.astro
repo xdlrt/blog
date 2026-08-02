@@ -44,13 +44,12 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
   </div>
   <main id="main-content">
     <header class="post-header">
-      <div class="post-kicker">
-        <span>FIELD NOTE</span>
-        <span>{tags[0] || "未分类"}</span>
-      </div>
       <h1 class="post-title">{title}</h1>
       <p class="post-deck">{description}</p>
-      <Datetime datetime={pubDatetime} size="lg" className="post-date" />
+      <div class="post-meta">
+        <span aria-hidden="true">发布于</span>
+        <Datetime datetime={pubDatetime} size="sm" className="post-date" />
+      </div>
     </header>
     <article id="article" role="article" class="prose mx-auto mt-8">
       <Content />
@@ -101,10 +100,6 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
     @apply mx-auto pb-10 pt-8;
     max-width: var(--layout-reading-width);
   }
-  .post-kicker {
-    color: rgb(var(--color-accent));
-    @apply mb-5 flex justify-between text-[0.65rem] font-semibold tracking-[0.18em];
-  }
   .post-title {
     font-size: clamp(2.25rem, 6vw, 4.35rem);
     text-wrap: balance;
@@ -114,8 +109,15 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
   .post-deck {
     @apply mt-6 max-w-2xl text-lg leading-8 text-skin-muted;
   }
-  .post-header :global(.post-date) {
-    @apply mt-8 text-sm;
+  .post-meta {
+    @apply mt-8 flex items-center gap-3;
+  }
+  .post-meta > span {
+    @apply text-[0.65rem] font-semibold tracking-[0.16em] text-skin-accent;
+  }
+  .post-meta :global(.post-date) {
+    @apply text-sm tracking-[0.04em] text-skin-muted;
+    font-variant-numeric: tabular-nums;
   }
   .tags-container {
     @apply mx-auto my-12 flex flex-wrap gap-2 pt-4;

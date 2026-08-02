@@ -98,7 +98,7 @@ test("about copy shares the desktop reading measure", async ({ page }) => {
 
 test("post topics read as distinct tags", async ({ page }) => {
   await page.setViewportSize({ width: 1024, height: 900 });
-  await page.goto("/posts/annual-summary-2025");
+  await page.goto("/posts/newsletter-129");
 
   const tag = page.locator(".tags-container a").first();
   await expect(tag).toBeVisible();
@@ -115,6 +115,39 @@ test("post topics read as distinct tags", async ({ page }) => {
   expect(appearance.label).toMatch(/^#/);
   expect(appearance.backgroundColor).not.toBe("rgba(0, 0, 0, 0)");
   expect(appearance.borderRadius).toBeGreaterThanOrEqual(16);
+});
+
+test("post header presents the publication date as metadata", async ({ page }) => {
+  await page.setViewportSize({ width: 1024, height: 900 });
+  await page.goto("/posts/annual-summary-2025");
+
+  await expect(page.locator(".post-kicker")).toHaveCount(0);
+
+  const meta = page.locator(".post-meta");
+  await expect(meta).toContainText("发布于");
+
+  const typeScale = await page.evaluate(() => {
+    const deck = document.querySelector(".post-deck");
+    const meta = document.querySelector(".post-meta");
+    const label = meta?.querySelector(":scope > span");
+    const date = document.querySelector(".post-date span:not(.sr-only)");
+
+    if (!deck || !meta || !label || !date) {
+      throw new Error("Expected post deck and publication metadata");
+    }
+
+    return {
+      deck: Number.parseFloat(getComputedStyle(deck).fontSize),
+      date: Number.parseFloat(getComputedStyle(date).fontSize),
+      metaDisplay: getComputedStyle(meta).display,
+      labelTop: Math.round(label.getBoundingClientRect().top),
+      dateTop: Math.round(date.getBoundingClientRect().top),
+    };
+  });
+
+  expect(typeScale.date).toBeLessThan(typeScale.deck);
+  expect(typeScale.metaDisplay).toBe("flex");
+  expect(Math.abs(typeScale.labelTop - typeScale.dateTop)).toBeLessThanOrEqual(1);
 });
 
 test("mobile pages do not force a permanent vertical scrollbar gutter", async ({

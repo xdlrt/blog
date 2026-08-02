@@ -7,6 +7,7 @@ import Layout from "./Layout.astro";
 export interface Props {
   frontmatter: {
     title?: string;
+    identity?: string;
     description?: string;
   };
 }
@@ -19,8 +20,13 @@ const title = frontmatter.title || "关于我";
   <Header activeNav="about" />
   <main id="main-content">
     <header class="about-header">
-      <p>ABOUT / YESHU</p>
+      <p class="about-eyebrow">ABOUT / YESHU</p>
       <h1>{title}</h1>
+      {
+        frontmatter.identity && (
+          <p class="about-identity">{frontmatter.identity}</p>
+        )
+      }
       {
         frontmatter.description && (
           <div class="about-deck">{frontmatter.description}</div>
@@ -42,16 +48,22 @@ const title = frontmatter.title || "关于我";
     max-width: calc(var(--layout-reading-width) + 2rem);
   }
   .about-header {
-    @apply pb-8 pt-10;
+    @apply pb-12 pt-10;
   }
-  .about-header p {
+  .about-eyebrow {
     @apply text-xs font-semibold tracking-[0.16em] text-skin-accent;
   }
   .about-header h1 {
-    @apply mt-3 text-4xl font-semibold sm:text-6xl;
+    margin-top: 0.75rem;
+    font-size: clamp(2.625rem, 6vw, 3.75rem);
+    line-height: 1.12;
+    @apply font-semibold;
+  }
+  .about-identity {
+    @apply mt-6 text-sm font-semibold tracking-[0.08em] text-skin-accent;
   }
   .about-deck {
-    @apply mt-5 max-w-2xl text-lg leading-8 text-skin-muted;
+    @apply mt-3 max-w-2xl text-xl leading-8 text-skin-muted;
   }
   #about {
     @apply mx-auto;
@@ -60,12 +72,12 @@ const title = frontmatter.title || "关于我";
   }
   #about :global(h2) {
     margin-bottom: 1.25rem !important;
-    margin-top: 3.75rem !important;
+    margin-top: 4.5rem !important;
     font-size: clamp(1.75rem, 2.5vw, 2.125rem);
     line-height: 1.25;
   }
-  #about :global(h2:first-child) {
-    margin-top: 0 !important;
+  #about > :global(h2:first-of-type) {
+    margin-top: 1.5rem !important;
   }
   #about :global(h3) {
     margin-bottom: 0.6rem !important;
@@ -73,28 +85,77 @@ const title = frontmatter.title || "关于我";
     font-size: 1.25rem;
     line-height: 1.45;
   }
+  #about > :global(h3) {
+    margin-bottom: 1rem !important;
+    margin-top: 3.5rem !important;
+    font-size: 1.5rem;
+  }
+  #about > :global(h3:first-of-type) {
+    margin-top: 2rem !important;
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    line-height: 1.15;
+  }
+  #about > :global(h3:first-of-type + p) {
+    margin-block: 0.75rem 0;
+    color: rgb(var(--color-accent));
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+  }
+  #about > :global(h3:first-of-type + p em) {
+    font-style: normal;
+  }
+  #about > :global(p) {
+    max-width: 44rem;
+  }
+  #about > :global(blockquote) {
+    max-width: 44rem;
+    margin: 2.5rem 0 0;
+    padding: 0;
+    border: 0;
+    font-family: "Songti SC", STSong, "Noto Serif CJK SC", serif;
+    font-size: clamp(1.5rem, 3vw, 1.9rem);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.55;
+    color: rgb(var(--color-text-base));
+  }
+  #about > :global(blockquote p) {
+    margin: 0;
+  }
+  #about :global(a) {
+    color: rgb(var(--color-accent)) !important;
+    text-decoration-color: transparent !important;
+    text-underline-offset: 0.3em;
+    transition:
+      color 160ms ease,
+      text-decoration-color 160ms ease;
+  }
+  #about :global(a:hover),
+  #about :global(a:focus-visible) {
+    text-decoration-color: currentColor !important;
+    text-decoration-style: solid;
+  }
   #about > :global(ul:first-of-type) {
     display: grid;
     gap: 0.75rem 2rem;
     margin-block: 0;
     padding-left: 1.25rem;
   }
-  #about > :global(ol) {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2.5rem 3rem;
+  #about > :global(ol:first-of-type) {
     margin-block: 2rem 0;
     padding-left: 0;
     list-style: none;
     counter-reset: belief;
   }
-  #about > :global(ol > li) {
+  #about > :global(ol:first-of-type > li) {
     position: relative;
-    margin: 0;
+    margin: 0 0 2.5rem;
     padding-left: 2.75rem;
     counter-increment: belief;
+    break-inside: avoid;
   }
-  #about > :global(ol > li::before) {
+  #about > :global(ol:first-of-type > li::before) {
     position: absolute;
     top: 0.15rem;
     left: 0;
@@ -104,12 +165,46 @@ const title = frontmatter.title || "关于我";
     font-weight: 700;
     letter-spacing: 0.12em;
   }
-  #about > :global(ol > li > ul) {
+  #about > :global(ol:first-of-type > li > ul) {
     margin-block: 0;
     padding-left: 1.2rem;
   }
-  #about > :global(ol > li > ul > li) {
+  #about > :global(ol:first-of-type > li > ul > li) {
     margin-block: 0.35rem;
+  }
+  #about > :global(ol:nth-of-type(2)) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    margin-block: 1.75rem 0;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: method;
+  }
+  #about > :global(ol:nth-of-type(2) > li) {
+    position: relative;
+    margin: 0;
+    padding-inline: 0;
+    padding-top: 1.75rem;
+    counter-increment: method;
+  }
+  #about > :global(ol:nth-of-type(2) > li::before) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(var(--color-accent));
+    content: counter(method, decimal-leading-zero);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+  #about > :global(ol:nth-of-type(2) h4) {
+    margin: 0 0 0.5rem !important;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  #about > :global(ol:nth-of-type(2) p) {
+    margin: 0;
   }
   @media (min-width: 48rem) {
     #about {
@@ -119,8 +214,17 @@ const title = frontmatter.title || "关于我";
     #about > :global(ul:first-of-type) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    #about > :global(ol) {
+    #about > :global(ol:nth-of-type(2)) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (min-width: 64rem) {
+    #about > :global(ol:first-of-type) {
+      column-count: 2;
+      column-gap: 4rem;
+    }
+    #about > :global(ol:nth-of-type(2)) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 </style>

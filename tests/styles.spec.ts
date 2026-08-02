@@ -68,57 +68,35 @@ test("homepage editorial cards share one content axis", async ({ page }) => {
 
   const alignment = await page.evaluate(() => {
     const heading = document.querySelector("#recent-posts .section-heading");
-    const leadTitle = document.querySelector(
-      "#recent-posts .article-card-lead .card-title"
-    );
-    const leadDate = document.querySelector(
-      "#recent-posts .article-card-lead time"
-    );
-    const leadLink = document.querySelector(
-      "#recent-posts .article-card-lead > a"
-    );
-    const regularTitle = document.querySelector(
-      "#recent-posts .article-card:not(.article-card-lead) .card-title"
-    );
-    const regularLink = document.querySelector(
-      "#recent-posts .article-card:not(.article-card-lead) > a"
-    );
+    const cards = document.querySelectorAll("#recent-posts .article-card");
+    const firstTitle = cards[0]?.querySelector(".card-title");
+    const firstLink = cards[0]?.querySelector("a");
+    const secondLink = cards[1]?.querySelector("a");
 
-    if (
-      !heading ||
-      !leadTitle ||
-      !leadDate ||
-      !leadLink ||
-      !regularTitle ||
-      !regularLink
-    ) {
+    if (!heading || !firstTitle || !firstLink || !secondLink) {
       throw new Error("Expected homepage editorial elements were not rendered");
     }
 
     const headingRect = heading.getBoundingClientRect();
-    const leadTitleRect = leadTitle.getBoundingClientRect();
-    const leadDateRect = leadDate.getBoundingClientRect();
-    const leadLinkRect = leadLink.getBoundingClientRect();
-    const regularTitleRect = regularTitle.getBoundingClientRect();
-    const regularLinkRect = regularLink.getBoundingClientRect();
+    const firstTitleRect = firstTitle.getBoundingClientRect();
+    const firstLinkRect = firstLink.getBoundingClientRect();
+    const secondLinkRect = secondLink.getBoundingClientRect();
 
     return {
-      leadLeftDifference: Math.round(leadTitleRect.left - headingRect.left),
-      regularLeftDifference: Math.round(
-        regularTitleRect.left - headingRect.left
+      firstLeftDifference: Math.round(
+        firstTitleRect.left - headingRect.left
       ),
-      leadRightDifference: Math.round(headingRect.right - leadDateRect.right),
-      hoverEdgeDifference: Math.round(
-        regularLinkRect.left - leadLinkRect.left
+      cardWidthDifference: Math.round(
+        firstLinkRect.width - secondLinkRect.width
       ),
+      rowTopDifference: Math.round(firstLinkRect.top - secondLinkRect.top),
     };
   });
 
   expect(alignment).toEqual({
-    leadLeftDifference: 0,
-    regularLeftDifference: 0,
-    leadRightDifference: 0,
-    hoverEdgeDifference: 0,
+    firstLeftDifference: 0,
+    cardWidthDifference: 0,
+    rowTopDifference: 0,
   });
 });
 

@@ -3,6 +3,7 @@ export interface Props {
   href: string;
   className?: string;
   ariaLabel?: string;
+  ariaCurrent?: "page";
   title?: string;
   disabled?: boolean;
 }
@@ -11,6 +12,7 @@ const {
   href,
   className = "",
   ariaLabel,
+  ariaCurrent,
   title,
   disabled = false,
 } = Astro.props;
@@ -21,6 +23,7 @@ const {
     <span
       class={`group ${className}`}
       aria-label={ariaLabel}
+      aria-current={ariaCurrent}
       title={title}
       aria-disabled="true"
     >
@@ -31,6 +34,7 @@ const {
       href={href}
       class={`group ${className}`}
       aria-label={ariaLabel}
+      aria-current={ariaCurrent}
       title={title}
     >
       <slot />

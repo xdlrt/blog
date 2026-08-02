@@ -1,5 +1,39 @@
 import { expect, test } from "@playwright/test";
 
+test("homepage hero keeps only the primary identity information", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1024, height: 900 });
+  await page.goto("/");
+
+  const hero = page.locator("#hero");
+
+  await expect(
+    hero.getByText("IN PROGRESS TO BE A PRODUCT MAKER", { exact: true })
+  ).toBeVisible();
+  await expect(hero.getByRole("heading", { level: 1 })).toContainText(
+    "技术向前，生活向内。"
+  );
+  await expect(hero.getByText("篇文章", { exact: true })).toBeVisible();
+  await expect(hero.getByText("始于 2016", { exact: true })).toBeVisible();
+  await expect(hero.getByText("持续更新", { exact: true })).toBeVisible();
+  await expect(hero.getByRole("link", { name: "开始阅读" })).toBeVisible();
+  await expect(hero.getByRole("link", { name: "关于我" })).toBeVisible();
+  await expect(hero.getByRole("link", { name: "Github" })).toBeVisible();
+  await expect(hero.getByRole("link", { name: "X", exact: true })).toBeVisible();
+  await expect(hero.getByRole("link", { name: "Email" })).toBeVisible();
+  await expect(hero.getByRole("link", { name: "RSS" })).toBeVisible();
+
+  await expect(hero.locator(".hero-intro, .note-label, .note-copy")).toHaveCount(
+    0
+  );
+  await expect(hero.getByText("EST. 2016", { exact: true })).toHaveCount(0);
+  await expect(hero.getByText("FIND ME ELSEWHERE", { exact: true })).toHaveCount(
+    0
+  );
+  await expect(hero.locator("svg")).toHaveCount(0);
+});
+
 const desktopWidths = [721, 768, 1024, 1440];
 
 for (const width of desktopWidths) {
@@ -28,7 +62,7 @@ for (const width of desktopWidths) {
     expect(overlapsHorizontally && overlapsVertically).toBe(false);
   });
 
-  test(`recent post titles keep the section's left axis at ${width}px`, async ({
+  test(`left-column post titles keep the section's axis at ${width}px`, async ({
     page,
   }) => {
     await page.setViewportSize({ width, height: 900 });
@@ -37,25 +71,19 @@ for (const width of desktopWidths) {
     const heading = await page
       .locator("#recent-posts .section-heading h2")
       .boundingBox();
-    const leadTitle = await page
-      .locator("#recent-posts .article-card-lead .card-title")
-      .boundingBox();
-    const regularTitle = await page
-      .locator(
-        "#recent-posts .article-card:not(.article-card-lead) .card-title"
-      )
-      .first()
-      .boundingBox();
+    const titles = page.locator("#recent-posts .article-card .card-title");
+    const firstTitle = await titles.nth(0).boundingBox();
+    const thirdTitle = await titles.nth(2).boundingBox();
 
     expect(heading).not.toBeNull();
-    expect(leadTitle).not.toBeNull();
-    expect(regularTitle).not.toBeNull();
-    expect(Math.abs(leadTitle!.x - heading!.x)).toBeLessThanOrEqual(0.5);
-    expect(Math.abs(regularTitle!.x - heading!.x)).toBeLessThanOrEqual(0.5);
+    expect(firstTitle).not.toBeNull();
+    expect(thirdTitle).not.toBeNull();
+    expect(Math.abs(firstTitle!.x - heading!.x)).toBeLessThanOrEqual(0.5);
+    expect(Math.abs(thirdTitle!.x - heading!.x)).toBeLessThanOrEqual(0.5);
   });
 }
 
-test("homepage switches from a single column to two columns at 768px", async ({
+test("homepage cards switch columns while the hero summary stays visible", async ({
   page,
 }) => {
   const links = page.locator(
@@ -73,7 +101,7 @@ test("homepage switches from a single column to two columns at 768px", async ({
   expect(narrowSecond!.y).toBeGreaterThanOrEqual(
     narrowFirst!.y + narrowFirst!.height
   );
-  await expect(archiveNote).toBeHidden();
+  await expect(archiveNote).toBeVisible();
 
   await page.setViewportSize({ width: 768, height: 900 });
 
@@ -85,7 +113,88 @@ test("homepage switches from a single column to two columns at 768px", async ({
   await expect(archiveNote).toBeVisible();
 });
 
-test("recent posts render one lead card followed by two complete rows", async ({
+test("homepage hero follows the intended responsive reading order", async ({
+  page,
+}) => {
+  const mobileWidths = [390, 721];
+
+  for (const width of mobileWidths) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/");
+
+    const heading = await page.locator(".hero-heading").boundingBox();
+    const archive = await page.locator(".archive-note").boundingBox();
+    const actions = await page.locator(".hero-actions").boundingBox();
+    const social = await page.locator(".social-wrapper").boundingBox();
+
+    expect(heading).not.toBeNull();
+    expect(archive).not.toBeNull();
+    expect(actions).not.toBeNull();
+    expect(social).not.toBeNull();
+    expect(archive!.y).toBeGreaterThanOrEqual(heading!.y + heading!.height);
+    expect(actions!.y).toBeGreaterThanOrEqual(archive!.y + archive!.height);
+    expect(social!.y).toBeGreaterThanOrEqual(actions!.y + actions!.height);
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth)
+    ).toBeLessThanOrEqual(width);
+  }
+
+  for (const width of [768, 1024, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto("/");
+
+    const heading = await page.locator(".hero-heading").boundingBox();
+    const archive = await page.locator(".archive-note").boundingBox();
+    const actions = await page.locator(".hero-actions").boundingBox();
+    const social = await page.locator(".social-wrapper").boundingBox();
+
+    expect(heading).not.toBeNull();
+    expect(archive).not.toBeNull();
+    expect(actions).not.toBeNull();
+    expect(social).not.toBeNull();
+    expect(archive!.x).toBeGreaterThan(heading!.x + heading!.width);
+    expect(Math.abs(actions!.y - social!.y)).toBeLessThanOrEqual(1);
+    expect(
+      await page.evaluate(() => document.documentElement.scrollWidth)
+    ).toBeLessThanOrEqual(width);
+  }
+});
+
+test("homepage writing summary uses one visible left axis", async ({ page }) => {
+  await page.setViewportSize({ width: 1024, height: 900 });
+  await page.goto("/");
+
+  const textStarts = await page.locator("#hero").evaluate(hero => {
+    const textStart = (selector: string) => {
+      const element = hero.querySelector(selector);
+      const textNode = element?.firstChild;
+
+      if (!textNode) return null;
+
+      const range = document.createRange();
+      range.selectNodeContents(textNode);
+      return range.getBoundingClientRect().x;
+    };
+
+    return {
+      count: textStart(".note-count strong"),
+      status: textStart(".note-meta span"),
+      social: textStart(".social-wrapper a"),
+    };
+  });
+
+  expect(textStarts.count).not.toBeNull();
+  expect(textStarts.status).not.toBeNull();
+  expect(textStarts.social).not.toBeNull();
+  expect(Math.abs(textStarts.status! - textStarts.count!)).toBeLessThanOrEqual(
+    0.5
+  );
+  expect(Math.abs(textStarts.social! - textStarts.count!)).toBeLessThanOrEqual(
+    0.5
+  );
+});
+
+test("recent posts render six equally weighted cards in three rows", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1024, height: 900 });
@@ -97,9 +206,35 @@ test("recent posts render one lead card followed by two complete rows", async ({
     "#recent-posts .article-card:not(.article-card-lead)"
   );
 
-  await expect(cards).toHaveCount(5);
-  await expect(leadCards).toHaveCount(1);
-  await expect(regularCards).toHaveCount(4);
+  await expect(cards).toHaveCount(6);
+  await expect(leadCards).toHaveCount(0);
+  await expect(regularCards).toHaveCount(6);
+});
+
+test("complete writing archive is a prominent text-only action", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 1024, height: 900 });
+  await page.goto("/");
+
+  const action = page.getByRole("link", {
+    name: "查看完整写作档案",
+    exact: true,
+  });
+  const presentation = await action.evaluate(element => {
+    const styles = getComputedStyle(element);
+    const rect = element.getBoundingClientRect();
+
+    return {
+      height: rect.height,
+      backgroundColor: styles.backgroundColor,
+    };
+  });
+
+  await expect(action).toBeVisible();
+  await expect(action.locator("svg")).toHaveCount(0);
+  expect(presentation.height).toBeGreaterThanOrEqual(44);
+  expect(presentation.backgroundColor).not.toBe("rgba(0, 0, 0, 0)");
 });
 
 test("wide homepage sections consume the display width token", async ({
@@ -120,36 +255,36 @@ test("wide homepage sections consume the display width token", async ({
   expect(recentPosts!.width).toBe(1280);
 });
 
-test("lead card changes background on hover", async ({ page }) => {
+test("editorial card changes background on hover", async ({ page }) => {
   await page.setViewportSize({ width: 1024, height: 900 });
   await page.goto("/");
 
-  const leadLink = page.locator(
-    "#recent-posts .article-card-lead > a"
-  );
-  const backgroundBefore = await leadLink.evaluate(
+  const editorialLink = page.locator("#recent-posts .article-card > a").first();
+  const backgroundBefore = await editorialLink.evaluate(
     element => getComputedStyle(element).backgroundColor
   );
 
-  await leadLink.hover();
+  await editorialLink.hover();
   await page.waitForTimeout(200);
 
-  const backgroundAfter = await leadLink.evaluate(
+  const backgroundAfter = await editorialLink.evaluate(
     element => getComputedStyle(element).backgroundColor
   );
   expect(backgroundAfter).not.toBe(backgroundBefore);
 });
 
-test("lead card keeps its keyboard focus outline inside the viewport", async ({
+test("editorial card keeps its keyboard focus outline inside the viewport", async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1024, height: 900 });
   await page.goto("/");
 
-  const leadLink = page.locator("#recent-posts .article-card-lead > a");
-  await leadLink.focus();
+  const editorialLink = page
+    .locator("#recent-posts .article-card > a")
+    .first();
+  await editorialLink.focus();
 
-  const focusStyle = await leadLink.evaluate(element => {
+  const focusStyle = await editorialLink.evaluate(element => {
     const style = getComputedStyle(element);
     const rect = element.getBoundingClientRect();
 
@@ -163,11 +298,16 @@ test("lead card keeps its keyboard focus outline inside the viewport", async ({
     };
   });
 
-  expect(focusStyle.left).toBe(0);
-  expect(focusStyle.right).toBe(focusStyle.viewportWidth);
+  expect(focusStyle.left).toBeGreaterThanOrEqual(0);
+  expect(focusStyle.right).toBeLessThanOrEqual(focusStyle.viewportWidth);
   expect(focusStyle.outlineStyle).not.toBe("none");
   expect(focusStyle.outlineWidth).toBeGreaterThan(0);
-  expect(focusStyle.outlineOffset).toBeLessThanOrEqual(
-    -focusStyle.outlineWidth
+  const outlineReach = Math.max(
+    0,
+    focusStyle.outlineWidth + focusStyle.outlineOffset
+  );
+  expect(focusStyle.left - outlineReach).toBeGreaterThanOrEqual(0);
+  expect(focusStyle.right + outlineReach).toBeLessThanOrEqual(
+    focusStyle.viewportWidth
   );
 });
