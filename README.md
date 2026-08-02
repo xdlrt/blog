@@ -1,45 +1,41 @@
 # 一颗小树
 
-In progress to be a product maker.
+也树的个人博客，记录技术、产品与生活。
+
+在线访问：[yeshu.cloud](https://yeshu.cloud)
+
+站点使用 Markdown 管理内容，提供文章归档、标签、搜索、RSS、深色模式与响应式阅读体验。
 
 ## 技术栈
 
-- Astro 3.x
-- Typescript
-- TailwindCSS
+- Astro 7
+- React 19
+- Tailwind CSS 4
+- TypeScript
 - Playwright
 
-## 环境要求
+## 本地运行
 
-- Node.js 18.x
-- NPM 9.x
-
-中国大陆建议使用 CNPM：
+项目需要 Node.js 24.x，推荐使用 `.nvmrc` 切换版本：
 
 ```bash
-npm install cnpm -g --registry=https://registry.npmmirror.com
-```
-
-## 依赖安装
-
-```bash
-npm i
-```
-
-## 本地开发
-
-```bash
+nvm use
+npm install
 npm run dev
 ```
 
-## E2E 测试
+访问 <http://localhost:4321> 查看站点。
 
 ```bash
-npm run test:ui
+npm run build         # 构建生产版本
+npm run preview       # 预览生产构建
+npm run format:check  # 检查代码格式
+npm run test:ui       # 运行端到端测试
 ```
 
-PlayWright UI Mode
+## 内容位置
 
-```bash
-npm run test:ui:debug
-```
+- 博客文章：`src/data/blog/`
+- Newsletter：`src/data/newsletter/`
+- 关于页：`src/pages/about.md`
+- 站点配置：`src/config.ts`
