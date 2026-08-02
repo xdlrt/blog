@@ -1,13 +1,13 @@
 ---
 title: "和 deepseek 创作悬疑短篇"
 pubDatetime: 2025-02-16T12:25:34.334Z
-postSlug: newsletter-129
+postSlug: newsletter-131
 tags:
   - newsletter
 description: "算不上一次成功的探索，吸取一些经验教训，多多尝试。"
 ---
 
-> 你好，我是小树。这是我为你写的第 129 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)。
+> 你好，我是小树。这是我为你写的第 131 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)。
 
 过年的时候发了第一章，中间事情有点多，一直没发出来，干脆一次发完整版出来吧。
 
