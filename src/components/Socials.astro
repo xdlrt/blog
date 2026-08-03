@@ -49,6 +49,6 @@ const textLabels: Record<string, string> = {
     @apply gap-x-1 gap-y-0;
   }
   .text-links :global(a) {
-    @apply inline-flex min-h-11 items-center rounded-xl px-3 text-sm text-skin-muted transition-colors hover:bg-skin-card/65 hover:text-skin-accent;
+    @apply inline-flex min-h-11 items-center px-3 text-sm text-skin-muted underline decoration-transparent underline-offset-8 transition-[color,text-decoration-color] hover:text-skin-accent hover:decoration-skin-accent;
   }
 </style>
