@@ -60,6 +60,9 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "overrides": {
+    "nanoid": "3.3.18"
+  },
   "lint-staged": {
     "*": [
       "prettier --write"
