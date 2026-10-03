@@ -38,7 +38,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
     "@types/github-slugger": "^2.0.0",
-    "@types/react": "^19.2.18",
+    "@types/react": "^19.3.0",
     "@typescript-eslint/parser": "^8.68.0",
     "astro-eslint-parser": "^3.1.0",
     "commitizen": "^4.3.2",
@@ -51,7 +51,7 @@
     "prettier": "^3.9.6",
     "prettier-plugin-astro": "^0.14.0",
     "prettier-plugin-tailwindcss": "^0.8.1",
-    "react": "^19.0.0",
+    "react": "^19.3.0",
     "react-dom": "^19.2.8",
     "tailwindcss": "^4.3.3"
   },
