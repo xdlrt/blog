@@ -42,130 +42,117 @@ const nextPage = currentPage < totalPages ? currentPage + 1 : undefined;
 
 <nav class="pagination" aria-label="文章分页" data-testid="pagination">
   <div class="desktop-pagination">
-    {
-      previousPage ? (
-        <a
-          class="direction-link previous"
-          href={pageHref(previousPage)}
-          rel="prev"
-          aria-label={`前往上一页，第 ${previousPage} 页`}
-        >
-          <span>上一页</span>
-          <small>第 {String(previousPage).padStart(2, "0")} 页</small>
-        </a>
-      ) : (
-        <span class="direction-link previous disabled" aria-disabled="true">
-          <span>上一页</span>
-          <small>已经是第一页</small>
-        </span>
-      )
-    }
+    {previousPage ? (
+      <a
+        class="direction-link previous"
+        href={pageHref(previousPage)}
+        rel="prev"
+        aria-label={`前往上一页，第 ${previousPage} 页`}
+      >
+        <span>上一页</span>
+        <small>第 {String(previousPage).padStart(2, "0")} 页</small>
+      </a>
+    ) : (
+      <span class="direction-link previous disabled" aria-disabled="true">
+        <span>上一页</span>
+        <small>已经是第一页</small>
+      </span>
+    )}
 
     <div class="page-center">
       <ol class="page-list">
-        {
-          pageEntries.map(entry =>
-            entry === "ellipsis" ? (
-              <li class="ellipsis" aria-hidden="true">
-                …
-              </li>
-            ) : (
-              <li>
-                <a
-                  href={pageHref(entry)}
-                  aria-label={`前往第 ${entry} 页`}
-                  aria-current={entry === currentPage ? "page" : undefined}
-                >
-                  {entry}
-                </a>
-              </li>
-            )
+        {pageEntries.map(entry =>
+          entry === "ellipsis" ? (
+            <li class="ellipsis" aria-hidden="true">…</li>
+          ) : (
+            <li>
+              <a
+                href={pageHref(entry)}
+                aria-label={`前往第 ${entry} 页`}
+                aria-current={entry === currentPage ? "page" : undefined}
+              >
+                {entry}
+              </a>
+            </li>
           )
-        }
+        )}
       </ol>
       <p class="page-summary">
-        第 {String(currentPage).padStart(2, "0")} / {
-          String(totalPages).padStart(2, "0")
-        } 页
+        第 {String(currentPage).padStart(2, "0")} /
+        {String(totalPages).padStart(2, "0")} 页
         <span aria-hidden="true"> · </span>
         共 {totalItems} 篇
       </p>
     </div>
 
-    {
-      nextPage ? (
-        <a
-          class="direction-link next"
-          href={pageHref(nextPage)}
-          rel="next"
-          aria-label={`前往下一页，第 ${nextPage} 页`}
-        >
-          <span>下一页</span>
-          <small>第 {String(nextPage).padStart(2, "0")} 页</small>
-        </a>
-      ) : (
-        <span class="direction-link next disabled" aria-disabled="true">
-          <span>下一页</span>
-          <small>已经是最后一页</small>
-        </span>
-      )
-    }
+    {nextPage ? (
+      <a
+        class="direction-link next"
+        href={pageHref(nextPage)}
+        rel="next"
+        aria-label={`前往下一页，第 ${nextPage} 页`}
+      >
+        <span>下一页</span>
+        <small>第 {String(nextPage).padStart(2, "0")} 页</small>
+      </a>
+    ) : (
+      <span class="direction-link next disabled" aria-disabled="true">
+        <span>下一页</span>
+        <small>已经是最后一页</small>
+      </span>
+    )}
   </div>
 
   <div class="mobile-pagination">
-    {
-      previousPage ? (
-        <a
-          class="mobile-direction"
-          href={pageHref(previousPage)}
-          rel="prev"
-          aria-label={`前往上一页，第 ${previousPage} 页`}
-        >
-          上一页
-        </a>
-      ) : (
-        <span class="mobile-direction disabled" aria-disabled="true">
-          上一页
-        </span>
-      )
-    }
+    {previousPage ? (
+      <a
+        class="mobile-direction"
+        href={pageHref(previousPage)}
+        rel="prev"
+        aria-label={`前往上一页，第 ${previousPage} 页`}
+      >
+        上一页
+      </a>
+    ) : (
+      <span class="mobile-direction disabled" aria-disabled="true">
+        上一页
+      </span>
+    )}
 
     <label class="mobile-page-select">
       <span class="sr-only">选择页码</span>
       <select aria-label="选择页码" data-page-select>
-        {
-          Array.from({ length: totalPages }, (_, index) => index + 1).map(
-            page => (
-              <option value={pageHref(page)} selected={page === currentPage}>
-                {page} / {totalPages}
-              </option>
-            )
-          )
-        }
+        {Array.from({ length: totalPages }, (_, index) => index + 1).map(
+          page => <option
+            value={pageHref(page)}
+            selected={page === currentPage}
+          >
+            {page} / {totalPages}
+          </option>
+        )}
       </select>
       <span
         class="select-indicator"
         data-testid="page-select-indicator"
-        aria-hidden="true">▾</span
+        aria-hidden="true"
+        >▾</span
       >
     </label>
 
-    {
-      nextPage ? (
-        <a
-          class="mobile-direction next"
-          href={pageHref(nextPage)}
-          rel="next"
-          aria-label={`前往下一页，第 ${nextPage} 页`}
-        >
-          下一页
-        </a>
-      ) : (
-        <span class="mobile-direction next disabled" aria-disabled="true">
-          下一页
-        </span>
-      )
-    }
+    {nextPage ? (
+      <a
+        class="mobile-direction next"
+        href={pageHref(nextPage)}
+        rel="next"
+        aria-label={`前往下一页，第 ${nextPage} 页`}
+      >
+        下一页
+      </a>
+    ) : (
+      <span class="mobile-direction next disabled" aria-disabled="true">
+        下一页
+      </span>
+    )}
   </div>
 </nav>
 

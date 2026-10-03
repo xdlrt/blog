@@ -20,17 +20,16 @@ const textLabels: Record<string, string> = {
 <div
   class={`social-links ${variant === "text" ? "text-links" : "icon-links"} ${centered ? "centered" : ""}`}
 >
-  {
-    SOCIALS.filter(social => social.active).map(social => (
-      <LinkButton href={social.href} title={social.linkTitle}>
-        {variant === "text" ? (
-          textLabels[social.name] || social.name
-        ) : (
-          <Fragment set:html={socialIcons[social.name]} />
-        )}
-      </LinkButton>
-    ))
-  }
+  {SOCIALS.filter(social => social.active).map(social => <LinkButton
+    href={social.href}
+    title={social.linkTitle}
+  >
+    {variant === "text" ? (
+      textLabels[social.name] || social.name
+    ) : (
+      <Fragment set:html={socialIcons[social.name]} />
+    )}
+  </LinkButton>)}
 </div>
 
 <style>

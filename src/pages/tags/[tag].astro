@@ -45,23 +45,21 @@ const tagPosts = getSortedPosts(getPostsByTag(posts, tag));
     pageMeta="TOPIC ARCHIVE"
   >
     <ul class="progressive-list">
-      {
-        tagPosts.map(({ data }, index) => (
-          <Card
-            href={`/posts/${slugify(data)}`}
-            frontmatter={data}
-            initiallyHidden={index >= 24}
-          />
-        ))
-      }
+      {tagPosts.map(({ data }, index) => (
+        <Card
+          href={`/posts/${slugify(data)}`}
+          frontmatter={data}
+          initiallyHidden={index >= 24}
+        />
+      ))}
     </ul>
-    {
-      tagPosts.length > 24 && (
-        <button class="load-more" type="button" data-load-more>
-          再看 24 篇
-        </button>
-      )
-    }
+    {tagPosts.length > 24 && <button
+      class="load-more"
+      type="button"
+      data-load-more
+    >
+      再看 24 篇
+    </button>}
   </Main>
   <Footer />
 </Layout>

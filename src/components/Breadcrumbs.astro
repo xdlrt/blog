@@ -40,26 +40,24 @@ breadcrumbList[0] === "文章" && breadcrumbList.splice(0, 2, `文章`);
       <a href="/">首页</a>
       <span aria-hidden="true">&nbsp;&#62;&nbsp;</span>
     </li>
-    {
-      breadcrumbList.map((breadcrumb, index) =>
-        index + 1 === breadcrumbList.length ? (
-          <li>
-            <span
-              class={`${index > 0 ? "lowercase" : "capitalize"}`}
-              aria-current="page"
-            >
-              {/* make the last part lowercase in Home > Tags > some-tag */}
-              {breadcrumb}
-            </span>
-          </li>
-        ) : (
-          <li>
-            <a href={`/${linkMap[breadcrumb]}`}>{breadcrumb}</a>
-            <span aria-hidden="true">&nbsp;&#62;&nbsp;</span>
-          </li>
-        )
+    {breadcrumbList.map((breadcrumb, index) =>
+      index + 1 === breadcrumbList.length ? (
+        <li>
+          <span
+            class={`${index > 0 ? "lowercase" : "capitalize"}`}
+            aria-current="page"
+          >
+            {/* make the last part lowercase in Home > Tags > some-tag */}
+            {breadcrumb}
+          </span>
+        </li>
+      ) : (
+        <li>
+          <a href={`/${linkMap[breadcrumb]}`}>{breadcrumb}</a>
+          <span aria-hidden="true">&nbsp;&#62;&nbsp;</span>
+        </li>
       )
-    }
+    )}
   </ul>
 </nav>
 

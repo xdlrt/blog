@@ -18,29 +18,27 @@ const {
 } = Astro.props;
 ---
 
-{
-  disabled ? (
-    <span
-      class={`group ${className}`}
-      aria-label={ariaLabel}
-      aria-current={ariaCurrent}
-      title={title}
-      aria-disabled="true"
-    >
-      <slot />
-    </span>
-  ) : (
-    <a
-      href={href}
-      class={`group ${className}`}
-      aria-label={ariaLabel}
-      aria-current={ariaCurrent}
-      title={title}
-    >
-      <slot />
-    </a>
-  )
-}
+{disabled ? (
+  <span
+    class={`group ${className}`}
+    aria-label={ariaLabel}
+    aria-current={ariaCurrent}
+    title={title}
+    aria-disabled="true"
+  >
+    <slot />
+  </span>
+) : (
+  <a
+    href={href}
+    class={`group ${className}`}
+    aria-label={ariaLabel}
+    aria-current={ariaCurrent}
+    title={title}
+  >
+    <slot />
+  </a>
+)}
 
 <style>
   @reference "../styles/base.css";

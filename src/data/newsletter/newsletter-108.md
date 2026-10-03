@@ -1,10 +1,10 @@
 ---
-title: '扔掉心里的锚'
+title: "扔掉心里的锚"
 pubDatetime: 2024-05-05T13:31:46.131Z
 postSlug: newsletter-108
 tags:
   - newsletter
-description: '记录变化，认识自己，诚实面对世界。'
+description: "记录变化，认识自己，诚实面对世界。"
 ---
 
 > 你好，我是小树。这是我为你写的第 108 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)。

@@ -27,22 +27,18 @@ const { pageNum, totalPages, totalPosts, posts } = Astro.props;
     pageMeta={`ARCHIVE ${String(pageNum).padStart(2, "0")} / ${String(totalPages).padStart(2, "0")}`}
   >
     <ul>
-      {
-        posts.map(({ data }) => (
-          <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
-        ))
-      }
+      {posts.map(({ data }) => (
+        <Card href={`/posts/${slugify(data)}`} frontmatter={data} />
+      ))}
     </ul>
   </Main>
 
-  {
-    totalPages > 1 && (
-      <Pagination
-        currentPage={pageNum}
-        totalPages={totalPages}
-        totalItems={totalPosts}
-      />
-    )
-  }
+  {totalPages > 1 && (
+    <Pagination
+      currentPage={pageNum}
+      totalPages={totalPages}
+      totalItems={totalPosts}
+    />
+  )}
   <Footer noMarginTop={totalPages > 1} />
 </Layout>

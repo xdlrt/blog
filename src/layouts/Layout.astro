@@ -69,9 +69,9 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
     <meta property="twitter:description" content={description} />
     <meta
       property="twitter:image"
-      content={socialImageURL.endsWith(".svg")
-        ? fallbackImageURL
-        : socialImageURL}
+      content={
+        socialImageURL.endsWith(".svg") ? fallbackImageURL : socialImageURL
+      }
     />
 
     <script is:inline src="/toggle-theme.js"></script>
@@ -80,7 +80,7 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
     <a class="skip-link" href="#main-content">跳到正文</a>
     <slot />
     <script>
-      var _hmt = _hmt || [];
+      window._hmt = window._hmt || [];
       (function () {
         var hm = document.createElement("script");
         hm.src = "https://hm.baidu.com/hm.js?33fa00efe9f4f2a652c14b5521ab4215";
@@ -89,12 +89,14 @@ const fallbackImageURL = new URL(SITE.ogImage, Astro.url.origin).href;
       })();
     </script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DW6LQKGEJ1"
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DW6LQKGEJ1"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments);
+        window.dataLayer.push(arguments);
       }
       gtag("js", new Date());
 

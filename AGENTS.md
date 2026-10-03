@@ -159,5 +159,5 @@ Playwright E2E 只验证用户可感知的功能，不作为视觉回归或像�
 
 ## 11. 已知限制
 
-- 当前 `npm run lint` 可能因 ESLint 10 与仓库遗留配置格式不兼容而失败。除非任务包含升级 ESLint 配置，否则不要宣称 lint 已通过，也不要把该基础设施问题与业务改动混为一谈。
+- `npm run lint` 使用 `eslint.config.mjs` 检查 JavaScript、Astro 模板及其客户端脚本；独立 TypeScript/TSX 文件暂未纳入 ESLint。不要把 lint 通过当作完整类型检查。
 - 若本机 Node 版本不是 24.x，安装或构建时可能出现 engine 警告；先切换到项目要求的 Node 版本再判断代码问题。
