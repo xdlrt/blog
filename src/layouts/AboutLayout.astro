@@ -22,16 +22,12 @@ const title = frontmatter.title || "关于我";
     <header class="about-header">
       <p class="about-eyebrow">ABOUT / YESHU</p>
       <h1>{title}</h1>
-      {
-        frontmatter.identity && (
-          <p class="about-identity">{frontmatter.identity}</p>
-        )
-      }
-      {
-        frontmatter.description && (
-          <div class="about-deck">{frontmatter.description}</div>
-        )
-      }
+      {frontmatter.identity && <p class="about-identity">
+        {frontmatter.identity}
+      </p>}
+      {frontmatter.description && <div class="about-deck">
+        {frontmatter.description}
+      </div>}
     </header>
     <section id="about" class="prose mb-28 prose-img:border-0">
       <slot />

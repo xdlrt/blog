@@ -30,11 +30,9 @@ posts.forEach(({ data }) =>
     pageMeta="TOPIC INDEX"
   >
     <ul class="tag-cloud" data-testid="tag-list">
-      {
-        tags.map(tag => (
-          <Tag name={tag} size="lg" count={tagCounts.get(tag.toLowerCase())} />
-        ))
-      }
+      {tags.map(tag => (
+        <Tag name={tag} size="lg" count={tagCounts.get(tag.toLowerCase())} />
+      ))}
     </ul>
   </Main>
   <Footer />

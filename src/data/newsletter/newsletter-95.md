@@ -1,10 +1,10 @@
 ---
-title: '小树的 2024 年计划'
+title: "小树的 2024 年计划"
 pubDatetime: 2024-01-14T04:42:24.250Z
 postSlug: newsletter-95
 tags:
   - newsletter
-description: '多做少想，多学多练。'
+description: "多做少想，多学多练。"
 ---
 
 > 你好，我是小树。这是我为你写的第 95 封信。每期都会同步更新在微信公众号[一颗小树](https://weixin.sogou.com/weixin?query=a_warm_tree)。
@@ -112,7 +112,6 @@ description: '多做少想，多学多练。'
 如果想要成为自己想要的样子，就不要等到某个特定节点才开始，没有什么状态是瞬间切换的。
 
 脚下的路没有什么捷径，还是要一步一步踏实地走。
-
 
 谢谢你的关注，我们下期再见。👋🏻
 

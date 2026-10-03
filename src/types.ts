@@ -35,5 +35,4 @@ export type SocialMedia =
   | "RSS";
 
 export type PostCollectionEntry =
-  | CollectionEntry<"blog">
-  | CollectionEntry<"newsletter">;
+  CollectionEntry<"blog"> | CollectionEntry<"newsletter">;

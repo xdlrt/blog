@@ -41,44 +41,38 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <a href="/posts" class="primary-action">开始阅读</a>
         <LinkButton className="about-link" href="/about">关于我</LinkButton>
       </div>
-      {
-        socialCount > 0 && (
-          <div class="social-wrapper" aria-label="外部链接">
-            <Socials variant="text" />
-          </div>
-        )
-      }
+      {socialCount > 0 && <div class="social-wrapper" aria-label="外部链接">
+        <Socials variant="text" />
+      </div>}
     </section>
 
     <Hr />
 
-    {
-      featuredPosts.length > 0 && (
-        <>
-          <section id="featured">
-            <div class="section-heading">
-              <div>
-                <span class="section-index">CURATED / 01</span>
-                <h2>精选文章</h2>
-              </div>
-              <p>一些经得住时间回看的文字</p>
+    {featuredPosts.length > 0 && (
+      <>
+        <section id="featured">
+          <div class="section-heading">
+            <div>
+              <span class="section-index">CURATED / 01</span>
+              <h2>精选文章</h2>
             </div>
-            <ul>
-              {featuredPosts.map(({ data }, index) => (
-                <Card
-                  href={`/posts/${slugify(data)}`}
-                  frontmatter={data}
-                  secHeading={false}
-                  index={index + 1}
-                  variant={index === 0 ? "lead" : "editorial"}
-                />
-              ))}
-            </ul>
-          </section>
-          <Hr />
-        </>
-      )
-    }
+            <p>一些经得住时间回看的文字</p>
+          </div>
+          <ul>
+            {featuredPosts.map(({ data }, index) => (
+              <Card
+                href={`/posts/${slugify(data)}`}
+                frontmatter={data}
+                secHeading={false}
+                index={index + 1}
+                variant={index === 0 ? "lead" : "editorial"}
+              />
+            ))}
+          </ul>
+        </section>
+        <Hr />
+      </>
+    )}
 
     <section id="recent-posts">
       <div class="section-heading">
@@ -89,20 +83,18 @@ const socialCount = SOCIALS.filter(social => social.active).length;
         <p>沿着时间，查看最近留下的记录</p>
       </div>
       <ul class="article-grid">
-        {
-          recentPosts.map(
-            ({ data }, index) =>
-              index < 6 && (
-                <Card
-                  href={`/posts/${slugify(data)}`}
-                  frontmatter={data}
-                  secHeading={false}
-                  index={index + 1}
-                  variant="editorial"
-                />
-              )
-          )
-        }
+        {recentPosts.map(
+          ({ data }, index) =>
+            index < 6 && (
+              <Card
+                href={`/posts/${slugify(data)}`}
+                frontmatter={data}
+                secHeading={false}
+                index={index + 1}
+                variant="editorial"
+              />
+            )
+        )}
       </ul>
       <div class="all-posts-btn-wrapper">
         <LinkButton className="archive-action" href="/posts">

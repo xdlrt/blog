@@ -35,11 +35,12 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
   <Header />
   <div class="back-wrapper">
     <a class="focus-outline back-button" href="/posts">
-      <svg xmlns="http://www.w3.org/2000/svg"
-        ><path
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <path
           d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
         ></path>
-      </svg><span>返回文章列表</span>
+      </svg
+      ><span>返回文章列表</span>
     </a>
   </div>
   <main id="main-content">
@@ -56,29 +57,25 @@ const ogUrl = new URL(ogImage ? ogImage : `${title}.svg`, Astro.url.origin)
     </article>
 
     <ul class="tags-container">
-      {tags.map(tag => <Tag name={tag} variant="chip" />)}
+      {tags.map(tag => (
+        <Tag name={tag} variant="chip" />
+      ))}
     </ul>
 
-    {
-      (newerPost || olderPost) && (
-        <nav class="reading-nav" aria-label="继续阅读">
-          {newerPost ? (
-            <a href={`/posts/${slugify(newerPost.data)}`}>
-              <span>上一篇</span>
-              <strong>{newerPost.data.title}</strong>
-            </a>
-          ) : (
-            <span />
-          )}
-          {olderPost && (
-            <a class="next" href={`/posts/${slugify(olderPost.data)}`}>
-              <span>下一篇</span>
-              <strong>{olderPost.data.title}</strong>
-            </a>
-          )}
-        </nav>
-      )
-    }
+    {(newerPost || olderPost) && <nav class="reading-nav" aria-label="继续阅读">
+      {newerPost ? (
+        <a href={`/posts/${slugify(newerPost.data)}`}>
+          <span>上一篇</span>
+          <strong>{newerPost.data.title}</strong>
+        </a>
+      ) : (
+        <span />
+      )}
+      {olderPost && <a class="next" href={`/posts/${slugify(olderPost.data)}`}>
+        <span>下一篇</span>
+        <strong>{olderPost.data.title}</strong>
+      </a>}
+    </nav>}
   </main>
   <Footer />
 </Layout>
